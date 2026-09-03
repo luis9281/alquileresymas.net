@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-ink: #1e3b44;
+  --color-teal: #2c6577;
+  --color-teal-dark: #1b4552;
+  --color-lime: #c7d92e;
+  --color-lime-dark: #a9b923;
+  --color-cream: #faf7f1;
+  --color-border: #e3decf;
+  --color-muted: #6e7c80;
+
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-worksans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--color-teal-dark);
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 36s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  .py-20 {
+    padding-block: calc(var(--spacing) * 10);
+  }
+}
