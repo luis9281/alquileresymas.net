@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { QuoteProvider } from "@/components/QuoteContext";
 import { CONTACTO, LAT, LNG } from "@/lib/site-info";
 
@@ -78,6 +79,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${playfair.variable} ${workSans.variable} antialiased`}>
+        <GoogleAnalytics />
         <JsonLd data={localBusinessJsonLd} />
         <QuoteProvider>
           <Header />
