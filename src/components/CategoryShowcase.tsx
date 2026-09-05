@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Producto } from "@/lib/types";
 import { aListados, tituloListado } from "@/lib/producto";
+import { esImagenSanity } from "@/lib/images";
 
 const CARD_CLASS =
   "group relative block aspect-[3/4] w-[270px] shrink-0 snap-start overflow-hidden rounded-md bg-border sm:w-[calc((100%-2.5rem)/3)]";
@@ -98,6 +99,7 @@ export default function CategoryShowcase({
                   src={imagen}
                   alt={titulo}
                   fill
+                  unoptimized={esImagenSanity(imagen)}
                   sizes="(max-width: 640px) 270px, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />

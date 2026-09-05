@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Producto } from "@/lib/types";
+import { esImagenSanity } from "@/lib/images";
 import QuoteButton from "./QuoteButton";
 
 export default function ProductGallery({
@@ -36,6 +37,7 @@ export default function ProductGallery({
               alt={variante?.color ? `${producto.titulo} - ${variante.color}` : producto.titulo}
               width={900}
               height={900}
+              unoptimized={esImagenSanity(imagenActiva)}
               className="h-full w-full object-cover"
               priority
             />
@@ -55,7 +57,7 @@ export default function ProductGallery({
                   idx === imagenIdx ? "border-teal" : "border-transparent"
                 }`}
               >
-                <Image src={img} alt="" width={64} height={64} className="h-full w-full object-cover" />
+                <Image src={img} alt="" width={64} height={64} unoptimized={esImagenSanity(img)} className="h-full w-full object-cover" />
               </button>
             ))}
           </div>

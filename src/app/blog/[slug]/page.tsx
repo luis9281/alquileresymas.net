@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
 import JsonLd from "@/components/JsonLd";
 import { getPost } from "@/lib/sanity/queries";
+import { esImagenSanity } from "@/lib/images";
 
 const SITE_URL = "https://www.alquileresymas.net";
 const SITE_TITLE = "Alquileres Eventos & Más";
@@ -58,7 +59,15 @@ export default async function PostPage({ params }: Props) {
 
       {post.imagen && (
         <div className="mt-8 aspect-[16/9] overflow-hidden rounded-md bg-border">
-          <Image src={post.imagen} alt={post.titulo} width={1200} height={675} className="h-full w-full object-cover" priority />
+          <Image
+            src={post.imagen}
+            alt={post.titulo}
+            width={1200}
+            height={675}
+            unoptimized={esImagenSanity(post.imagen)}
+            className="h-full w-full object-cover"
+            priority
+          />
         </div>
       )}
 

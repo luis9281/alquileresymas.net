@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Categoria } from "@/lib/types";
+import { esImagenSanity } from "@/lib/images";
 
 const FALLBACK_IMAGES: Record<string, string> = {
   "bares-counters-podiums": "/muestras/bares-counters-podiums/bar-elegante-blanco-card.jpg",
@@ -30,6 +31,7 @@ export default function CategoryCard({
             src={src}
             alt=""
             fill
+            unoptimized={esImagenSanity(src)}
             sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 16vw"
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
           />

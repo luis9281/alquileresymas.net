@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Producto } from "@/lib/types";
+import { esImagenSanity } from "@/lib/images";
 import QuoteButton from "./QuoteButton";
 
 export default function ProductCard({
@@ -27,6 +28,7 @@ export default function ProductCard({
             alt={titulo}
             width={640}
             height={640}
+            unoptimized={esImagenSanity(imagen)}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (

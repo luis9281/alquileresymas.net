@@ -42,7 +42,7 @@ function mapProducto(p: SanityProducto): Producto {
   const variantes = (p.variantes ?? []).map((v) => ({
     color: v.color,
     imagenes: (v.imagenes ?? [])
-      .map((img) => urlFor(img)?.width(1000).height(1000).fit("crop").url())
+      .map((img) => urlFor(img)?.width(1000).height(1000).fit("crop").auto("format").url())
       .filter((url): url is string => Boolean(url)),
   }));
   return {
@@ -62,7 +62,7 @@ function mapProducto(p: SanityProducto): Producto {
 }
 
 function mapPost(p: SanityPost): Post {
-  const img = p.imagen ? urlFor(p.imagen)?.width(1200).height(750).fit("crop").url() : undefined;
+  const img = p.imagen ? urlFor(p.imagen)?.width(1200).height(750).fit("crop").auto("format").url() : undefined;
   return {
     _id: p._id,
     titulo: p.titulo,
@@ -90,7 +90,7 @@ export async function getCategorias(): Promise<Categoria[]> {
     return data.map((c) => ({
       nombre: c.nombre,
       slug: c.slug,
-      imagen: c.imagen ? urlFor(c.imagen)?.width(600).height(800).fit("crop").url() : undefined,
+      imagen: c.imagen ? urlFor(c.imagen)?.width(600).height(800).fit("crop").auto("format").url() : undefined,
     }));
   } catch {
     return categoriasMuestra;

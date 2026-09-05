@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useQuote } from "./QuoteContext";
 import { CONTACTO } from "@/lib/site-info";
+import { esImagenSanity } from "@/lib/images";
 import type { QuoteItem } from "@/lib/types";
 
 function construirMensajeWhatsApp(form: HTMLFormElement, items: QuoteItem[]) {
@@ -115,7 +116,14 @@ export default function QuoteForm() {
                 className="flex items-center gap-3 rounded-md border border-border bg-white p-3"
               >
                 {item.image && (
-                  <Image src={item.image} alt="" width={56} height={56} className="h-14 w-14 rounded object-cover" />
+                  <Image
+                    src={item.image}
+                    alt=""
+                    width={56}
+                    height={56}
+                    unoptimized={esImagenSanity(item.image)}
+                    className="h-14 w-14 rounded object-cover"
+                  />
                 )}
                 <span className="flex-1 text-sm font-semibold">{item.title}</span>
                 <input
