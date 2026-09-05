@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Nosotros | Alquileres Eventos & Más",
   description:
     "Alquiler de sillas, mesas, bares y mobiliario para eventos en Panamá, con transporte propio, montaje y desmontaje incluidos.",
+  alternates: { canonical: "/nosotros" },
 };
 
 const RAZONES = [

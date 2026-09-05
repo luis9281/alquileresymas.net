@@ -4,7 +4,9 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import JsonLd from "@/components/JsonLd";
 import { QuoteProvider } from "@/components/QuoteContext";
+import { CONTACTO, LAT, LNG } from "@/lib/site-info";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -32,6 +34,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "es_PA",
@@ -46,12 +49,36 @@ export const metadata: Metadata = {
   },
 };
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  url: SITE_URL,
+  image: `${SITE_URL}/logo.png`,
+  telephone: CONTACTO.telefono,
+  email: CONTACTO.emails.ventas,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: CONTACTO.direccion,
+    addressLocality: "Ciudad de Panamá",
+    addressCountry: "PA",
+  },
+  geo: { "@type": "GeoCoordinates", latitude: LAT, longitude: LNG },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "17:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday"], opens: "08:00", closes: "14:00" },
+  ],
+  sameAs: [CONTACTO.redes.facebook, CONTACTO.redes.instagram, CONTACTO.redes.tiktok],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
       <body className={`${playfair.variable} ${workSans.variable} antialiased`}>
+        <JsonLd data={localBusinessJsonLd} />
         <QuoteProvider>
           <Header />
           <main>{children}</main>

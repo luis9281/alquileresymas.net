@@ -4,6 +4,7 @@ import QuoteForm from "@/components/QuoteForm";
 export const metadata: Metadata = {
   title: "Cotización | Alquileres Eventos & Más",
   description: "Arma tu lista de mobiliario y equipo para tu evento y solicita una cotización sin compromiso, por correo o WhatsApp.",
+  alternates: { canonical: "/cotizacion" },
 };
 
 export default function CotizacionPage() {

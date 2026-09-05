@@ -5,6 +5,7 @@ import { getPosts } from "@/lib/sanity/queries";
 export const metadata: Metadata = {
   title: "Blog | Alquileres Eventos & Más",
   description: "Ideas, tendencias y consejos para planear bodas, eventos corporativos y celebraciones sociales en Panamá.",
+  alternates: { canonical: "/blog" },
 };
 
 export default async function BlogPage() {

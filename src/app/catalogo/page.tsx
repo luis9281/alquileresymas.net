@@ -6,6 +6,7 @@ import { getCategorias, getProductos } from "@/lib/sanity/queries";
 export const metadata: Metadata = {
   title: "Catálogo | Alquileres Eventos & Más",
   description: "Sillas, mesas, bares, cristalería, decoración y más mobiliario para renta de eventos en Panamá, por categoría.",
+  alternates: { canonical: "/catalogo" },
 };
 
 export default async function CatalogoPage() {

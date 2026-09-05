@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
 import ProductGallery from "@/components/ProductGallery";
+import JsonLd from "@/components/JsonLd";
 import { getProducto, getProductos } from "@/lib/sanity/queries";
 import { imagenPrincipal } from "@/lib/producto";
+
+const SITE_URL = "https://www.alquileresymas.net";
 
 type Props = {
   params: Promise<{ categoria: string; producto: string }>;
@@ -11,7 +14,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { producto: slug } = await params;
+  const { categoria: categoriaSlug, producto: slug } = await params;
   const producto = await getProducto(slug);
   if (!producto) return { title: "Producto | Alquileres Eventos & Más" };
 
@@ -24,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${producto.titulo} | ${producto.categoria.nombre} | Alquileres Eventos & Más`,
     description: descripcion,
+    alternates: { canonical: `/catalogo/${categoriaSlug}/${slug}` },
     openGraph: imagen ? { images: [imagen] } : undefined,
   };
 }
@@ -38,8 +42,32 @@ export default async function ProductoPage({ params, searchParams }: Props) {
   const varianteInicial = color ? Math.max(0, producto.variantes.findIndex((v) => v.color === color)) : 0;
   const relacionados = (await getProductos(categoriaSlug)).filter((p) => p._id !== producto._id).slice(0, 4);
 
+  const imagenes = producto.variantes.flatMap((v) => v.imagenes);
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: producto.titulo,
+    description:
+      producto.descripcion || `Renta de ${producto.titulo} para eventos en Panamá.`,
+    image: imagenes.length ? imagenes : undefined,
+    category: producto.categoria.nombre,
+    url: `${SITE_URL}/catalogo/${categoriaSlug}/${slug}`,
+    ...(producto.precio
+      ? {
+          offers: {
+            "@type": "Offer",
+            price: producto.precio,
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            url: `${SITE_URL}/catalogo/${categoriaSlug}/${slug}`,
+          },
+        }
+      : {}),
+  };
+
   return (
     <>
+      <JsonLd data={productJsonLd} />
       <section className="mx-auto grid max-w-[1350px] gap-12 px-6 py-16 md:grid-cols-2">
         <ProductGallery producto={producto} varianteInicial={varianteInicial} />
       </section>

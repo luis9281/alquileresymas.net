@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Planos del Salón | Alquileres Eventos & Más",
   description:
     "Herramienta interactiva para armar la distribución de mesas, sillas y áreas de tu evento antes de que llegue el primer invitado.",
+  alternates: { canonical: "/planos-del-salon" },
 };
 
 export default function PlanosDelSalonPage() {

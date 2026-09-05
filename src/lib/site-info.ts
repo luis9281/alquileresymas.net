@@ -1,8 +1,8 @@
 const DIRECCION = "Ave. Domingo Díaz, Antiguo Auto Depot, Local B19 - B20 - B21, Ciudad de Panamá";
 
 // Coordenadas exactas del local, resueltas desde el link de Google Maps que compartio el cliente.
-const LAT = 9.042189;
-const LNG = -79.4703409;
+export const LAT = 9.042189;
+export const LNG = -79.4703409;
 
 export const CONTACTO = {
   emails: {

@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
+import JsonLd from "@/components/JsonLd";
 import { getPost } from "@/lib/sanity/queries";
+
+const SITE_URL = "https://www.alquileresymas.net";
+const SITE_TITLE = "Alquileres Eventos & Más";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -13,6 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.titulo} | Blog | Alquileres Eventos & Más`,
     description: post.extracto,
+    alternates: { canonical: `/blog/${slug}` },
     openGraph: post.imagen ? { images: [post.imagen] } : undefined,
   };
 }
@@ -29,8 +34,25 @@ export default async function PostPage({ params }: Props) {
     year: "numeric",
   });
 
+  const postJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.titulo,
+    description: post.extracto,
+    image: post.imagen ? [post.imagen] : undefined,
+    datePublished: post.fecha,
+    url: `${SITE_URL}/blog/${slug}`,
+    author: { "@type": "Organization", name: SITE_TITLE },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_TITLE,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
+    },
+  };
+
   return (
     <article className="mx-auto max-w-3xl px-6 py-16">
+      <JsonLd data={postJsonLd} />
       <p className="text-sm text-muted">{fecha}</p>
       <h1 className="mt-2">{post.titulo}</h1>
 

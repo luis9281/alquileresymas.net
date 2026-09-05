@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Diseño de Eventos | Alquileres Eventos & Más",
   description: "Asesoría en decoración, paleta de colores y montaje para que el mobiliario de tu evento combine con tu visión.",
+  alternates: { canonical: "/diseno-de-eventos" },
 };
 
 export default function DisenoDeEventosPage() {

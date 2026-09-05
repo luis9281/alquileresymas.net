@@ -6,6 +6,7 @@ import { CONTACTO } from "@/lib/site-info";
 export const metadata: Metadata = {
   title: "Contacto | Alquileres Eventos & Más",
   description: "Teléfono, WhatsApp, correo, ubicación y horario de Alquileres Eventos & Más en Ciudad de Panamá.",
+  alternates: { canonical: "/contacto" },
 };
 
 export default function ContactoPage() {
