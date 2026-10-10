@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Work_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,15 +11,19 @@ import { CONTACTO, LAT, LNG } from "@/lib/site-info";
 import { getCategorias } from "@/lib/sanity/queries";
 import { ordenarAlfabeticamente } from "@/lib/categorias";
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
+// Fuentes servidas desde el repo (subconjunto "latin" de Google Fonts, variables).
+// Con next/font/google el build en Vercel fallaba si no lograba descargarlas.
+const playfair = localFont({
+  src: "./fonts/PlayfairDisplay-latin.woff2",
+  weight: "500 700",
+  display: "swap",
   variable: "--font-playfair",
 });
 
-const workSans = Work_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
+const workSans = localFont({
+  src: "./fonts/WorkSans-latin.woff2",
+  weight: "400 600",
+  display: "swap",
   variable: "--font-worksans",
 });
 
