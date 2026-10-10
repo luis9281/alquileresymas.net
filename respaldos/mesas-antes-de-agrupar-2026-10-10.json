@@ -1,0 +1,355 @@
+[
+ {
+  "_createdAt": "2026-09-02T01:33:24Z",
+  "_id": "producto-mesas-mesa-con-cambas-delanteras",
+  "_rev": "trzJwo7gNjLjmFEMdsinjQ",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:27:15Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 100,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-con-cambas-delanteras"
+  },
+  "titulo": "Mesa con Cambas delanteras",
+  "variantes": [
+   {
+    "_key": "0qqjn1cc",
+    "imagenes": [
+     {
+      "_key": "nvzf41a6",
+      "_type": "image",
+      "asset": {
+       "_ref": "image-d345ad3b37aeed8a6991487ab1046c543b03e66d-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-02T01:55:57Z",
+  "_id": "producto-mesas-consola-con-cambas-delanteras",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 100,
+  "slug": {
+   "_type": "slug",
+   "current": "consola-con-cambas-delanteras"
+  },
+  "titulo": "Consola con Cambas delanteras",
+  "variantes": [
+   {
+    "_key": "pqspfyia",
+    "color": "Chocolate",
+    "imagenes": [
+     {
+      "_key": "rrlxwy2y",
+      "_type": "image",
+      "asset": {
+       "_ref": "image-7f78cf1099efb915ce6cfa8f4b14fd3c39e5b165-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-02T01:55:57Z",
+  "_id": "producto-mesas-mesa-decorativa-individual-baja",
+  "_rev": "Fp6j2OFYXErtrNMrGBFhH4",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:32:42Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 18,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-decorativa-individual-baja"
+  },
+  "titulo": "Mesa decorativa individual - Baja",
+  "variantes": [
+   {
+    "_key": "4r3ddfkd",
+    "color": "Blanca",
+    "imagenes": [
+     {
+      "_key": "v81n2ov5",
+      "_type": "image",
+      "asset": {
+       "_ref": "image-d682c44a32dd30543b3b2160c078d11c4e9109d1-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-02T01:32:51Z",
+  "_id": "producto-mesas-mesa-baja-decorativa",
+  "_rev": "5FAMOnPt1ALazn1iKEoKIp",
+  "_type": "producto",
+  "_updatedAt": "2026-09-02T02:57:26Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-baja-decorativa"
+  },
+  "titulo": "Mesa baja decorativa",
+  "variantes": [
+   {
+    "_key": "fta18luk",
+    "imagenes": [
+     {
+      "_key": "q3qsv000",
+      "_type": "image",
+      "asset": {
+       "_ref": "image-7c3b2458a7df7d55f4f51f9beadd263cac9e55af-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-02T01:32:41Z",
+  "_id": "producto-mesas-mesa-alta-decorativa",
+  "_rev": "5FAMOnPt1ALazn1iKEoKIp",
+  "_type": "producto",
+  "_updatedAt": "2026-09-02T02:57:26Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-alta-decorativa"
+  },
+  "titulo": "Mesa alta decorativa",
+  "variantes": [
+   {
+    "_key": "8x6jwiol",
+    "imagenes": [
+     {
+      "_key": "rrtjm7hz",
+      "_type": "image",
+      "asset": {
+       "_ref": "image-9f1a56ce5a7005f99f46d5935226c009ca5d2bf9-1254x1254-png",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-02T01:35:27Z",
+  "_id": "producto-mesas-mesa-redondas-60",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 6.75,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-redondas-60"
+  },
+  "titulo": "Mesa Redondas 60´´",
+  "variantes": [
+   {
+    "_key": "3iqyhg2g",
+    "imagenes": [
+     {
+      "_key": "89mh34s1",
+      "_type": "image",
+      "asset": {
+       "_ref": "image-4dac969f641267f442d7e17f18e2e05fbddfbe91-1000x1000-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-02T01:55:57Z",
+  "_id": "producto-mesas-duo-de-mesas-decorativas",
+  "_rev": "wW620qM45cAl8Fh2yC5eYI",
+  "_type": "producto",
+  "_updatedAt": "2026-09-02T03:25:56Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "duo-de-mesas-decorativas"
+  },
+  "titulo": "Duo de Mesas Decorativas",
+  "variantes": [
+   {
+    "_key": "z7coljj0",
+    "color": "Blanca",
+    "imagenes": [
+     {
+      "_key": "acu3d8ri",
+      "_type": "image",
+      "asset": {
+       "_ref": "image-ccbe30d0662cdc334bb74e8ed4eec6f89bd01d3b-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   },
+   {
+    "_key": "55y2pz3v",
+    "color": "Chocolate",
+    "imagenes": [
+     {
+      "_key": "p80gn3rk",
+      "_type": "image",
+      "asset": {
+       "_ref": "image-9c12097eec2d041d9aef7a25de2d92da34dfc07f-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-02T01:55:57Z",
+  "_id": "producto-mesas-mesa-duo-isabelina",
+  "_rev": "wW620qM45cAl8Fh2yC5eYI",
+  "_type": "producto",
+  "_updatedAt": "2026-09-02T03:25:56Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-duo-isabelina"
+  },
+  "titulo": "Mesa Duo Isabelina",
+  "variantes": [
+   {
+    "_key": "f0nl372t",
+    "color": "Blanca",
+    "imagenes": [
+     {
+      "_key": "e7gsdecj",
+      "_type": "image",
+      "asset": {
+       "_ref": "image-129e37f1f7eab63d45d5d41bdbb06926762c6582-1024x1024-jpg",
+       "_type": "reference"
+      }
+     },
+     {
+      "_key": "xch0jiqf",
+      "_type": "image",
+      "asset": {
+       "_ref": "image-73a7506eb441c7857aace1d280d19ea8ec8acf25-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   },
+   {
+    "_key": "xfqotm0e",
+    "color": "Chocolate",
+    "imagenes": [
+     {
+      "_key": "sxqowio9",
+      "_type": "image",
+      "asset": {
+       "_ref": "image-b5a809d06b0b51aded8e86de33d8fa70076299da-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:46:09Z",
+  "_id": "drafts.producto-mesas-mesa-alta-decorativa-otro-angulo",
+  "_rev": "QbRV0eIQAr15Jc3fFApNEf",
+  "_type": "producto",
+  "_updatedAt": "2026-09-03T14:34:03Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-alta-decorativa-otro-angulo"
+  },
+  "titulo": "Mesa alta decorativa otro angulo",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-7b5127648a17f52aa40109668d0b592eb4f3c254-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:48:15Z",
+  "_id": "drafts.producto-mesas-mesa-redondas-60-medidas",
+  "_rev": "Fp6j2OFYXErtrNMrGBFbzy",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:30:01Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 6.75,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-redondas-60-medidas"
+  },
+  "titulo": "Mesa Redondas 60´´ medidas",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-e2d6d524c674aabfee6ede7758c2139f1fc34edb-2000x2000-webp",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ }
+]
