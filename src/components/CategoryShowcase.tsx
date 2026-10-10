@@ -7,8 +7,11 @@ import type { Producto } from "@/lib/types";
 import { aListados, tituloListado } from "@/lib/producto";
 import { esImagenSanity } from "@/lib/images";
 
+// Fixed 600px tall on tablet/desktop (3 per row); phones keep a 3:4 card so it fits the screen.
+// White background matches the product photos, which are fitted whole (object-contain) so
+// wide items like rectangular tables or round tablecloths aren't cropped at the sides.
 const CARD_CLASS =
-  "group relative block aspect-[3/4] w-[270px] shrink-0 snap-start overflow-hidden rounded-md bg-border sm:w-[calc((100%-2.5rem)/3)]";
+  "group relative block aspect-[3/4] w-[270px] shrink-0 snap-start overflow-hidden rounded-md bg-white sm:aspect-auto sm:h-[600px] sm:w-[calc((100%-2.5rem)/3)]";
 
 export default function CategoryShowcase({
   eyebrow,
@@ -101,7 +104,7 @@ export default function CategoryShowcase({
                   fill
                   unoptimized={esImagenSanity(imagen)}
                   sizes="(max-width: 640px) 270px, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-contain transition-transform duration-500 group-hover:scale-105"
                 />
               ) : (
                 <div className="h-full w-full bg-gradient-to-br from-teal/20 to-lime/20" />

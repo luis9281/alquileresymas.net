@@ -18,6 +18,11 @@ export default async function HomePage() {
   const sillas = productos.filter((p) => p.categoria.slug === "sillas");
   const mesas = productos.filter((p) => p.categoria.slug === "mesas");
   const cristaleria = productos.filter((p) => p.categoria.slug === "cristaleria");
+  // Mantelería: primero los manteles redondos lisos (los más alquilados), luego el resto.
+  const prioridadMantel = (titulo: string) => (/redondo.*liso/i.test(titulo) ? 0 : /coctel/i.test(titulo) ? 1 : 2);
+  const manteleria = productos
+    .filter((p) => p.categoria.slug === "manteleria")
+    .sort((a, b) => prioridadMantel(a.titulo) - prioridadMantel(b.titulo));
 
   // Portada por categoría: la del CMS si el cliente la subió, si no la del
   // primer producto real de esa categoría (mejor que el logo genérico).
@@ -82,6 +87,16 @@ export default async function HomePage() {
           copy={`Redondas, rectangulares, cocteleras o decorativas, en blanco y chocolate: ${mesas.length}+ mesas para armar el layout perfecto de tu evento.`}
           verTodoHref="/catalogo/mesas"
           productos={mesas}
+        />
+      </RevealOnScroll>
+
+      <RevealOnScroll>
+        <CategoryShowcase
+          eyebrow="Nuestra colección"
+          titulo="Mantelería para vestir cada mesa"
+          copy={`Manteles redondos, rectangulares y lycras para mesas cocteleras, en lisos, corrugados y satín: ${manteleria.reduce((n, p) => n + p.variantes.length, 0)}+ colores para combinar con la paleta de tu evento.`}
+          verTodoHref="/catalogo/manteleria"
+          productos={manteleria}
         />
       </RevealOnScroll>
 
