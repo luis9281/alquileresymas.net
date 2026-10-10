@@ -1,0 +1,1479 @@
+[
+ {
+  "_createdAt": "2026-09-03T13:44:23Z",
+  "_id": "drafts.producto-bares-counters-podiums-bar-de-madera-blanco",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-bares-counters-podiums",
+   "_type": "reference"
+  },
+  "precio": 50,
+  "slug": {
+   "_type": "slug",
+   "current": "bar-de-madera-blanco"
+  },
+  "titulo": "Bar de madera - Blanco",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-d1f393299d9041c60217deb8191457741a9e9ee3-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:44:27Z",
+  "_id": "drafts.producto-bares-counters-podiums-bar-de-madera-chocolate",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-bares-counters-podiums",
+   "_type": "reference"
+  },
+  "precio": 50,
+  "slug": {
+   "_type": "slug",
+   "current": "bar-de-madera-chocolate"
+  },
+  "titulo": "Bar de madera - Chocolate",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-d1ccf4b0d8dc4642741ad3a492120255b148de31-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:44:30Z",
+  "_id": "drafts.producto-bares-counters-podiums-bar-elegante-blanco-detras",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-bares-counters-podiums",
+   "_type": "reference"
+  },
+  "precio": 65,
+  "slug": {
+   "_type": "slug",
+   "current": "bar-elegante-blanco-detras"
+  },
+  "titulo": "Bar Elegante - blanco detras",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-1ba47db6401d98494f87e16707c8421190e86c58-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:44:37Z",
+  "_id": "drafts.producto-bares-counters-podiums-bar-elegante-grande-blanco",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-bares-counters-podiums",
+   "_type": "reference"
+  },
+  "precio": 65,
+  "slug": {
+   "_type": "slug",
+   "current": "bar-elegante-grande-blanco"
+  },
+  "titulo": "Bar Elegante Grande - Blanco",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-7eb26adf9887919a482b61d18b7b3573200352db-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:44:34Z",
+  "_id": "drafts.producto-bares-counters-podiums-bar-elegante-grande-chocolate",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-bares-counters-podiums",
+   "_type": "reference"
+  },
+  "precio": 65,
+  "slug": {
+   "_type": "slug",
+   "current": "bar-elegante-grande-chocolate"
+  },
+  "titulo": "Bar Elegante - Grande - Chocolate",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-7e0b8aef0a111fcacd0172b3b79c0cef30bc0300-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:44:46Z",
+  "_id": "drafts.producto-bares-counters-podiums-bar-mediano-blanco",
+  "_rev": "QbRV0eIQAr15Jc3fFApNEf",
+  "_type": "producto",
+  "_updatedAt": "2026-09-03T14:34:03Z",
+  "categoria": {
+   "_ref": "categoria-bares-counters-podiums",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "bar-mediano-blanco"
+  },
+  "titulo": "Bar Mediano - Blanco",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-7bfff1bd7d6689c6f6ca16bb5b439bd679be4104-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:44:41Z",
+  "_id": "drafts.producto-bares-counters-podiums-bar-mediano-blanco-lateral-frontal",
+  "_rev": "QbRV0eIQAr15Jc3fFApNEf",
+  "_type": "producto",
+  "_updatedAt": "2026-09-03T14:34:03Z",
+  "categoria": {
+   "_ref": "categoria-bares-counters-podiums",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "bar-mediano-blanco-lateral-frontal"
+  },
+  "titulo": "Bar Mediano - Blanco lateral frontal",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-0fa4089a8534654ee245b53f96c32a263275edb8-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:44:52Z",
+  "_id": "drafts.producto-bares-counters-podiums-bar-mediano-chocolate",
+  "_rev": "QbRV0eIQAr15Jc3fFApNEf",
+  "_type": "producto",
+  "_updatedAt": "2026-09-03T14:34:03Z",
+  "categoria": {
+   "_ref": "categoria-bares-counters-podiums",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "bar-mediano-chocolate"
+  },
+  "titulo": "Bar Mediano - Chocolate",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-0162ca92b533d123ddedc337b749153ec2fc3ad4-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:44:49Z",
+  "_id": "drafts.producto-bares-counters-podiums-bar-mediano-chocolate-lateral-frontal",
+  "_rev": "QbRV0eIQAr15Jc3fFApNEf",
+  "_type": "producto",
+  "_updatedAt": "2026-09-03T14:34:03Z",
+  "categoria": {
+   "_ref": "categoria-bares-counters-podiums",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "bar-mediano-chocolate-lateral-frontal"
+  },
+  "titulo": "Bar Mediano - Chocolate lateral frontal",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-f9dc4b42457ea62389a1edb567e7f10a352d5bc7-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:45:52Z",
+  "_id": "drafts.producto-mesas-consola-con-cambas-delanteras-chocolate",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 100,
+  "slug": {
+   "_type": "slug",
+   "current": "consola-con-cambas-delanteras-chocolate"
+  },
+  "titulo": "Consola con Cambas delanteras - Chocolate",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-7f78cf1099efb915ce6cfa8f4b14fd3c39e5b165-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:45:56Z",
+  "_id": "drafts.producto-mesas-duo-de-mesa-isabelina-chocolate",
+  "_rev": "QbRV0eIQAr15Jc3fFApNEf",
+  "_type": "producto",
+  "_updatedAt": "2026-09-03T14:34:03Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "duo-de-mesa-isabelina-chocolate"
+  },
+  "titulo": "Duo de mesa isabelina - Chocolate",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-b5a809d06b0b51aded8e86de33d8fa70076299da-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:46:03Z",
+  "_id": "drafts.producto-mesas-duo-de-mesas-decorativas-blancas",
+  "_rev": "QbRV0eIQAr15Jc3fFApNEf",
+  "_type": "producto",
+  "_updatedAt": "2026-09-03T14:34:03Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "duo-de-mesas-decorativas-blancas"
+  },
+  "titulo": "Duo de Mesas decorativas - Blancas",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-ccbe30d0662cdc334bb74e8ed4eec6f89bd01d3b-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:46:13Z",
+  "_id": "drafts.producto-mesas-mesa-carmencita-blanca-16x47",
+  "_rev": "Fp6j2OFYXErtrNMrGBFhH4",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:32:42Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 35,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-carmencita-blanca-16x47"
+  },
+  "titulo": "Mesa Carmencita - Blanca, 16x47´´",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-529a2c3de9fd921c5c72e19839a702b530e043df-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:46:19Z",
+  "_id": "drafts.producto-mesas-mesa-carmencita-chocolate-16x47",
+  "_rev": "Fp6j2OFYXErtrNMrGBFhH4",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:32:42Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 35,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-carmencita-chocolate-16x47"
+  },
+  "titulo": "Mesa Carmencita - Chocolate, 16x47´´",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-0e4320ee35a9471809c1325a33c640992ae2519a-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:46:22Z",
+  "_id": "drafts.producto-mesas-mesa-coctelera-de-madera-blanca",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 20,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-coctelera-de-madera-blanca"
+  },
+  "titulo": "Mesa Coctelera de Madera - Blanca",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-92af3cfad1652e89ef803566fa112fb1d2e6ef16-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:46:30Z",
+  "_id": "drafts.producto-mesas-mesa-coctelera-de-madera-chocolate",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 20,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-coctelera-de-madera-chocolate"
+  },
+  "titulo": "Mesa Coctelera de Madera - Chocolate",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-8d9581baf7902abd9320757685fc6a9f5405f876-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:46:37Z",
+  "_id": "drafts.producto-mesas-mesa-de-dos-cubos-blanca",
+  "_rev": "Fp6j2OFYXErtrNMrGBFhH4",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:32:42Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 30,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-de-dos-cubos-blanca"
+  },
+  "titulo": "Mesa de dos cubos - Blanca",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-e6518de4e5cb5283412e36b132e8fa4a0ba7b7b9-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:46:41Z",
+  "_id": "drafts.producto-mesas-mesa-de-dos-cubos-chocolate",
+  "_rev": "Fp6j2OFYXErtrNMrGBFhH4",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:32:42Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 30,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-de-dos-cubos-chocolate"
+  },
+  "titulo": "Mesa de dos cubos - Chocolate",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-9d6ca55a5bf24915ecb8ba78d7049dbcaa731940-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:46:51Z",
+  "_id": "drafts.producto-mesas-mesa-de-madera-8-puestos-blanca",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 20,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-de-madera-8-puestos-blanca"
+  },
+  "titulo": "Mesa de madera (8 Puestos) - Blanca",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-2ba2abab541eae97c6419ba06a93152b20d08c34-1254x1254-png",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:46:54Z",
+  "_id": "drafts.producto-mesas-mesa-de-madera-8-puestos-chocolate",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 20,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-de-madera-8-puestos-chocolate"
+  },
+  "titulo": "Mesa de madera (8 Puestos) - Chocolate",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-a398f7c526ecb7847180622097e3a339cc685e32-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:46:45Z",
+  "_id": "drafts.producto-mesas-mesa-de-madera-redonda-de-48-blanca",
+  "_rev": "QbRV0eIQAr15Jc3fFApNEf",
+  "_type": "producto",
+  "_updatedAt": "2026-09-03T14:34:03Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-de-madera-redonda-de-48-blanca"
+  },
+  "titulo": "Mesa de madera redonda de 48 - Blanca",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-00c23676aa6d5229650e2f24c44f6cc7cf057c5b-1254x1254-png",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:46:48Z",
+  "_id": "drafts.producto-mesas-mesa-de-madera-redonda-de-48-chocolate",
+  "_rev": "QbRV0eIQAr15Jc3fFApNEf",
+  "_type": "producto",
+  "_updatedAt": "2026-09-03T14:34:03Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-de-madera-redonda-de-48-chocolate"
+  },
+  "titulo": "Mesa de madera redonda de 48 - Chocolate",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-7372dfabba7bec6adfcc1f5c3db3c0dfb98d89a9-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:46:57Z",
+  "_id": "drafts.producto-mesas-mesa-de-un-cubo-blanca",
+  "_rev": "Fp6j2OFYXErtrNMrGBFhH4",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:32:42Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 30,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-de-un-cubo-blanca"
+  },
+  "titulo": "Mesa de un cubo - Blanca",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-b34b33fddbd90cb6a48586365cde839d58052b39-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:01Z",
+  "_id": "drafts.producto-mesas-mesa-de-un-cubo-chocolate",
+  "_rev": "Fp6j2OFYXErtrNMrGBFhH4",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:32:42Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 30,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-de-un-cubo-chocolate"
+  },
+  "titulo": "Mesa de un cubo - Chocolate",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-39b755ae7f49cce2bbcb99dac4893fd8d7ab4d88-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:05Z",
+  "_id": "drafts.producto-mesas-mesa-decorativa-individual-baja-blanca",
+  "_rev": "Fp6j2OFYXErtrNMrGBFhH4",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:32:42Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 18,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-decorativa-individual-baja-blanca"
+  },
+  "titulo": "Mesa decorativa individual - Baja blanca",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-d682c44a32dd30543b3b2160c078d11c4e9109d1-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:12Z",
+  "_id": "drafts.producto-mesas-mesa-duo-isabelina-blanca",
+  "_rev": "QbRV0eIQAr15Jc3fFApNEf",
+  "_type": "producto",
+  "_updatedAt": "2026-09-03T14:34:03Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-duo-isabelina-blanca"
+  },
+  "titulo": "Mesa duo isabelina - blanca",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-129e37f1f7eab63d45d5d41bdbb06926762c6582-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:08Z",
+  "_id": "drafts.producto-mesas-mesa-duo-isabelina-blanca-otro-angulo",
+  "_rev": "QbRV0eIQAr15Jc3fFApNEf",
+  "_type": "producto",
+  "_updatedAt": "2026-09-03T14:34:03Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-duo-isabelina-blanca-otro-angulo"
+  },
+  "titulo": "Mesa duo isabelina - blanca otro angulo",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-73a7506eb441c7857aace1d280d19ea8ec8acf25-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:16Z",
+  "_id": "drafts.producto-mesas-mesa-isabelina-individual-alta-blanca",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 35,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-isabelina-individual-alta-blanca"
+  },
+  "titulo": "Mesa Isabelina individual alta - Blanca",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-07392652a81984e280dc6700151acaeb0b9d0e1b-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:19Z",
+  "_id": "drafts.producto-mesas-mesa-isabelina-individual-alta-chocolate",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 35,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-isabelina-individual-alta-chocolate"
+  },
+  "titulo": "Mesa Isabelina individual alta - Chocolate",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-55c9e74891450df5c4b81af0892ea9cc5f507ce0-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:22Z",
+  "_id": "drafts.producto-mesas-mesa-nova-delux-blanca",
+  "_rev": "Fp6j2OFYXErtrNMrGBFhH4",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:32:42Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 35,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-nova-delux-blanca"
+  },
+  "titulo": "Mesa Nova Delux blanca",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-809b3a5a2c6ccf60aebaaae2a26215ed59a6654b-1000x1260-webp",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:26Z",
+  "_id": "drafts.producto-mesas-mesa-nova-luxe-blanca",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 35,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-nova-luxe-blanca"
+  },
+  "titulo": "Mesa Nova Luxe - Blanca",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-3d14abd1f7c3494ab572460bf62938b3bb7e4e4d-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:34Z",
+  "_id": "drafts.producto-mesas-mesa-nova-luxe-chocolate",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 35,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-nova-luxe-chocolate"
+  },
+  "titulo": "Mesa Nova Luxe - Chocolate",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-19f7ab3488355b3eaee3296239b13a579beb0533-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:38Z",
+  "_id": "drafts.producto-mesas-mesa-rectangular-de-madera-72x32-blanca",
+  "_rev": "trzJwo7gNjLjmFEMdsinjQ",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:27:15Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 25,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-rectangular-de-madera-72x32-blanca"
+  },
+  "titulo": "Mesa rectangular de madera 72x32 - Blanca",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-94b4192fe09b6afa0f2d68a0480a63296334cf7a-1254x1254-png",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:41Z",
+  "_id": "drafts.producto-mesas-mesa-rectangular-de-madera-72x32-chocolate-0",
+  "_rev": "trzJwo7gNjLjmFEMdsinjQ",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:27:15Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 25,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-rectangular-de-madera-72x32-chocolate-0"
+  },
+  "titulo": "Mesa rectangular de madera 72x32 - Chocolate 0",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-32e4cbd0d990ff23accbc7c5cfda259671c7ffbd-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:47Z",
+  "_id": "drafts.producto-mesas-mesa-rectangular-de-madera-con-patas-torneadas-blanca",
+  "_rev": "trzJwo7gNjLjmFEMdsinjQ",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:27:15Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 25,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-rectangular-de-madera-con-patas-torneadas-blanca"
+  },
+  "titulo": "Mesa rectangular de madera con patas torneadas - Blanca",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-865898993ed583b5d9d541c58cb44cf644e27ed8-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:44Z",
+  "_id": "drafts.producto-mesas-mesa-rectangular-de-madera-con-patas-torneadas-blanca-otro-angulo",
+  "_rev": "trzJwo7gNjLjmFEMdsinjQ",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:27:15Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 25,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-rectangular-de-madera-con-patas-torneadas-blanca-otro-angulo"
+  },
+  "titulo": "Mesa rectangular de madera con patas torneadas - Blanca otro angulo",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-4b85bec2c6f413a2039636e25cde28c3d0a26aa9-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:48:06Z",
+  "_id": "drafts.producto-mesas-mesa-rectangular-de-madera-con-patas-torneadas-chocolate",
+  "_rev": "trzJwo7gNjLjmFEMdsinjQ",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:27:15Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 25,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-rectangular-de-madera-con-patas-torneadas-chocolate"
+  },
+  "titulo": "Mesa rectangular de madera con patas torneadas - Chocolate",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-279131f986476077fcc24c691fa52b8044f13c03-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:47:57Z",
+  "_id": "drafts.producto-mesas-mesa-rectangular-de-madera-con-patas-torneadas-chocolate-otro-angulo",
+  "_rev": "trzJwo7gNjLjmFEMdsinjQ",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:27:15Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 25,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-rectangular-de-madera-con-patas-torneadas-chocolate-otro-angulo"
+  },
+  "titulo": "Mesa rectangular de madera con patas torneadas - Chocolate otro angulo",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-ec9366bda7614b03e30277aea1b87c2b4c0e214b-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:48:09Z",
+  "_id": "drafts.producto-mesas-mesa-redonda-de-madera-para-invitados-blanca-60-4-patas",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 28,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-redonda-de-madera-para-invitados-blanca-60-4-patas"
+  },
+  "titulo": "Mesa redonda de madera para invitados blanca - 60´´ - 4 patas",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-adbb34121856926bc22f3d444501ba765ffea276-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:48:12Z",
+  "_id": "drafts.producto-mesas-mesa-redonda-de-madera-para-invitados-chocolate-patas-torneadas-60-4-patas",
+  "_rev": "Fp6j2OFYXErtrNMrGBFbzy",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:30:01Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "precio": 28,
+  "slug": {
+   "_type": "slug",
+   "current": "mesa-redonda-de-madera-para-invitados-chocolate-patas-torneadas-60-4-patas"
+  },
+  "titulo": "Mesa redonda de madera para invitados chocolate patas torneadas - 60´´ - 4 patas",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-c0278f95a5e8dca0f02b40c290f4e21ce5f89942-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:48:21Z",
+  "_id": "drafts.producto-mesas-mesas-duo-de-decorativas",
+  "_rev": "QbRV0eIQAr15Jc3fFApNEf",
+  "_type": "producto",
+  "_updatedAt": "2026-09-03T14:34:03Z",
+  "categoria": {
+   "_ref": "categoria-mesas",
+   "_type": "reference"
+  },
+  "slug": {
+   "_type": "slug",
+   "current": "mesas-duo-de-decorativas"
+  },
+  "titulo": "Mesas Duo de decorativas",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-9c12097eec2d041d9aef7a25de2d92da34dfc07f-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:48:31Z",
+  "_id": "drafts.producto-sillas-phoenix-transparente",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-sillas",
+   "_type": "reference"
+  },
+  "precio": 2.5,
+  "slug": {
+   "_type": "slug",
+   "current": "phoenix-transparente"
+  },
+  "titulo": "Phoenix Transparente",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-4df95c1c805fd049807389a218922e705d94fa35-550x550-png",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:48:34Z",
+  "_id": "drafts.producto-sillas-silla-tiffany-dorada-baja",
+  "_rev": "trzJwo7gNjLjmFEMdsinjQ",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:27:15Z",
+  "categoria": {
+   "_ref": "categoria-sillas",
+   "_type": "reference"
+  },
+  "precio": 2,
+  "slug": {
+   "_type": "slug",
+   "current": "silla-tiffany-dorada-baja"
+  },
+  "titulo": "Silla tiffany dorada baja",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-57073291b2b32112f784612c1109c0ad461c549c-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:48:38Z",
+  "_id": "drafts.producto-sillas-silla-tiffany-plateada-baja",
+  "_rev": "trzJwo7gNjLjmFEMdsinjQ",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:27:15Z",
+  "categoria": {
+   "_ref": "categoria-sillas",
+   "_type": "reference"
+  },
+  "precio": 2,
+  "slug": {
+   "_type": "slug",
+   "current": "silla-tiffany-plateada-baja"
+  },
+  "titulo": "Silla tiffany plateada baja",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-81e43248bad3860bde22478dbc1983515dcc7b26-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:48:41Z",
+  "_id": "drafts.producto-sillas-silla-tiffany-transparente-baja",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-sillas",
+   "_type": "reference"
+  },
+  "precio": 2,
+  "slug": {
+   "_type": "slug",
+   "current": "silla-tiffany-transparente-baja"
+  },
+  "titulo": "Silla Tiffany Transparente Baja",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-793e922b932c4c3ac3d17e583b18f267d1d0e614-1000x1000-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:48:44Z",
+  "_id": "drafts.producto-sillas-sillas-coctelera-tiffany-doradas-altas",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-sillas",
+   "_type": "reference"
+  },
+  "precio": 3.9,
+  "slug": {
+   "_type": "slug",
+   "current": "sillas-coctelera-tiffany-doradas-altas"
+  },
+  "titulo": "Sillas Coctelera Tiffany Doradas Altas",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-60691e82f75a839abea2d1de6add40c6436db4a0-500x500-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:48:48Z",
+  "_id": "drafts.producto-sillas-sillas-coctelera-tiffany-plateadas-altas",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-sillas",
+   "_type": "reference"
+  },
+  "precio": 3.9,
+  "slug": {
+   "_type": "slug",
+   "current": "sillas-coctelera-tiffany-plateadas-altas"
+  },
+  "titulo": "Sillas Coctelera Tiffany Plateadas Altas",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-697734de16759946ea99cc372dc90d332ab74e37-500x500-png",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:48:52Z",
+  "_id": "drafts.producto-sillas-sillas-coctelera-tiffanys-transparente-altas",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-sillas",
+   "_type": "reference"
+  },
+  "precio": 5,
+  "slug": {
+   "_type": "slug",
+   "current": "sillas-coctelera-tiffanys-transparente-altas"
+  },
+  "titulo": "Sillas Coctelera Tiffanys Transparente Altas",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-2a22f5de6e8f881759b13e83558f7b512c7556d4-1024x1024-png",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ }
+]
