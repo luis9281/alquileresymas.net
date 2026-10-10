@@ -9,6 +9,8 @@
  * /studio. Safe to re-run: existing categories/products are left untouched
  * (createIfNotExists), so re-running only picks up new files.
  *
+ * Every image is compressed with bin/lib/optimizar-imagen.mjs before upload.
+ *
  * Usage (needs SANITY_API_TOKEN with "Editor" permissions in .env.local):
  *
  *   node --env-file=.env.local bin/import-a-sanity.mjs
@@ -17,6 +19,7 @@ import { createClient } from "@sanity/client";
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join, extname, basename } from "node:path";
 import { fileURLToPath } from "node:url";
+import { optimizarImagen, cambiarExtension, kb } from "./lib/optimizar-imagen.mjs";
 
 const { NEXT_PUBLIC_SANITY_PROJECT_ID, NEXT_PUBLIC_SANITY_DATASET, SANITY_API_TOKEN } = process.env;
 
@@ -41,7 +44,9 @@ const CATEGORIAS = {
   "buffet-catering": "Buffet y Catering",
   "coolers-hieleras": "Coolers y Hieleras",
   cristaleria: "Cristalería",
-  "decoracion-ambientacion": "Decoracion y Ambientacion",
+  // Antes "Decoracion y Ambientacion"; la carpeta conserva el nombre viejo porque
+  // de ella sale el _id "categoria-decoracion-ambientacion" que ya existe en Sanity.
+  "decoracion-ambientacion": "Toldas",
   "manteles-licras": "Manteles y Licras",
   mesas: "Mesas",
   "plantas-potes-decorativos": "Plantas y Potes Decorativos",
@@ -114,8 +119,12 @@ for (const categoriaSlug of Object.keys(CATEGORIAS)) {
     }
 
     const filePath = join(categoriaDir, archivo);
-    const asset = await client.assets.upload("image", readFileSync(filePath), {
-      filename: archivo,
+    const original = readFileSync(filePath);
+    const { buffer, ext, contentType, optimizada } = await optimizarImagen(original);
+    if (optimizada) console.log(`  ${archivo}: ${kb(original.length)} -> ${kb(buffer.length)}`);
+    const asset = await client.assets.upload("image", buffer, {
+      filename: optimizada ? cambiarExtension(archivo, ext) : archivo,
+      ...(contentType && { contentType }),
     });
 
     await client.createIfNotExists({

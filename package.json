@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "eslint",
     "import:sanity": "node --env-file=.env.local bin/import-a-sanity.mjs",
+    "optimizar:imagenes": "node bin/optimizar-imagenes.mjs",
     "merge:variantes": "node --env-file=.env.local bin/merge-variantes.mjs",
     "publish:all": "node --env-file=.env.local bin/publish-all-drafts.mjs"
   },
@@ -36,6 +37,7 @@
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.3.4",
     "postcss": "^8.5.26",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3"
   }

@@ -28,6 +28,7 @@ next-env.d.ts
 # (bin/import-a-sanity.mjs) - las fotos ya viven en Sanity, no las usa el
 # sitio en runtime. ~86MB, se deja fuera del repo para no inflarlo.
 /productos/
+/productos-optimizadas/
 
 # estado local de Claude Code, no es parte del proyecto
 /.claude/

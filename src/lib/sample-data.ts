@@ -11,7 +11,7 @@ export const categoriasMuestra: Categoria[] = [
   { slug: "buffet-catering", nombre: "Buffet y Catering" },
   { slug: "coolers-hieleras", nombre: "Coolers y Hieleras" },
   { slug: "cristaleria", nombre: "Cristalería" },
-  { slug: "decoracion-ambientacion", nombre: "Decoracion y Ambientacion" },
+  { slug: "toldas", nombre: "Toldas" },
   { slug: "manteles-licras", nombre: "Manteles y Licras" },
   { slug: "mesas", nombre: "Mesas" },
   { slug: "plantas-potes-decorativos", nombre: "Plantas y Potes Decorativos" },
