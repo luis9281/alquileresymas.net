@@ -17,7 +17,7 @@ export const categoriasMuestra: Categoria[] = [
   { slug: "plantas-potes-decorativos", nombre: "Plantas y Potes Decorativos" },
   { slug: "salas-lounge", nombre: "Salas Lounge" },
   { slug: "sillas", nombre: "Sillas" },
-  { slug: "utileria", nombre: "Utileria" },
+  { slug: "utileria", nombre: "Utilería" },
 ];
 
 function categoria(slug: string): Categoria {

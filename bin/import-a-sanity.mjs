@@ -53,7 +53,7 @@ const CATEGORIAS = {
   "plantas-potes-decorativos": "Plantas y Potes Decorativos",
   "salas-lounge": "Salas Lounge",
   sillas: "Sillas",
-  utileria: "Utileria",
+  utileria: "Utilería",
 };
 
 const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp"]);
