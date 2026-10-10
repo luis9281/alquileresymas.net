@@ -82,11 +82,17 @@ type SanityCategoria = {
   imagen?: SanityImageSource;
 };
 
+// Hidden categories (and their products) stay off the site. To review one locally
+// before publishing it: MOSTRAR_CATEGORIAS_OCULTAS=1 npm run dev (never set on Vercel).
+const mostrarOcultas = process.env.MOSTRAR_CATEGORIAS_OCULTAS === "1";
+const CATEGORIA_VISIBLE = mostrarOcultas ? "" : "&& oculta != true";
+const PRODUCTO_VISIBLE = mostrarOcultas ? "" : "&& categoria->oculta != true";
+
 export async function getCategorias(): Promise<Categoria[]> {
   if (!sanityClient) return categoriasMuestra;
   try {
     const data: SanityCategoria[] = await sanityClient.fetch(
-      `*[_type == "categoriaProducto" && oculta != true] | order(orden asc, titulo asc){ "nombre": titulo, "slug": slug.current, imagen }`
+      `*[_type == "categoriaProducto" ${CATEGORIA_VISIBLE}] | order(orden asc, titulo asc){ "nombre": titulo, "slug": slug.current, imagen }`
     );
     if (!data?.length) return categoriasMuestra;
     return data.map((c) => ({
@@ -108,7 +114,7 @@ export async function getProductos(categoriaSlug?: string): Promise<Producto[]> 
   try {
     const filtro = categoriaSlug ? `&& categoria->slug.current == $categoriaSlug` : "";
     const data: SanityProducto[] = await sanityClient.fetch(
-      `*[_type == "producto" ${filtro}] | order(titulo asc){
+      `*[_type == "producto" ${PRODUCTO_VISIBLE} ${filtro}] | order(titulo asc){
         _id, titulo, slug, subcategoria, variantes, medidas, capacidad, descripcion, precio,
         "categoria": categoria->{ titulo, slug }
       }`,
@@ -133,7 +139,7 @@ export async function getProducto(slug: string): Promise<Producto | null> {
   }
   try {
     const data: SanityProducto | null = await sanityClient.fetch(
-      `*[_type == "producto" && slug.current == $slug][0]{
+      `*[_type == "producto" && slug.current == $slug ${PRODUCTO_VISIBLE}][0]{
         _id, titulo, slug, subcategoria, variantes, medidas, capacidad, descripcion, precio,
         "categoria": categoria->{ titulo, slug }
       }`,
