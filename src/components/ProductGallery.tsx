@@ -73,6 +73,10 @@ export default function ProductGallery({
         </Link>
         <h1 className="mt-2">{producto.titulo}</h1>
 
+        {typeof producto.precio === "number" && (
+          <p className="mt-2 text-lg font-semibold text-ink">${producto.precio.toFixed(2)}</p>
+        )}
+
         {(producto.medidas || producto.capacidad) && (
           <ul className="mt-4 space-y-1 text-muted">
             {producto.medidas && <li><strong className="text-ink">Medidas:</strong> {producto.medidas}</li>}
