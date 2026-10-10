@@ -84,7 +84,7 @@ export async function getCategorias(): Promise<Categoria[]> {
   if (!sanityClient) return categoriasMuestra;
   try {
     const data: SanityCategoria[] = await sanityClient.fetch(
-      `*[_type == "categoriaProducto"] | order(orden asc, titulo asc){ "nombre": titulo, "slug": slug.current, imagen }`
+      `*[_type == "categoriaProducto" && oculta != true] | order(orden asc, titulo asc){ "nombre": titulo, "slug": slug.current, imagen }`
     );
     if (!data?.length) return categoriasMuestra;
     return data.map((c) => ({
