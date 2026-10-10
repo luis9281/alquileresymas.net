@@ -12,7 +12,7 @@ export const categoriasMuestra: Categoria[] = [
   { slug: "hieleras-coolers", nombre: "Hieleras y Coolers" },
   { slug: "cristaleria", nombre: "Cristalería" },
   { slug: "toldas", nombre: "Toldas" },
-  { slug: "manteles-licras", nombre: "Manteles y Licras" },
+  { slug: "manteleria", nombre: "Mantelería" },
   { slug: "mesas", nombre: "Mesas" },
   { slug: "plantas-potes-decorativos", nombre: "Plantas y Potes Decorativos" },
   { slug: "salas-lounge", nombre: "Salas Lounge" },

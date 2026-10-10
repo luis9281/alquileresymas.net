@@ -48,7 +48,8 @@ const CATEGORIAS = {
   // Antes "Decoracion y Ambientacion"; la carpeta conserva el nombre viejo porque
   // de ella sale el _id "categoria-decoracion-ambientacion" que ya existe en Sanity.
   "decoracion-ambientacion": "Toldas",
-  "manteles-licras": "Manteles y Licras",
+  // Antes "Manteles y Licras"; la carpeta conserva el nombre viejo por el _id existente en Sanity.
+  "manteles-licras": "Mantelería",
   mesas: "Mesas",
   "plantas-potes-decorativos": "Plantas y Potes Decorativos",
   "salas-lounge": "Salas Lounge",

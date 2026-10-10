@@ -6,6 +6,7 @@ import RangoPrecio from "./RangoPrecio";
 import BuscadorProductos, { MIN_CARACTERES_BUSQUEDA, normalizar } from "./BuscadorProductos";
 import type { Producto } from "@/lib/types";
 import { aListados, tituloListado, type ProductoListado } from "@/lib/producto";
+import { familiaDeColor, ORDEN_FAMILIAS, type FamiliaColor } from "@/lib/colores";
 
 const OPCIONES_ORDEN = [
   { value: "nombre-asc", label: "Nombre: A-Z" },
@@ -29,18 +30,25 @@ function comparar(a: ProductoListado, b: ProductoListado, orden: Orden): number 
   return orden === "precio-asc" ? pa - pb : pb - pa;
 }
 
+const familiaDe = ({ producto, varianteIdx }: ProductoListado) =>
+  familiaDeColor(producto.variantes[varianteIdx]?.color);
+
 export default function CatalogGrid({
   productos,
   filtroPrecio = false,
+  filtroColor = false,
 }: {
   productos: Producto[];
   /** Show the price range slider (only used inside a single category). */
   filtroPrecio?: boolean;
+  /** Show the color-family chips (only used inside a single category). */
+  filtroColor?: boolean;
 }) {
   const [orden, setOrden] = useState<Orden>("nombre-asc");
   const [busqueda, setBusqueda] = useState("");
   // null = whole range, i.e. no price filter.
   const [rango, setRango] = useState<[number, number] | null>(null);
+  const [colores, setColores] = useState<string[]>([]);
   const listados = useMemo(() => aListados(productos), [productos]);
   const nombres = useMemo(() => listados.map(tituloListado), [listados]);
 
@@ -54,10 +62,27 @@ export default function CatalogGrid({
   }, [productos]);
   const mostrarFiltroPrecio = filtroPrecio && limites !== null;
 
+  // Color families present in this category, with listing counts.
+  const familias = useMemo(() => {
+    const cuenta = new Map<string, { familia: FamiliaColor; cantidad: number }>();
+    for (const l of listados) {
+      const f = familiaDe(l);
+      if (!f) continue;
+      const actual = cuenta.get(f.nombre);
+      if (actual) actual.cantidad++;
+      else cuenta.set(f.nombre, { familia: f, cantidad: 1 });
+    }
+    return [...cuenta.values()].sort(
+      (a, b) => ORDEN_FAMILIAS.indexOf(a.familia.nombre) - ORDEN_FAMILIAS.indexOf(b.familia.nombre),
+    );
+  }, [listados]);
+  const mostrarFiltroColor = filtroColor && familias.length >= 2;
+
   const consulta = normalizar(busqueda.trim());
   const buscando = consulta.length >= MIN_CARACTERES_BUSQUEDA;
   const filtrandoPrecio = mostrarFiltroPrecio && rango !== null;
-  const filtrando = buscando || filtrandoPrecio;
+  const filtrandoColor = mostrarFiltroColor && colores.length > 0;
+  const filtrando = buscando || filtrandoPrecio || filtrandoColor;
 
   const ordenados = useMemo(() => {
     const filtrados = listados.filter((l) => {
@@ -67,10 +92,11 @@ export default function CatalogGrid({
         const precio = l.producto.precio;
         if (typeof precio !== "number" || precio < rango[0] || precio > rango[1]) return false;
       }
+      if (filtrandoColor && !colores.includes(familiaDe(l)?.nombre ?? "")) return false;
       return true;
     });
     return filtrados.sort((a, b) => comparar(a, b, orden));
-  }, [listados, orden, buscando, consulta, filtrandoPrecio, rango]);
+  }, [listados, orden, buscando, consulta, filtrandoPrecio, rango, filtrandoColor, colores]);
 
   if (listados.length === 0) {
     return <p className="text-muted">Pronto agregaremos productos a esta categoría.</p>;
@@ -82,7 +108,13 @@ export default function CatalogGrid({
   const limpiarFiltros = () => {
     setBusqueda("");
     setRango(null);
+    setColores([]);
   };
+
+  const alternarColor = (nombre: string) =>
+    setColores((actuales) =>
+      actuales.includes(nombre) ? actuales.filter((c) => c !== nombre) : [...actuales, nombre],
+    );
 
   return (
     <div>
@@ -116,6 +148,38 @@ export default function CatalogGrid({
           </select>
         </div>
       </div>
+
+      {mostrarFiltroColor && (
+        <fieldset className="mb-6">
+          <legend className="mb-2 text-sm text-muted">Color</legend>
+          <div className="flex flex-wrap gap-2">
+            {familias.map(({ familia, cantidad }) => {
+              const activo = colores.includes(familia.nombre);
+              return (
+                <button
+                  key={familia.nombre}
+                  type="button"
+                  aria-pressed={activo}
+                  onClick={() => alternarColor(familia.nombre)}
+                  className={`flex items-center gap-1.5 rounded-full border py-1 pl-1 pr-3 text-sm transition-colors ${
+                    activo
+                      ? "border-teal bg-teal/10 font-semibold text-teal-dark"
+                      : "border-border bg-white text-ink hover:border-teal"
+                  }`}
+                >
+                  <span
+                    aria-hidden="true"
+                    className="h-5 w-5 rounded-full border border-black/15"
+                    style={{ background: familia.muestra }}
+                  />
+                  {familia.nombre}
+                  <span className="text-xs text-muted">{cantidad}</span>
+                </button>
+              );
+            })}
+          </div>
+        </fieldset>
+      )}
 
       {filtrando && (
         <p className="mb-4 text-sm text-muted" aria-live="polite">

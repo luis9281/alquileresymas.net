@@ -59,7 +59,7 @@ export default async function CategoriaPage({ params, searchParams }: Props) {
           subActiva={subActiva?.slug}
         />
 
-        <CatalogGrid key={`${slug}-${subActiva?.slug ?? ""}`} productos={visibles} filtroPrecio />
+        <CatalogGrid key={`${slug}-${subActiva?.slug ?? ""}`} productos={visibles} filtroPrecio filtroColor />
       </section>
     </>
   );

@@ -1,0 +1,12 @@
+{
+ "_createdAt": "2026-09-02T01:32:16Z",
+ "_id": "categoria-manteles-licras",
+ "_rev": "xegrAlRcIY0yJhP3hapGcc",
+ "_type": "categoriaProducto",
+ "_updatedAt": "2026-09-02T01:32:16Z",
+ "slug": {
+  "_type": "slug",
+  "current": "manteles-licras"
+ },
+ "titulo": "Manteles y Licras"
+}

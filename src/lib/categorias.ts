@@ -20,15 +20,19 @@ export function slugSubcategoria(nombre: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
-/** Distinct subcategories of a category's products, A-Z, with product counts. */
+/**
+ * Distinct subcategories of a category's products, A-Z. `cantidad` counts
+ * catalog cards (one per color variant), matching what the grid shows.
+ */
 export function subcategoriasDe(productos: Producto[]): Subcategoria[] {
   const porSlug = new Map<string, Subcategoria>();
   for (const p of productos) {
     if (!p.subcategoria) continue;
     const slug = slugSubcategoria(p.subcategoria);
+    const tarjetas = Math.max(1, p.variantes.length);
     const actual = porSlug.get(slug);
-    if (actual) actual.cantidad++;
-    else porSlug.set(slug, { slug, nombre: p.subcategoria, cantidad: 1 });
+    if (actual) actual.cantidad += tarjetas;
+    else porSlug.set(slug, { slug, nombre: p.subcategoria, cantidad: tarjetas });
   }
   return [...porSlug.values()].sort((a, b) => a.nombre.localeCompare(b.nombre, "es"));
 }
