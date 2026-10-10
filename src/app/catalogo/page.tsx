@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import CatalogGrid from "@/components/CatalogGrid";
+import CategoriasSidebar from "@/components/CategoriasSidebar";
 import { getCategorias, getProductos } from "@/lib/sanity/queries";
 
 export const metadata: Metadata = {
@@ -24,18 +24,7 @@ export default async function CatalogoPage() {
       </section>
 
       <section className="mx-auto grid max-w-[1350px] gap-10 px-6 py-16 md:grid-cols-[220px_1fr]">
-        <aside>
-          <h2 className="mb-4 text-lg">Categorías</h2>
-          <ul className="space-y-2">
-            {categorias.map((c) => (
-              <li key={c.slug}>
-                <Link href={`/catalogo/${c.slug}`} className="text-ink hover:text-teal">
-                  {c.nombre}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </aside>
+        <CategoriasSidebar categorias={categorias} />
 
         <CatalogGrid productos={productos} />
       </section>

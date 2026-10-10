@@ -42,7 +42,8 @@ const client = createClient({
 const CATEGORIAS = {
   "bares-counters-podiums": "Bares, Counters y Podiums",
   "buffet-catering": "Buffet y Catering",
-  "coolers-hieleras": "Coolers y Hieleras",
+  // Antes "Coolers y Hieleras"; la carpeta conserva el nombre viejo por el _id existente en Sanity.
+  "coolers-hieleras": "Hieleras y Coolers",
   cristaleria: "Cristalería",
   // Antes "Decoracion y Ambientacion"; la carpeta conserva el nombre viejo porque
   // de ella sale el _id "categoria-decoracion-ambientacion" que ya existe en Sanity.

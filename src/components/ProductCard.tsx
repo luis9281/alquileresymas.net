@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Producto } from "@/lib/types";
 import { esImagenSanity } from "@/lib/images";
 import QuoteButton from "./QuoteButton";
+import { formatoPrecio } from "@/lib/precio";
 
 export default function ProductCard({
   producto,
@@ -43,7 +44,7 @@ export default function ProductCard({
           <Link href={href}>{titulo}</Link>
         </h3>
         {typeof producto.precio === "number" && (
-          <p className="text-sm font-semibold text-ink">${producto.precio.toFixed(2)}</p>
+          <p className="text-sm font-semibold text-ink">{formatoPrecio(producto.precio)}</p>
         )}
         <div className="mt-auto flex items-center gap-3 pt-2">
           <Link

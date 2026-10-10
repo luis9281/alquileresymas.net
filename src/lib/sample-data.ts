@@ -9,7 +9,7 @@ import type { Categoria, Producto, Post } from "./types";
 export const categoriasMuestra: Categoria[] = [
   { slug: "bares-counters-podiums", nombre: "Bares, Counters y Podiums" },
   { slug: "buffet-catering", nombre: "Buffet y Catering" },
-  { slug: "coolers-hieleras", nombre: "Coolers y Hieleras" },
+  { slug: "hieleras-coolers", nombre: "Hieleras y Coolers" },
   { slug: "cristaleria", nombre: "Cristalería" },
   { slug: "toldas", nombre: "Toldas" },
   { slug: "manteles-licras", nombre: "Manteles y Licras" },

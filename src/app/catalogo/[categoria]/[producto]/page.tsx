@@ -57,7 +57,7 @@ export default async function ProductoPage({ params, searchParams }: Props) {
           offers: {
             "@type": "Offer",
             price: producto.precio,
-            priceCurrency: "USD",
+            priceCurrency: "PAB",
             availability: "https://schema.org/InStock",
             url: `${SITE_URL}/catalogo/${categoriaSlug}/${slug}`,
           },

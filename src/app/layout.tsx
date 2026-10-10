@@ -8,6 +8,8 @@ import JsonLd from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { QuoteProvider } from "@/components/QuoteContext";
 import { CONTACTO, LAT, LNG } from "@/lib/site-info";
+import { getCategorias } from "@/lib/sanity/queries";
+import { ordenarAlfabeticamente } from "@/lib/categorias";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -73,16 +75,18 @@ const localBusinessJsonLd = {
   sameAs: [CONTACTO.redes.facebook, CONTACTO.redes.instagram, CONTACTO.redes.tiktok],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const categorias = ordenarAlfabeticamente(await getCategorias());
+
   return (
     <html lang="es">
       <body className={`${playfair.variable} ${workSans.variable} antialiased`}>
         <GoogleAnalytics />
         <JsonLd data={localBusinessJsonLd} />
         <QuoteProvider>
-          <Header />
+          <Header categorias={categorias.map(({ slug, nombre }) => ({ slug, nombre }))} />
           <main>{children}</main>
           <Footer />
           <WhatsAppButton />

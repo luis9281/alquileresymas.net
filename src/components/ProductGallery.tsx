@@ -6,6 +6,7 @@ import Image from "next/image";
 import type { Producto } from "@/lib/types";
 import { esImagenSanity } from "@/lib/images";
 import QuoteButton from "./QuoteButton";
+import { formatoPrecio } from "@/lib/precio";
 
 export default function ProductGallery({
   producto,
@@ -74,7 +75,7 @@ export default function ProductGallery({
         <h1 className="mt-2">{producto.titulo}</h1>
 
         {typeof producto.precio === "number" && (
-          <p className="mt-2 text-lg font-semibold text-ink">${producto.precio.toFixed(2)}</p>
+          <p className="mt-2 text-lg font-semibold text-ink">{formatoPrecio(producto.precio)}</p>
         )}
 
         {(producto.medidas || producto.capacidad) && (

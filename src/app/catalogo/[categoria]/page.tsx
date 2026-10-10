@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CatalogGrid from "@/components/CatalogGrid";
+import CategoriasSidebar from "@/components/CategoriasSidebar";
 import { getCategorias, getProductos } from "@/lib/sanity/queries";
 
 type Props = { params: Promise<{ categoria: string }> };
@@ -39,23 +40,9 @@ export default async function CategoriaPage({ params }: Props) {
       </section>
 
       <section className="mx-auto grid max-w-[1350px] gap-10 px-6 py-16 md:grid-cols-[220px_1fr]">
-        <aside>
-          <h2 className="mb-4 text-lg">Categorías</h2>
-          <ul className="space-y-2">
-            {categorias.map((c) => (
-              <li key={c.slug}>
-                <Link
-                  href={`/catalogo/${c.slug}`}
-                  className={c.slug === slug ? "font-bold text-lime-dark" : "text-ink hover:text-teal"}
-                >
-                  {c.nombre}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </aside>
+        <CategoriasSidebar categorias={categorias} activa={slug} />
 
-        <CatalogGrid productos={productos} />
+        <CatalogGrid key={slug} productos={productos} filtroPrecio />
       </section>
     </>
   );
