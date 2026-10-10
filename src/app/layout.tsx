@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { preconnect } from "react-dom";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -82,6 +83,8 @@ const localBusinessJsonLd = {
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  // Product photos come from Sanity's CDN: open that connection while the HTML is still loading.
+  preconnect("https://cdn.sanity.io");
   const categorias = ordenarAlfabeticamente(await getCategorias());
 
   return (

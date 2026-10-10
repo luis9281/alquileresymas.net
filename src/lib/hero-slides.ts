@@ -19,7 +19,8 @@ export const heroSlides: HeroSlide[] = [
   {
     type: "video",
     src: "/eventos/decoracion-evento-video.mp4",
-    poster: "/eventos/decoracion-evento-1.jpg",
+    // Versión 1280px del primer fotograma (~90 KB): es lo primero que se pinta (LCP).
+    poster: "/eventos/decoracion-evento-poster.jpg",
   },
   {
     type: "image",

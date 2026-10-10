@@ -100,7 +100,7 @@ export default function CategoryShowcase({
               {imagen ? (
                 <Image
                   src={imagen}
-                  alt={titulo}
+                  alt=""
                   fill
                   unoptimized={esImagenSanity(imagen)}
                   sizes="(max-width: 640px) 270px, 33vw"

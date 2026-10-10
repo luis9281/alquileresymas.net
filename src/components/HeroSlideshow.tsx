@@ -58,17 +58,21 @@ export default function HeroSlideshow({
       </AnimatePresence>
 
       {slides.length > 1 && (
-        <div className="absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+        <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2">
           {slides.map((_, i) => (
+            // The visible dot stays small; the button around it is a 24px touch target.
             <button
               key={i}
               type="button"
               aria-label={`Ir a la diapositiva ${i + 1}`}
+              aria-current={i === index ? "true" : undefined}
               onClick={() => setIndex(i)}
-              className={`h-1.5 rounded-full transition-all ${
-                i === index ? "w-6 bg-lime" : "w-1.5 bg-white/50"
-              }`}
-            />
+              className="flex h-6 min-w-6 items-center justify-center px-1"
+            >
+              <span
+                className={`block h-1.5 rounded-full transition-all ${i === index ? "w-6 bg-lime" : "w-1.5 bg-white/50"}`}
+              />
+            </button>
           ))}
         </div>
       )}

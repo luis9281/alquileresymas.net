@@ -20,6 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${categoria.nombre} | Alquileres Eventos & Más`,
     description: `Renta de ${categoria.nombre.toLowerCase()} para eventos en Panamá. Fotos reales, entrega, montaje y desmontaje incluidos.`,
     alternates: { canonical: `/catalogo/${slug}` },
+    // Category cover as the preview image when the link is shared (WhatsApp, Facebook...).
+    openGraph: categoria.imagen ? { images: [categoria.imagen] } : undefined,
   };
 }
 

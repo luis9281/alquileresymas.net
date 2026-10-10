@@ -53,6 +53,8 @@ export default function ProductGallery({
               <button
                 key={img}
                 type="button"
+                aria-label={`Ver foto ${idx + 1} de ${imagenes.length}`}
+                aria-current={idx === imagenIdx ? "true" : undefined}
                 onClick={() => setImagenIdx(idx)}
                 className={`h-16 w-16 overflow-hidden rounded border-2 ${
                   idx === imagenIdx ? "border-teal" : "border-transparent"

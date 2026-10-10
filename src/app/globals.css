@@ -9,7 +9,7 @@
   --color-lime-dark: #a9b923;
   --color-cream: #faf7f1;
   --color-border: #e3decf;
-  --color-muted: #6e7c80;
+  --color-muted: #627075; /* 4.8:1 on cream (was #6e7c80, 4.0:1 - below WCAG AA) */
 
   --font-display: var(--font-playfair), Georgia, serif;
   --font-body: var(--font-worksans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;

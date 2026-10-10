@@ -25,7 +25,11 @@ export default function CategoriasSidebar({
               <Link
                 href={`/catalogo/${c.slug}`}
                 aria-current={esActiva && !subActiva ? "page" : undefined}
-                className={esActiva ? "font-bold text-lime-dark" : "text-ink hover:text-teal"}
+                className={
+                  esActiva
+                    ? "font-bold text-teal-dark underline decoration-lime decoration-2 underline-offset-4"
+                    : "text-ink hover:text-teal"
+                }
               >
                 {c.nombre}
               </Link>
