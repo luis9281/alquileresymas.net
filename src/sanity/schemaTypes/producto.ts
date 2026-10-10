@@ -21,6 +21,13 @@ export default defineType({
       validation: (r) => r.required(),
     }),
     defineField({
+      name: "subcategoria",
+      title: "Subcategoria",
+      description:
+        "Opcional. Agrupa productos dentro de la categoria y aparece en la barra lateral del catalogo (ej. Copas, Vasos, Dispensadores). Escribela igual en todos los productos del grupo.",
+      type: "string",
+    }),
+    defineField({
       name: "variantes",
       title: "Variantes (color / acabado)",
       description:

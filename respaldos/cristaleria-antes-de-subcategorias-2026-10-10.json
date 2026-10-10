@@ -1,0 +1,808 @@
+[
+ {
+  "_createdAt": "2026-09-03T13:44:58Z",
+  "_id": "producto-cristaleria-copa-de-agua",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.35,
+  "slug": {
+   "_type": "slug",
+   "current": "copa-de-agua"
+  },
+  "titulo": "Copa de Agua",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-1f4f29f524627650d173f723605d6c1f5bf6c9b7-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:45:01Z",
+  "_id": "producto-cristaleria-copa-de-champana",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.35,
+  "slug": {
+   "_type": "slug",
+   "current": "copa-de-champana"
+  },
+  "titulo": "Copa de champaña",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-e30b2e6a03a638e9f7e479ca6a0bbf41944eee4a-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:45:04Z",
+  "_id": "producto-cristaleria-copa-de-gin",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 1,
+  "slug": {
+   "_type": "slug",
+   "current": "copa-de-gin"
+  },
+  "titulo": "Copa de Gin",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-109c2cd497043b2866260fbfcf0563f01e3e6e04-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:45:08Z",
+  "_id": "producto-cristaleria-copa-de-martini",
+  "_rev": "Fp6j2OFYXErtrNMrGBFbzy",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:30:01Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.7,
+  "slug": {
+   "_type": "slug",
+   "current": "copa-de-martini"
+  },
+  "titulo": "Copa de martini",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-427d5ae147e02823d134f65b7142b82c8333cc7c-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:45:11Z",
+  "_id": "producto-cristaleria-copa-de-vino",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.35,
+  "slug": {
+   "_type": "slug",
+   "current": "copa-de-vino"
+  },
+  "titulo": "Copa de vino",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-6101b8340a52facc3736f3086d838fa99e5b2291-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:45:16Z",
+  "_id": "producto-cristaleria-copa-imperial",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 1,
+  "slug": {
+   "_type": "slug",
+   "current": "copa-imperial"
+  },
+  "titulo": "Copa imperial",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-e9152c7938091b6705cd0a8864b7d27f968456a6-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:45:21Z",
+  "_id": "producto-cristaleria-copa-sage-green",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 1,
+  "slug": {
+   "_type": "slug",
+   "current": "copa-sage-green"
+  },
+  "titulo": "Copa Sage Green",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-5cede9f3668b91b7b22d4b80d0e3a675f00c21f2-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:13Z",
+  "_id": "producto-cristaleria-cuacharita-de-postre",
+  "_rev": "Fp6j2OFYXErtrNMrGBFbzy",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:30:01Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.25,
+  "slug": {
+   "_type": "slug",
+   "current": "cuacharita-de-postre"
+  },
+  "titulo": "Cuacharita de postre",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-a12e0d9956939aeef41563bbbbb054a50032f4ee-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:10Z",
+  "_id": "producto-cristaleria-cuacharita-de-postre-dorada",
+  "_rev": "Fp6j2OFYXErtrNMrGBFbzy",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:30:01Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.5,
+  "slug": {
+   "_type": "slug",
+   "current": "cuacharita-de-postre-dorada"
+  },
+  "titulo": "Cuacharita de postre Dorada",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-9ab59f9b5f3c28b2dde880d37cf1d6c13b3e445c-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:16Z",
+  "_id": "producto-cristaleria-cuchara-cuchara-de-sopa",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.25,
+  "slug": {
+   "_type": "slug",
+   "current": "cuchara-cuchara-de-sopa"
+  },
+  "titulo": "Cuchara-cuchara de sopa",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-a1afb25b5bd6bfa55e784dd8e97515a8f65807ac-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:19Z",
+  "_id": "producto-cristaleria-cuchillo-dorado",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.5,
+  "slug": {
+   "_type": "slug",
+   "current": "cuchillo-dorado"
+  },
+  "titulo": "Cuchillo dorado",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-fac4530f8eb47cc81a173988013918ea2fe3e68e-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:22Z",
+  "_id": "producto-cristaleria-cuchillos-de-comida",
+  "_rev": "Fp6j2OFYXErtrNMrGBFbzy",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:30:01Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.25,
+  "slug": {
+   "_type": "slug",
+   "current": "cuchillos-de-comida"
+  },
+  "titulo": "Cuchillos de comida",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-5713afae71b529e4925d00b4b872c95d7be3e1ba-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:24Z",
+  "_id": "producto-cristaleria-porta-plato-de-crema-beige",
+  "_rev": "trzJwo7gNjLjmFEMdsinjQ",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:27:15Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 1,
+  "slug": {
+   "_type": "slug",
+   "current": "porta-plato-de-crema-beige"
+  },
+  "titulo": "Porta plato de Crema-beige",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-92401c41a890a980d0fc3eb32a185cbc94005b88-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:27Z",
+  "_id": "producto-cristaleria-porta-plato-de-gris",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 1,
+  "slug": {
+   "_type": "slug",
+   "current": "porta-plato-de-gris"
+  },
+  "titulo": "Porta plato de Gris",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-8d15637aacc25fdb85ab3c1a2009d335e4455073-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:30Z",
+  "_id": "producto-cristaleria-porta-plato-de-mimbre",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 1,
+  "slug": {
+   "_type": "slug",
+   "current": "porta-plato-de-mimbre"
+  },
+  "titulo": "Porta plato de mimbre",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-e3a5231e1a4a9707681a2fe36257cf7695ddb27e-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:33Z",
+  "_id": "producto-cristaleria-porta-plato-de-rosado",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 1,
+  "slug": {
+   "_type": "slug",
+   "current": "porta-plato-de-rosado"
+  },
+  "titulo": "Porta plato de Rosado",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-7ff08bfab3b076ec5411341de48c4f8e557022f2-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:36Z",
+  "_id": "producto-cristaleria-porta-plato-de-vidrio",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 1.75,
+  "slug": {
+   "_type": "slug",
+   "current": "porta-plato-de-vidrio"
+  },
+  "titulo": "Porta plato de vidrio",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-3f6791215d1384b8ace57204572158d9b11d820d-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:45:25Z",
+  "_id": "producto-cristaleria-taza-de-cafe-con-platito",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.6,
+  "slug": {
+   "_type": "slug",
+   "current": "taza-de-cafe-con-platito"
+  },
+  "titulo": "Taza de café con platito",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-5965de3db6bbfd874e9c199beeac5397a4bf85cf-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:39Z",
+  "_id": "producto-cristaleria-tenedor-de-boquita",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.15,
+  "slug": {
+   "_type": "slug",
+   "current": "tenedor-de-boquita"
+  },
+  "titulo": "Tenedor de boquita",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-b50cb6138854d1d85ccefd7c5d23eeb6e47aeacf-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:42Z",
+  "_id": "producto-cristaleria-tenedor-de-plato-fuerte",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.25,
+  "slug": {
+   "_type": "slug",
+   "current": "tenedor-de-plato-fuerte"
+  },
+  "titulo": "Tenedor de plato fuerte",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-f804040ebcdeb502da9799583b215d44e0fdfa05-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:45Z",
+  "_id": "producto-cristaleria-tenedor-dorado",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.5,
+  "slug": {
+   "_type": "slug",
+   "current": "tenedor-dorado"
+  },
+  "titulo": "Tenedor dorado",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-389980cda402a6df7452b38bc157828947ae3b33-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-15T22:46:48Z",
+  "_id": "producto-cristaleria-tenedor-dorado2",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.5,
+  "slug": {
+   "_type": "slug",
+   "current": "tenedor-dorado2"
+  },
+  "titulo": "Tenedor dorado2",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-706724c53f0f63a867863febd7b76b7653258f6e-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:45:29Z",
+  "_id": "producto-cristaleria-vaso-de-cerveza",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 1.25,
+  "slug": {
+   "_type": "slug",
+   "current": "vaso-de-cerveza"
+  },
+  "titulo": "Vaso de cerveza",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-173effe8feb5a460b87261625067742a00fb687c-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:45:37Z",
+  "_id": "producto-cristaleria-vaso-de-shots-de-2-onz",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.25,
+  "slug": {
+   "_type": "slug",
+   "current": "vaso-de-shots-de-2-onz"
+  },
+  "titulo": "Vaso de shots de 2 onz",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-9ea8bfd07c4cdbefffa4528c6d1a1fdea2e93084-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:45:43Z",
+  "_id": "producto-cristaleria-vaso-largo",
+  "_rev": "Fp6j2OFYXErtrNMrGBFbzy",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:30:01Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.35,
+  "slug": {
+   "_type": "slug",
+   "current": "vaso-largo"
+  },
+  "titulo": "Vaso largo",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-1ccd0d709f9dfc342b9555e215fb9d1a5357dbf1-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_createdAt": "2026-09-03T13:45:46Z",
+  "_id": "producto-cristaleria-vaso-roca",
+  "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+  "_type": "producto",
+  "_updatedAt": "2026-09-23T21:23:50Z",
+  "categoria": {
+   "_ref": "categoria-cristaleria",
+   "_type": "reference"
+  },
+  "precio": 0.25,
+  "slug": {
+   "_type": "slug",
+   "current": "vaso-roca"
+  },
+  "titulo": "Vaso Roca",
+  "variantes": [
+   {
+    "_type": "variante",
+    "imagenes": [
+     {
+      "_type": "image",
+      "asset": {
+       "_ref": "image-75cd7aac2c665d1dcd35fe6ea087c0b346d80444-1024x1024-jpg",
+       "_type": "reference"
+      }
+     }
+    ]
+   }
+  ]
+ }
+]

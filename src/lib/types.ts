@@ -16,6 +16,7 @@ export type Producto = {
   titulo: string;
   slug: string;
   categoria: Categoria;
+  subcategoria?: string;
   variantes: ProductoVariante[];
   medidas?: string;
   capacidad?: string;

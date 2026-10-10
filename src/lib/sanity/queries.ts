@@ -21,6 +21,7 @@ type SanityProducto = {
   titulo: string;
   slug: { current: string };
   categoria: { titulo: string; slug: { current: string } } | null;
+  subcategoria?: string;
   variantes?: SanityVariante[];
   medidas?: string;
   capacidad?: string;
@@ -53,6 +54,7 @@ function mapProducto(p: SanityProducto): Producto {
       slug: p.categoria?.slug.current ?? "sin-categoria",
       nombre: p.categoria?.titulo ?? "Sin categoria",
     },
+    subcategoria: p.subcategoria?.trim() || undefined,
     variantes,
     medidas: p.medidas,
     capacidad: p.capacidad,
@@ -107,7 +109,7 @@ export async function getProductos(categoriaSlug?: string): Promise<Producto[]> 
     const filtro = categoriaSlug ? `&& categoria->slug.current == $categoriaSlug` : "";
     const data: SanityProducto[] = await sanityClient.fetch(
       `*[_type == "producto" ${filtro}] | order(titulo asc){
-        _id, titulo, slug, variantes, medidas, capacidad, descripcion, precio,
+        _id, titulo, slug, subcategoria, variantes, medidas, capacidad, descripcion, precio,
         "categoria": categoria->{ titulo, slug }
       }`,
       { categoriaSlug }
@@ -132,7 +134,7 @@ export async function getProducto(slug: string): Promise<Producto | null> {
   try {
     const data: SanityProducto | null = await sanityClient.fetch(
       `*[_type == "producto" && slug.current == $slug][0]{
-        _id, titulo, slug, variantes, medidas, capacidad, descripcion, precio,
+        _id, titulo, slug, subcategoria, variantes, medidas, capacidad, descripcion, precio,
         "categoria": categoria->{ titulo, slug }
       }`,
       { slug }
