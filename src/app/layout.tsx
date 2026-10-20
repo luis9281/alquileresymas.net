@@ -28,10 +28,11 @@ const workSans = localFont({
   variable: "--font-worksans",
 });
 
-// Refresca el contenido de Sanity (Vercel/produccion) cada 60s como maximo,
+// Refresca el contenido de Sanity (Vercel/produccion) cada hora como maximo,
 // sin necesitar un redeploy. Aplica a todas las paginas salvo que una
-// defina su propio `revalidate` mas corto.
-export const revalidate = 60;
+// defina su propio `revalidate` mas corto. Antes era 60s y disparaba el
+// consumo de ISR en el plan Hobby de Vercel.
+export const revalidate = 3600;
 
 const SITE_URL = "https://www.alquileresymas.net";
 const SITE_TITLE = "Alquileres Eventos & Más";

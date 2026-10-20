@@ -40,14 +40,6 @@ export default async function HomePage() {
     p.titulo === "Crossback" || p.titulo.toLowerCase().includes("tiffany") ? 0 : 1;
   const sillasDestacadas = [...sillas].sort((a, b) => prioridadSilla(a) - prioridadSilla(b));
 
-  // Cristalería se muestra en orden aleatorio en la home (se remezcla en
-  // cada regeneración ISR, no en cada visita — ver revalidate en layout.tsx).
-  const cristaleriaAleatoria = [...cristaleria];
-  for (let i = cristaleriaAleatoria.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [cristaleriaAleatoria[i], cristaleriaAleatoria[j]] = [cristaleriaAleatoria[j], cristaleriaAleatoria[i]];
-  }
-
   // "Decoracion y Ambientacion" no se muestra en esta cuadrícula por ahora
   // (sigue existiendo en Sanity y en /catalogo, solo se oculta aquí).
   // El orden de las demás lo controla el campo "orden" de cada categoría en Sanity.
@@ -106,7 +98,10 @@ export default async function HomePage() {
           titulo="Cristalería para cada brindis"
           copy={`Copas de vino, champaña, martini y más, hasta vasos y tazas: ${cristaleria.length}+ piezas para que cada bebida se sirva a la altura de tu evento.`}
           verTodoHref="/catalogo/cristaleria"
-          productos={cristaleriaAleatoria}
+          productos={cristaleria}
+          // Orden aleatorio en cada visita, mezclado en el navegador para que
+          // el HTML cacheado (ISR) no cambie entre regeneraciones.
+          aleatorio
         />
       </RevealOnScroll>
 

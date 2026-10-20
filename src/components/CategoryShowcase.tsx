@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Producto } from "@/lib/types";
@@ -20,6 +20,7 @@ export default function CategoryShowcase({
   verTodoHref,
   productos,
   video,
+  aleatorio = false,
 }: {
   eyebrow: string;
   titulo: string;
@@ -28,14 +29,35 @@ export default function CategoryShowcase({
   productos: Producto[];
   /** Optional video shown as the first card, e.g. a short clip of a real event setup. */
   video?: { src: string; poster?: string };
+  /**
+   * Shuffle the cards in the browser after mount. Done client-side on purpose: shuffling on
+   * the server makes every ISR regeneration produce different HTML, and Vercel bills each
+   * changed regeneration as an ISR write.
+   */
+  aleatorio?: boolean;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [mezclados, setMezclados] = useState<Producto[] | null>(null);
+
+  useEffect(() => {
+    if (!aleatorio) return;
+    const copia = [...productos];
+    for (let i = copia.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copia[i], copia[j]] = [copia[j], copia[i]];
+    }
+    // Shuffle must run after hydration so server and client HTML match.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMezclados(copia);
+  }, [productos, aleatorio]);
+
+  const orden = aleatorio && mezclados ? mezclados : productos;
 
   function scroll(dir: 1 | -1) {
     scrollRef.current?.scrollBy({ left: dir * scrollRef.current.clientWidth * 0.85, behavior: "smooth" });
   }
 
-  const listados = aListados(productos);
+  const listados = aListados(orden);
 
   if (listados.length === 0 && !video) return null;
 
