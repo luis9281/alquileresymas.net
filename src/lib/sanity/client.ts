@@ -8,8 +8,16 @@ export const apiVersion = "2025-01-01";
 /** Whether a real Sanity project is configured, or we're still on sample data. */
 export const sanityConfigured = Boolean(projectId);
 
+// To review unpublished drafts locally before publishing them:
+// MOSTRAR_BORRADORES=1 npm run dev (needs SANITY_API_TOKEN; never set on Vercel).
+const mostrarBorradores = process.env.MOSTRAR_BORRADORES === "1" && Boolean(process.env.SANITY_API_TOKEN);
+
 export const sanityClient = sanityConfigured
-  ? createClient({ projectId, dataset, apiVersion, useCdn: true })
+  ? createClient(
+      mostrarBorradores
+        ? { projectId, dataset, apiVersion, useCdn: false, token: process.env.SANITY_API_TOKEN, perspective: "drafts" }
+        : { projectId, dataset, apiVersion, useCdn: true }
+    )
   : null;
 
 const builder = sanityClient ? createImageUrlBuilder(sanityClient) : null;

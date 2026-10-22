@@ -1,4 +1,18 @@
-import { defineField, defineType } from "sanity";
+import { defineArrayMember, defineField, defineType } from "sanity";
+
+// Photos inside the article: the alt text is what Google and screen readers read.
+const imagenConAlt = defineArrayMember({
+  type: "image",
+  options: { hotspot: true },
+  fields: [
+    defineField({
+      name: "alt",
+      title: "Texto alternativo",
+      description: "Describe la foto en pocas palabras (ej. Servilleta de tela azul navy doblada).",
+      type: "string",
+    }),
+  ],
+});
 
 export default defineType({
   name: "post",
@@ -22,7 +36,34 @@ export default defineType({
       initialValue: () => new Date().toISOString(),
       validation: (r) => r.required(),
     }),
-    defineField({ name: "contenido", title: "Contenido", type: "array", of: [{ type: "block" }, { type: "image" }] }),
+    defineField({
+      name: "contenido",
+      title: "Contenido",
+      type: "array",
+      of: [
+        { type: "block" },
+        imagenConAlt,
+        defineArrayMember({
+          name: "galeria",
+          title: "Galeria (2-3 fotos lado a lado)",
+          type: "object",
+          fields: [
+            defineField({
+              name: "imagenes",
+              title: "Fotos",
+              type: "array",
+              of: [imagenConAlt],
+              validation: (r) => r.required().min(2).max(3),
+            }),
+            defineField({ name: "leyenda", title: "Pie de foto", type: "string" }),
+          ],
+          preview: {
+            select: { title: "leyenda", media: "imagenes.0" },
+            prepare: ({ title, media }) => ({ title: title || "Galeria", media }),
+          },
+        }),
+      ],
+    }),
   ],
   preview: { select: { title: "titulo", media: "imagen" } },
 });

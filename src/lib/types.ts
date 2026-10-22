@@ -17,6 +17,8 @@ export type Producto = {
   slug: string;
   categoria: Categoria;
   subcategoria?: string;
+  /** Third level inside the subcategory (Redondos > Corrugado). */
+  tipo?: string;
   variantes: ProductoVariante[];
   medidas?: string;
   capacidad?: string;

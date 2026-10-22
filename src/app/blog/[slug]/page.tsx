@@ -1,15 +1,56 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { PortableText } from "@portabletext/react";
+import { PortableText, type PortableTextComponents } from "@portabletext/react";
+import type { SanityImageSource } from "@sanity/image-url";
 import JsonLd from "@/components/JsonLd";
 import { getPost } from "@/lib/sanity/queries";
 import { esImagenSanity } from "@/lib/images";
+import { urlFor } from "@/lib/sanity/client";
 
 const SITE_URL = "https://www.alquileresymas.net";
 const SITE_TITLE = "Alquileres Eventos & Más";
 
 type Props = { params: Promise<{ slug: string }> };
+
+type ImagenContenido = SanityImageSource & { _key?: string; alt?: string };
+
+// Photos and 2-3 photo galleries placed inside the article body from /studio.
+const componentes: PortableTextComponents = {
+  types: {
+    image: ({ value }: { value: ImagenContenido }) => {
+      const src = urlFor(value)?.width(1200).fit("max").auto("format").url();
+      if (!src) return null;
+      return (
+        <figure className="not-prose my-8">
+          <Image src={src} alt={value.alt ?? ""} width={1200} height={800} unoptimized className="h-auto w-full rounded-md" />
+        </figure>
+      );
+    },
+    galeria: ({ value }: { value: { imagenes?: ImagenContenido[]; leyenda?: string } }) => (
+      <figure className="not-prose my-8">
+        <div className={`grid grid-cols-2 gap-3 ${value.imagenes?.length === 3 ? "sm:grid-cols-3" : ""}`}>
+          {value.imagenes?.map((img, i) => {
+            const src = urlFor(img)?.width(600).height(600).fit("crop").auto("format").url();
+            return src ? (
+              <Image
+                key={img._key ?? i}
+                src={src}
+                alt={img.alt ?? ""}
+                width={600}
+                height={600}
+                unoptimized
+                loading="lazy"
+                className="aspect-square w-full rounded-md border border-border bg-white object-cover"
+              />
+            ) : null;
+          })}
+        </div>
+        {value.leyenda && <figcaption className="mt-2 text-center text-sm text-muted">{value.leyenda}</figcaption>}
+      </figure>
+    ),
+  },
+};
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -73,7 +114,7 @@ export default async function PostPage({ params }: Props) {
 
       <div className="prose prose-neutral mt-8 max-w-none">
         {post.contenido && post.contenido.length > 0 ? (
-          <PortableText value={post.contenido} />
+          <PortableText value={post.contenido} components={componentes} />
         ) : (
           post.extracto && <p>{post.extracto}</p>
         )}

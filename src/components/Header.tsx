@@ -19,15 +19,23 @@ const SERVICIOS_LINKS: SubLink[] = [
   { href: "/catalogo", label: "Catálogo de Productos" },
 ];
 
+// Subcategories popular enough to get their own entry in the Catálogo menu
+// (listed only while their parent category is visible).
+const SUBCATEGORIAS_MENU: (SubLink & { categoria: string })[] = [
+  { categoria: "manteleria", href: "/catalogo/manteleria?sub=servilletas", label: "Servilletas" },
+];
+
 function navLinks(categorias: Pick<Categoria, "slug" | "nombre">[]): NavLink[] {
+  const catalogo: SubLink[] = [
+    ...categorias.map((c) => ({ href: `/catalogo/${c.slug}`, label: c.nombre })),
+    ...SUBCATEGORIAS_MENU.filter((s) => categorias.some((c) => c.slug === s.categoria)).map(({ href, label }) => ({
+      href,
+      label,
+    })),
+  ].sort((a, b) => a.label.localeCompare(b.label, "es"));
   return [
     { href: "/", label: "Inicio" },
-    {
-      href: "/catalogo",
-      label: "Catálogo",
-      compacto: true,
-      children: categorias.map((c) => ({ href: `/catalogo/${c.slug}`, label: c.nombre })),
-    },
+    { href: "/catalogo", label: "Catálogo", compacto: true, children: catalogo },
     { label: "Servicios", children: SERVICIOS_LINKS },
     { href: "/blog", label: "Blog" },
     { href: "/nosotros", label: "Nosotros" },
