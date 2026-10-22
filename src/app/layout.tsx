@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/GoogleTagManager";
 import { QuoteProvider } from "@/components/QuoteContext";
 import { CONTACTO, LAT, LNG } from "@/lib/site-info";
 import { getCategorias } from "@/lib/sanity/queries";
@@ -91,6 +92,8 @@ export default async function RootLayout({
   return (
     <html lang="es">
       <body className={`${playfair.variable} ${workSans.variable} antialiased`}>
+        <GoogleTagManagerNoScript />
+        <GoogleTagManager />
         <GoogleAnalytics />
         <JsonLd data={localBusinessJsonLd} />
         <QuoteProvider>
