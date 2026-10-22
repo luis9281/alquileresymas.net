@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useQuote } from "./QuoteContext";
 import { CONTACTO } from "@/lib/site-info";
@@ -41,6 +42,7 @@ export default function QuoteForm() {
   const { items, removeItem, updateQty, clearAll } = useQuote();
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const router = useRouter();
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -73,7 +75,7 @@ export default function QuoteForm() {
       }
       setStatus("ok");
       clearAll();
-      (event.target as HTMLFormElement).reset();
+      router.push("/gracias");
     } catch {
       setStatus("error");
       setErrorMsg("No se pudo enviar la solicitud. Revisa tu conexion e intenta de nuevo.");
@@ -155,11 +157,6 @@ export default function QuoteForm() {
       </div>
 
       <div>
-        {status === "ok" && (
-          <p className="mb-5 rounded-md bg-green-100 px-4 py-3 font-semibold text-green-800">
-            Gracias, recibimos tu solicitud. Te contactaremos muy pronto.
-          </p>
-        )}
         {status === "error" && (
           <p className="mb-5 rounded-md bg-red-100 px-4 py-3 font-semibold text-red-800">{errorMsg}</p>
         )}
@@ -185,6 +182,11 @@ export default function QuoteForm() {
           >
             {status === "sending" ? "Enviando…" : "Enviar solicitud de cotización"}
           </button>
+
+          <p className="text-xs text-muted">
+            Al enviar aceptas nuestra{" "}
+            <Link href="/politica-de-privacidad" className="text-teal underline">política de privacidad</Link>.
+          </p>
 
           <div className="flex items-center gap-3 text-sm text-muted">
             <span className="h-px flex-1 bg-border" />

@@ -47,6 +47,7 @@ export default async function Footer() {
             <li><Link href="/nosotros" className="hover:text-lime">Nosotros</Link></li>
             <li><Link href="/blog" className="hover:text-lime">Blog</Link></li>
             <li><Link href="/contacto" className="hover:text-lime">Contacto</Link></li>
+            <li><Link href="/politica-de-privacidad" className="hover:text-lime">Política de privacidad</Link></li>
           </ul>
         </div>
 
@@ -72,6 +73,8 @@ export default async function Footer() {
 
       <div className="border-t border-white/15 px-6 py-5 text-center text-xs">
         © {new Date().getFullYear()} Alquileres Eventos & Más. Todos los derechos reservados.
+        {" · "}
+        <Link href="/politica-de-privacidad" className="hover:text-lime">Política de privacidad</Link>
       </div>
     </footer>
   );
