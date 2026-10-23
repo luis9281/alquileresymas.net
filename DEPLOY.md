@@ -29,6 +29,7 @@ Copia `.env.local.example` a `.env.local` (o configúralas directo en el panel d
 | `SANITY_API_TOKEN` | Solo si vas a correr el script de importación masiva en el servidor |
 | `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` | Envío de correo del formulario de cotización |
 | `QUOTE_TO_EMAIL` | A dónde llegan las solicitudes de cotización |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY` | Captcha Cloudflare Turnstile del formulario (opcional) |
 
 **Nunca subas `.env.local` a git.** Ya está en `.gitignore`.
 

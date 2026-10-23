@@ -12,7 +12,31 @@ type QuoteRequestBody = {
   items?: QuoteItem[];
   /** Honeypot field: real visitors never fill this. */
   website?: string;
+  /** Token del captcha Cloudflare Turnstile. */
+  captchaToken?: string;
 };
+
+/** Valida el token de Turnstile con Cloudflare. Sin TURNSTILE_SECRET_KEY no se exige captcha. */
+async function captchaValido(token: string, ip: string | null): Promise<boolean> {
+  const secret = process.env.TURNSTILE_SECRET_KEY;
+  if (!secret) return true;
+  if (!token) return false;
+
+  const datos = new URLSearchParams({ secret, response: token });
+  if (ip) datos.set("remoteip", ip);
+
+  try {
+    const res = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      body: datos,
+    });
+    const resultado = (await res.json()) as { success?: boolean };
+    return resultado.success === true;
+  } catch (error) {
+    console.error("Error validando el captcha:", error);
+    return false;
+  }
+}
 
 export async function POST(request: Request) {
   let body: QuoteRequestBody;
@@ -25,6 +49,11 @@ export async function POST(request: Request) {
   if (body.website) {
     // Honeypot tripped: silently pretend success so bots don't learn anything.
     return NextResponse.json({ ok: true });
+  }
+
+  const ip = request.headers.get("cf-connecting-ip") ?? request.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? null;
+  if (!(await captchaValido(body.captchaToken ?? "", ip))) {
+    return NextResponse.json({ error: "Confirma que no eres un robot e intenta de nuevo." }, { status: 400 });
   }
 
   const nombre = (body.nombre ?? "").trim();

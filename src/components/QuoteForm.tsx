@@ -1,14 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useQuote } from "./QuoteContext";
+import Turnstile, { type TurnstileHandle } from "./Turnstile";
 import { CONTACTO } from "@/lib/site-info";
 import { esImagenSanity } from "@/lib/images";
 import type { QuoteItem } from "@/lib/types";
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 function construirMensajeWhatsApp(form: HTMLFormElement, items: QuoteItem[]) {
   const data = new FormData(form);
@@ -43,6 +46,7 @@ export default function QuoteForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const router = useRouter();
+  const captchaRef = useRef<TurnstileHandle>(null);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -58,6 +62,7 @@ export default function QuoteForm() {
       lugar: String(form.get("lugar") || ""),
       mensaje: String(form.get("mensaje") || ""),
       website: String(form.get("website") || ""),
+      captchaToken: String(form.get("cf-turnstile-response") || ""),
       items,
     };
 
@@ -71,6 +76,8 @@ export default function QuoteForm() {
       if (!res.ok) {
         setStatus("error");
         setErrorMsg(data.error || "No se pudo enviar la solicitud.");
+        // Cada token sirve una sola vez: pide uno nuevo para el siguiente intento.
+        captchaRef.current?.reset();
         return;
       }
       setStatus("ok");
@@ -79,6 +86,7 @@ export default function QuoteForm() {
     } catch {
       setStatus("error");
       setErrorMsg("No se pudo enviar la solicitud. Revisa tu conexion e intenta de nuevo.");
+      captchaRef.current?.reset();
     }
   }
 
@@ -174,6 +182,8 @@ export default function QuoteForm() {
             <span className="mb-1.5 block text-sm font-semibold">Cuéntanos más</span>
             <textarea name="mensaje" rows={4} className="w-full rounded-md border border-border bg-white p-3" />
           </label>
+
+          {TURNSTILE_SITE_KEY && <Turnstile ref={captchaRef} siteKey={TURNSTILE_SITE_KEY} />}
 
           <button
             type="submit"
