@@ -30,10 +30,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // /catalogo/manteleria?sub=servilletas has its own canonical (see the category page metadata).
+  // Next writes <loc> without XML-escaping, so "&tipo=" must go out as "&amp;tipo=".
   const subcategoriaUrls: MetadataRoute.Sitemap = categorias.flatMap((c) =>
     subcategoriasDe(productos.filter((p) => p.categoria.slug === c.slug)).flatMap((s) =>
       [undefined, ...s.tipos.map((t) => t.slug)].map((tipo) => ({
-        url: `${SITE_URL}${urlSeleccion(c.slug, s.slug, tipo)}`,
+        url: `${SITE_URL}${urlSeleccion(c.slug, s.slug, tipo)}`.replaceAll("&", "&amp;"),
         changeFrequency: "weekly" as const,
         priority: tipo ? 0.6 : 0.7,
       }))
