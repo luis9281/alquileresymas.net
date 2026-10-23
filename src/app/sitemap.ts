@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getCategorias, getProductos, getPosts } from "@/lib/sanity/queries";
 import { subcategoriasDe, urlSeleccion } from "@/lib/categorias";
 
-const SITE_URL = "https://www.alquileresymas.net";
+import { SITE_URL } from "@/lib/site-info";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [categorias, productos, posts] = await Promise.all([

@@ -9,7 +9,7 @@ import { imagenPrincipal } from "@/lib/producto";
 import { formatoPrecio } from "@/lib/precio";
 import type { Producto } from "@/lib/types";
 
-const SITE_URL = "https://www.alquileresymas.net";
+import { SITE_URL } from "@/lib/site-info";
 
 type Props = {
   params: Promise<{ categoria: string; producto: string }>;

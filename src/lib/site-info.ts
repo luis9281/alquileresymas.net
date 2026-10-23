@@ -1,3 +1,6 @@
+// Dominio canonico: con www (Vercel redirige alquileresymas.net -> www).
+export const SITE_URL = "https://www.alquileresymas.net";
+
 const DIRECCION = "Ave. Domingo Díaz, Antiguo Auto Depot, Local B19 - B20 - B21, Ciudad de Panamá";
 
 // Coordenadas exactas del local, resueltas desde el link de Google Maps que compartio el cliente.

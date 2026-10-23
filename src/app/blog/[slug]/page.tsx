@@ -8,7 +8,7 @@ import { getPost } from "@/lib/sanity/queries";
 import { esImagenSanity } from "@/lib/images";
 import { urlFor } from "@/lib/sanity/client";
 
-const SITE_URL = "https://www.alquileresymas.net";
+import { SITE_URL } from "@/lib/site-info";
 const SITE_TITLE = "Alquileres Eventos & Más";
 
 type Props = { params: Promise<{ slug: string }> };

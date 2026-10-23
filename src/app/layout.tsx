@@ -9,7 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/GoogleTagManager";
 import { QuoteProvider } from "@/components/QuoteContext";
-import { CONTACTO, LAT, LNG } from "@/lib/site-info";
+import { CONTACTO, LAT, LNG, SITE_URL } from "@/lib/site-info";
 import { getCategorias } from "@/lib/sanity/queries";
 import { ordenarAlfabeticamente } from "@/lib/categorias";
 
@@ -35,7 +35,6 @@ const workSans = localFont({
 // consumo de ISR en el plan Hobby de Vercel.
 export const revalidate = 3600;
 
-const SITE_URL = "https://www.alquileresymas.net";
 const SITE_TITLE = "Alquileres Eventos & Más";
 const SITE_DESCRIPTION =
   "Renta de mobiliario y equipo para eventos en Panamá: sillas, mesas, bares, cristalería y decoración. Entrega, montaje y transporte propio incluidos. Cotiza sin compromiso.";
