@@ -21,6 +21,8 @@ export default function CategoryShowcase({
   productos,
   video,
   aleatorio = false,
+  limite = 12,
+  total,
 }: {
   eyebrow: string;
   titulo: string;
@@ -35,6 +37,10 @@ export default function CategoryShowcase({
    * changed regeneration as an ISR write.
    */
   aleatorio?: boolean;
+  /** Max cards shown; the strip ends with a "Ver los N productos" card linking to the catalog. */
+  limite?: number;
+  /** Cards in the full catalog category, for that last card. */
+  total: number;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [mezclados, setMezclados] = useState<Producto[] | null>(null);
@@ -57,7 +63,7 @@ export default function CategoryShowcase({
     scrollRef.current?.scrollBy({ left: dir * scrollRef.current.clientWidth * 0.85, behavior: "smooth" });
   }
 
-  const listados = aListados(orden);
+  const listados = aListados(orden).slice(0, limite);
 
   if (listados.length === 0 && !video) return null;
 
@@ -118,7 +124,7 @@ export default function CategoryShowcase({
             variante?.color ? `?color=${encodeURIComponent(variante.color)}` : ""
           }`;
           return (
-            <Link key={`${p._id}-${varianteIdx}`} href={href} className={CARD_CLASS}>
+            <Link key={`${p._id}-${variante?.color ?? varianteIdx}`} href={href} className={CARD_CLASS}>
               {imagen ? (
                 <Image
                   src={imagen}
@@ -136,6 +142,17 @@ export default function CategoryShowcase({
             </Link>
           );
         })}
+
+        <Link
+          href={verTodoHref}
+          className={`${CARD_CLASS} flex flex-col items-center justify-center gap-3 border border-border p-6 text-center hover:border-teal`}
+        >
+          <span className="text-5xl font-semibold text-teal">{total}</span>
+          <span className="text-lg font-semibold text-teal-dark">opciones en el catálogo</span>
+          <span className="mt-2 rounded-md bg-lime px-5 py-2.5 text-sm font-semibold text-teal-dark group-hover:bg-lime-dark">
+            Ver todo →
+          </span>
+        </Link>
       </div>
     </section>
   );

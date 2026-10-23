@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
 import ProductGallery from "@/components/ProductGallery";
 import JsonLd from "@/components/JsonLd";
+import RegistrarVista from "@/components/RegistrarVista";
 import { getProducto, getProductos } from "@/lib/sanity/queries";
 import { imagenPrincipal } from "@/lib/producto";
 import { formatoPrecio } from "@/lib/precio";
@@ -94,6 +95,7 @@ export default async function ProductoPage({ params, searchParams }: Props) {
     <>
       <JsonLd data={productJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
+      <RegistrarVista productoId={producto._id} />
       <section className="mx-auto grid max-w-[1350px] gap-12 px-6 py-16 md:grid-cols-2">
         <ProductGallery producto={producto} varianteInicial={varianteInicial} />
       </section>

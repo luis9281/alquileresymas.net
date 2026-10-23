@@ -21,3 +21,45 @@ export function tituloListado({ producto, varianteIdx }: ProductoListado): strin
   const color = producto.variantes[varianteIdx]?.color;
   return color ? `${producto.titulo} — ${color}` : producto.titulo;
 }
+
+// Neutral colors go last in showcases: a strip of white and black tablecloths sells less.
+const NEUTRO = /\b(blanc|negr|crema|marfil|beige|gris)/i;
+
+/**
+ * Picks up to `limite` cards for a home showcase, rotating across groups (subcategory + type,
+ * or the product itself when it has none) so one 20-color product can't fill the strip.
+ * Groups keep their order of first appearance in `productos`; inside each product, vivid
+ * colors come before neutral ones. Returns one single-variant copy of the product per card,
+ * in showcase order, which also keeps the page payload small.
+ */
+export function seleccionVitrina(productos: Producto[], limite: number): Producto[] {
+  const grupos = new Map<string, { producto: Producto; variantes: number[] }[]>();
+  for (const p of productos) {
+    const variantes = p.variantes
+      .map((v, i) => ({ i, neutro: NEUTRO.test(v.color ?? "") }))
+      .sort((a, b) => Number(a.neutro) - Number(b.neutro))
+      .map((v) => v.i);
+    const clave = p.subcategoria ? `${p.subcategoria}/${p.tipo ?? ""}` : p._id;
+    grupos.set(clave, [...(grupos.get(clave) ?? []), { producto: p, variantes }]);
+  }
+
+  const elegidos: Producto[] = [];
+  const colas = [...grupos.values()].map((items) => ({ items, turno: 0 }));
+  let quedan = limite;
+  while (quedan > 0 && colas.some((c) => c.items.some((it) => it.variantes.length))) {
+    for (const cola of colas) {
+      if (quedan === 0) break;
+      // Next product in this group that still has unshown variants, round-robin.
+      for (let n = 0; n < cola.items.length; n++) {
+        const item = cola.items[(cola.turno + n) % cola.items.length];
+        if (!item.variantes.length) continue;
+        elegidos.push({ ...item.producto, variantes: [item.producto.variantes[item.variantes.shift()!]] });
+        cola.turno = (cola.turno + n + 1) % cola.items.length;
+        quedan--;
+        break;
+      }
+    }
+  }
+
+  return elegidos;
+}

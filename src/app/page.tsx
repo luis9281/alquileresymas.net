@@ -5,8 +5,10 @@ import CategoryShowcase from "@/components/CategoryShowcase";
 import ServiciosSection from "@/components/ServiciosSection";
 import BlogCard from "@/components/BlogCard";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import MasVistos from "@/components/MasVistos";
 import { getCategorias, getProductos, getPosts } from "@/lib/sanity/queries";
-import { imagenPrincipal } from "@/lib/producto";
+import { imagenPrincipal, seleccionVitrina } from "@/lib/producto";
+import { getMasVistos } from "@/lib/vistas";
 
 export default async function HomePage() {
   const [categorias, productos, posts] = await Promise.all([
@@ -45,6 +47,18 @@ export default async function HomePage() {
   // El orden de las demás lo controla el campo "orden" de cada categoría en Sanity.
   const categoriasVisibles = categorias.filter((c) => c.slug !== "decoracion-ambientacion");
 
+  // Cards per category in the catalog (one per color), for each showcase's "Ver todo" card.
+  const tarjetas = (lista: typeof productos) => lista.reduce((n, p) => n + Math.max(1, p.variantes.length), 0);
+
+  // "Lo más visto": last week's ranking; until there's data, one product per category in turn.
+  const porCategoria = categoriasVisibles.map((c) => productos.filter((p) => p.categoria.slug === c.slug));
+  const relleno = Array.from({ length: Math.max(0, ...porCategoria.map((l) => l.length)) }, (_, i) =>
+    porCategoria.map((l) => l[i]).filter(Boolean)
+  ).flat();
+  const masVistos = await getMasVistos(productos, [sillasDestacadas[0], ...relleno].filter(Boolean), 8);
+  // Each product shows its most colorful variant as the thumbnail.
+  const masVistosVistosos = masVistos.productos.map((p) => seleccionVitrina([p], 1)[0] ?? p);
+
   return (
     <>
       <Hero />
@@ -62,13 +76,16 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <MasVistos productos={masVistosVistosos} conDatos={masVistos.conDatos} />
+
       <RevealOnScroll>
         <CategoryShowcase
           eyebrow="Nuestra colección"
           titulo="Sillas para cada estilo de evento"
           copy={`Del clásico Tiffany dorado al minimalismo transparente del Phoenix: ${sillas.length}+ modelos para bodas, eventos corporativos y celebraciones íntimas, en la cantidad que necesites.`}
           verTodoHref="/catalogo/sillas"
-          productos={sillasDestacadas}
+          productos={seleccionVitrina(sillasDestacadas, 12)}
+          total={tarjetas(sillas)}
         />
       </RevealOnScroll>
 
@@ -78,7 +95,8 @@ export default async function HomePage() {
           titulo="Mesas para cada montaje"
           copy={`Redondas, rectangulares, cocteleras o decorativas, en blanco y chocolate: ${mesas.length}+ mesas para armar el layout perfecto de tu evento.`}
           verTodoHref="/catalogo/mesas"
-          productos={mesas}
+          productos={seleccionVitrina(mesas, 12)}
+          total={tarjetas(mesas)}
         />
       </RevealOnScroll>
 
@@ -88,7 +106,8 @@ export default async function HomePage() {
           titulo="Mantelería para vestir cada mesa"
           copy={`Manteles redondos, rectangulares y lycras para mesas cocteleras, en lisos, corrugados y satín: ${manteleria.reduce((n, p) => n + p.variantes.length, 0)}+ colores para combinar con la paleta de tu evento.`}
           verTodoHref="/catalogo/manteleria"
-          productos={manteleria}
+          productos={seleccionVitrina(manteleria, 12)}
+          total={tarjetas(manteleria)}
         />
       </RevealOnScroll>
 
@@ -99,6 +118,7 @@ export default async function HomePage() {
           copy={`Copas de vino, champaña, martini y más, hasta vasos y tazas: ${cristaleria.length}+ piezas para que cada bebida se sirva a la altura de tu evento.`}
           verTodoHref="/catalogo/cristaleria"
           productos={cristaleria}
+          total={tarjetas(cristaleria)}
           // Orden aleatorio en cada visita, mezclado en el navegador para que
           // el HTML cacheado (ISR) no cambie entre regeneraciones.
           aleatorio
