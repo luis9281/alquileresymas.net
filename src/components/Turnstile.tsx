@@ -4,7 +4,7 @@ import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
 import Script from "next/script";
 
 type TurnstileApi = {
-  render: (el: HTMLElement, opts: { sitekey: string; language?: string }) => string;
+  render: (el: HTMLElement, opts: { sitekey: string; action?: string; language?: string }) => string;
   reset: (widgetId?: string) => void;
   remove: (widgetId: string) => void;
 };
@@ -14,6 +14,9 @@ declare global {
     turnstile?: TurnstileApi;
   }
 }
+
+/** Debe coincidir con lo que valida /api/cotizacion. */
+export const TURNSTILE_ACTION = "cotizacion";
 
 export type TurnstileHandle = { reset: () => void };
 
@@ -29,7 +32,7 @@ const Turnstile = forwardRef<TurnstileHandle, { siteKey: string }>(function Turn
 
   function renderWidget() {
     if (!window.turnstile || !containerRef.current || widgetId.current) return;
-    widgetId.current = window.turnstile.render(containerRef.current, { sitekey: siteKey, language: "es" });
+    widgetId.current = window.turnstile.render(containerRef.current, { sitekey: siteKey, action: TURNSTILE_ACTION, language: "es" });
   }
 
   useEffect(() => {

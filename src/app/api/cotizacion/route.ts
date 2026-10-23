@@ -16,11 +16,22 @@ type QuoteRequestBody = {
   captchaToken?: string;
 };
 
+const TURNSTILE_ACTION = "cotizacion";
+
+// Dominios desde donde se acepta el captcha. localhost solo cuenta en desarrollo.
+const HOSTNAMES_PERMITIDOS = [
+  "alquileresymas.net",
+  "www.alquileresymas.net",
+  ...(process.env.NODE_ENV === "development" ? ["localhost", "127.0.0.1"] : []),
+];
+
+type SiteverifyResult = { success?: boolean; action?: string; hostname?: string };
+
 /** Valida el token de Turnstile con Cloudflare. Sin TURNSTILE_SECRET_KEY no se exige captcha. */
 async function captchaValido(token: string, ip: string | null): Promise<boolean> {
   const secret = process.env.TURNSTILE_SECRET_KEY;
   if (!secret) return true;
-  if (!token) return false;
+  if (!token || token.length > 2048) return false;
 
   const datos = new URLSearchParams({ secret, response: token });
   if (ip) datos.set("remoteip", ip);
@@ -30,8 +41,14 @@ async function captchaValido(token: string, ip: string | null): Promise<boolean>
       method: "POST",
       body: datos,
     });
-    const resultado = (await res.json()) as { success?: boolean };
-    return resultado.success === true;
+    if (!res.ok) return false;
+    const resultado = (await res.json()) as SiteverifyResult;
+    return (
+      resultado.success === true &&
+      resultado.action === TURNSTILE_ACTION &&
+      !!resultado.hostname &&
+      HOSTNAMES_PERMITIDOS.includes(resultado.hostname)
+    );
   } catch (error) {
     console.error("Error validando el captcha:", error);
     return false;
