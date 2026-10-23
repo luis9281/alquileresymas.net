@@ -9,7 +9,7 @@ export type FamiliaColor = { nombre: string; muestra: string };
 const FAMILIAS: { familia: FamiliaColor; claves: string[] }[] = [
   {
     familia: { nombre: "Estampado", muestra: "repeating-linear-gradient(45deg,#111 0 4px,#fff 4px 8px)" },
-    claves: [" y ", "rombo"],
+    claves: [" y ", "rombo", "navide"],
   },
   { familia: { nombre: "Turquesa", muestra: "#1fb5c9" }, claves: ["turquesa", "aqua"] },
   { familia: { nombre: "Dorado", muestra: "linear-gradient(135deg,#b8862b,#f3d77a,#b8862b)" }, claves: ["dorad"] },

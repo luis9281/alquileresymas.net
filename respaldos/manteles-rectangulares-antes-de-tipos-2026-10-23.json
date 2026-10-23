@@ -1,0 +1,222 @@
+[
+  {
+    "_createdAt": "2026-10-10T20:16:46Z",
+    "_id": "producto-manteleria-mantel-rectangular-grande-corrugado",
+    "_rev": "GbP60G3Uqz2qrcSPqQRVm1",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T20:16:46Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "precio": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "mantel-rectangular-grande-corrugado"
+    },
+    "subcategoria": "Rectangulares",
+    "titulo": "Mantel rectangular grande corrugado",
+    "variantes": [
+      {
+        "_key": "fa7ec634",
+        "_type": "variante",
+        "color": "Azul navy",
+        "imagenes": [
+          {
+            "_key": "f6ede3f8",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-390922c383d5c143c4cf9cbacbb056c678c2a8db-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "da3cb41c",
+        "_type": "variante",
+        "color": "Rojo",
+        "imagenes": [
+          {
+            "_key": "6b373f52",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-79176055f5cb880407a5f0ee956da23ea66228bb-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T20:16:46Z",
+    "_id": "producto-manteleria-mantel-rectangular-grande-liso",
+    "_rev": "GbP60G3Uqz2qrcSPqQRVm1",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T20:16:46Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "precio": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "mantel-rectangular-grande-liso"
+    },
+    "subcategoria": "Rectangulares",
+    "titulo": "Mantel rectangular grande liso",
+    "variantes": [
+      {
+        "_key": "bef81217",
+        "_type": "variante",
+        "color": "Azul navy",
+        "imagenes": [
+          {
+            "_key": "24eb9259",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3997f76f1b50bf39745338d503005283860eb6ac-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "1c7e1b02",
+        "_type": "variante",
+        "color": "Blanco",
+        "imagenes": [
+          {
+            "_key": "f9cd60b2",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ce8a80760efc07fbce8fc0fb4399e6cfee724e7b-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "40ebbc1e",
+        "_type": "variante",
+        "color": "Crema",
+        "imagenes": [
+          {
+            "_key": "3142280e",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2fa03481e5ecb6c95255ae7ae1c8ce7071c1f1a1-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "4fcc2e30",
+        "_type": "variante",
+        "color": "Dorado",
+        "imagenes": [
+          {
+            "_key": "643d7907",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-bd95e35291a51e72c4a4741118355904fb3c8ff9-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "2c384b5e",
+        "_type": "variante",
+        "color": "Morado",
+        "imagenes": [
+          {
+            "_key": "f80da5f6",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4a636168d1ecfe4c8db5a0f2c170bc4faa2b59a3-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "3f0019cf",
+        "_type": "variante",
+        "color": "Negro",
+        "imagenes": [
+          {
+            "_key": "34bbec34",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f32cebb398042a250a8314116e9edcfa579ba009-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "78a7e0b3",
+        "_type": "variante",
+        "color": "Rosa viejo",
+        "imagenes": [
+          {
+            "_key": "b3592932",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-dcf1b2aaf8d3aee41513435cc9d0e9c5ad8cba0d-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "69908138",
+        "_type": "variante",
+        "color": "Rosado pastel",
+        "imagenes": [
+          {
+            "_key": "3084e9c0",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-963ecaedc89adc72cd4bfb81c56388d739ad1983-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "de388e98",
+        "_type": "variante",
+        "color": "Verde olivo",
+        "imagenes": [
+          {
+            "_key": "10b48c8a",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b76dc7026cde5b185f3133cfb731c67363322e21-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "32b44a39",
+        "_type": "variante",
+        "color": "Verde oscuro",
+        "imagenes": [
+          {
+            "_key": "f502fb58",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-cf146797847a1f9e647ca242406bed6ecd428421-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "_createdAt": "2026-10-10T20:16:46Z",
+    "_id": "producto-manteleria-mantel-rectangular-grande-corrugado",
+    "_rev": "6tPKyzeq7yxCN60QkDLurV",
+    "_type": "producto",
+    "_updatedAt": "2026-10-23T13:13:45Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "descripcion": "Mantel rectangular grande de tela corrugada (efecto arrugado tipo crush) para mesas rectangulares de 6′. Su textura con brillo suave aporta movimiento y elegancia a mesas principales, buffet y mesas de postres, sin necesidad de planchado perfecto. Disponible en 2 colores.",
+    "medidas": "Para mesa rectangular de 6′ (72 x 30\")",
+    "precio": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "mantel-rectangular-grande-corrugado"
+    },
+    "subcategoria": "Rectangulares",
+    "tipo": "Corrugado",
+    "titulo": "Mantel rectangular grande corrugado",
+    "variantes": [
+      {
+        "_key": "fa7ec634",
+        "_type": "variante",
+        "color": "Azul navy",
+        "imagenes": [
+          {
+            "_key": "f6ede3f8",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-390922c383d5c143c4cf9cbacbb056c678c2a8db-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "da3cb41c",
+        "_type": "variante",
+        "color": "Rojo",
+        "imagenes": [
+          {
+            "_key": "6b373f52",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-79176055f5cb880407a5f0ee956da23ea66228bb-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
