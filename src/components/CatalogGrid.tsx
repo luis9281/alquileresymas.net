@@ -7,6 +7,7 @@ import BuscadorProductos, { MIN_CARACTERES_BUSQUEDA, normalizar } from "./Buscad
 import type { Producto } from "@/lib/types";
 import { aListados, tituloListado, type ProductoListado } from "@/lib/producto";
 import { familiaDeColor, ORDEN_FAMILIAS, type FamiliaColor } from "@/lib/colores";
+import { precioDeVariante } from "@/lib/precio";
 
 const OPCIONES_ORDEN = [
   { value: "nombre-asc", label: "Nombre: A-Z" },
@@ -22,13 +23,15 @@ function comparar(a: ProductoListado, b: ProductoListado, orden: Orden): number 
     const cmp = tituloListado(a).localeCompare(tituloListado(b), "es");
     return orden === "nombre-asc" ? cmp : -cmp;
   }
-  const pa = a.producto.precio;
-  const pb = b.producto.precio;
+  const pa = precioDe(a);
+  const pb = precioDe(b);
   if (pa == null && pb == null) return 0;
   if (pa == null) return 1;
   if (pb == null) return -1;
   return orden === "precio-asc" ? pa - pb : pb - pa;
 }
+
+const precioDe = ({ producto, varianteIdx }: ProductoListado) => precioDeVariante(producto, varianteIdx);
 
 const familiaDe = ({ producto, varianteIdx }: ProductoListado) =>
   familiaDeColor(producto.variantes[varianteIdx]?.color);
@@ -54,12 +57,12 @@ export default function CatalogGrid({
 
   // Whole-dollar bounds so the slider's step=1 can reach both ends.
   const limites = useMemo(() => {
-    const precios = productos.map((p) => p.precio).filter((p): p is number => typeof p === "number");
+    const precios = listados.map(precioDe).filter((p): p is number => typeof p === "number");
     if (!precios.length) return null;
     const min = Math.floor(Math.min(...precios));
     const max = Math.ceil(Math.max(...precios));
     return min < max ? { min, max } : null;
-  }, [productos]);
+  }, [listados]);
   const mostrarFiltroPrecio = filtroPrecio && limites !== null;
 
   // Color families present in this category, with listing counts.
@@ -89,7 +92,7 @@ export default function CatalogGrid({
       if (buscando && !normalizar(tituloListado(l)).includes(consulta)) return false;
       if (filtrandoPrecio) {
         // Products without a price are "a cotizar": hidden only while a range is set.
-        const precio = l.producto.precio;
+        const precio = precioDe(l);
         if (typeof precio !== "number" || precio < rango[0] || precio > rango[1]) return false;
       }
       if (filtrandoColor && !colores.includes(familiaDe(l)?.nombre ?? "")) return false;

@@ -1,0 +1,417 @@
+[
+  {
+    "_createdAt": "2026-10-22T00:56:09Z",
+    "_id": "producto-manteleria-servilleta-de-tela",
+    "_rev": "0toeB2hsiIX6riiI40vKCp",
+    "_type": "producto",
+    "_updatedAt": "2026-10-22T00:56:09Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "precio": 0.65,
+    "slug": {
+      "_type": "slug",
+      "current": "servilleta-de-tela"
+    },
+    "subcategoria": "Servilletas",
+    "titulo": "Servilleta de tela",
+    "variantes": [
+      {
+        "_key": "amarillo-mostaza",
+        "_type": "variante",
+        "color": "Amarillo mostaza",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-62e8056a21fcbde7b3ceb024ca00d74c8d37ffc2-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "amarillo",
+        "_type": "variante",
+        "color": "Amarillo",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1e87a6ef86da2a1409a2ceffc781bc14962a86d1-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "azul-navy",
+        "_type": "variante",
+        "color": "Azul navy",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1ba655cc12520993be7daf9d38225bdd59b53f52-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "turquesa",
+        "_type": "variante",
+        "color": "Turquesa",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2476fdc5d2f68b8aa767580b0b05ba33d273427b-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "blanco-con-vainica",
+        "_type": "variante",
+        "color": "Blanco con vainica",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d2131c3b658416a15b600bf3c9d9db90ddd608b6-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "blanco",
+        "_type": "variante",
+        "color": "Blanco",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d4ea4043476697b730a3640ee877141774090d41-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "negro",
+        "_type": "variante",
+        "color": "Negro",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c067edcd79495863918668d5ee121e701dba7978-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "rojo",
+        "_type": "variante",
+        "color": "Rojo",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b5460191b2440f5cebeb59f6988fd6c8de05b1cc-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "magenta",
+        "_type": "variante",
+        "color": "Magenta",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-51d216dc18f96478fe952977e1cec124dba2c527-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "lila",
+        "_type": "variante",
+        "color": "Lila",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-67555ef1485fc68522fdf92e40e36703c064c1a8-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "lavanda",
+        "_type": "variante",
+        "color": "Lavanda",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fd7ffa4472ec56dd88d008a7ffd03138269908c2-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "verde-limon",
+        "_type": "variante",
+        "color": "Verde limón",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d464bf284f5d7f4b6a993dfb15e004d09fdff6e9-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "verde-salvia",
+        "_type": "variante",
+        "color": "Verde salvia",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-54b68746f4124e136205e84739524bec7ab63958-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "verde-esmeralda",
+        "_type": "variante",
+        "color": "Verde esmeralda",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-79c758c601b271aca78a8ce3e734870fa403bdcc-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-22T00:56:31Z",
+    "_id": "producto-manteleria-servilleta-satinada",
+    "_rev": "0toeB2hsiIX6riiI40vKCp",
+    "_type": "producto",
+    "_updatedAt": "2026-10-22T00:56:31Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "precio": 0.65,
+    "slug": {
+      "_type": "slug",
+      "current": "servilleta-satinada"
+    },
+    "subcategoria": "Servilletas",
+    "titulo": "Servilleta satinada",
+    "variantes": [
+      {
+        "_key": "amarillo-oro",
+        "_type": "variante",
+        "color": "Amarillo oro",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4554d781dc4afe2c8a26adaf16ba5f64c22ee73e-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "azul-cielo",
+        "_type": "variante",
+        "color": "Azul cielo",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-131d4bb04f03edb1dcabfd1f6b9afab74043e9ba-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "azul-rey",
+        "_type": "variante",
+        "color": "Azul rey",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-de91d822faff3976d79992fcf86cc2b6ad3afcae-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "marfil",
+        "_type": "variante",
+        "color": "Marfil",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-926de55d4a8d861cefde086afe42f77a7b7d1a93-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "coral",
+        "_type": "variante",
+        "color": "Coral",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-09fac7efdfed55e6ccd24fd7d0105d516783c2d4-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "dorado",
+        "_type": "variante",
+        "color": "Dorado",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d8edc1cadfa3355082fcddb3253b33a08699f6da-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "fucsia",
+        "_type": "variante",
+        "color": "Fucsia",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2a4240ce4e5a44b6a6e54889a5103bb4b5107707-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "morado",
+        "_type": "variante",
+        "color": "Morado",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0bbeeddd43a22d98a9cebbe762d276b22492398d-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "naranja",
+        "_type": "variante",
+        "color": "Naranja",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ee87b2bec2327897e46d2d104dc5d545098044db-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "rojo",
+        "_type": "variante",
+        "color": "Rojo",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a95fa559391a85021e0a360fbb3b40cfc8feb1b4-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "rosa-pastel",
+        "_type": "variante",
+        "color": "Rosa pastel",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-19330091f99fe1f9338c6beea5e1696a5976944e-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

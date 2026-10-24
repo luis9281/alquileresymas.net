@@ -9,6 +9,8 @@ export type Categoria = {
 export type ProductoVariante = {
   color?: string;
   imagenes: string[];
+  /** Overrides Producto.precio for this color only. */
+  precio?: number;
 };
 
 export type Producto = {

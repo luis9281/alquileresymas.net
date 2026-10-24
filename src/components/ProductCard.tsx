@@ -3,7 +3,7 @@ import Image from "next/image";
 import type { Producto } from "@/lib/types";
 import { esImagenSanity } from "@/lib/images";
 import QuoteButton from "./QuoteButton";
-import { formatoPrecio } from "@/lib/precio";
+import { formatoPrecio, precioDeVariante } from "@/lib/precio";
 
 export default function ProductCard({
   producto,
@@ -15,6 +15,7 @@ export default function ProductCard({
 }) {
   const variante = producto.variantes[varianteIdx] ?? producto.variantes[0];
   const imagen = variante?.imagenes[0];
+  const precio = precioDeVariante(producto, varianteIdx);
   const titulo = variante?.color ? `${producto.titulo} — ${variante.color}` : producto.titulo;
   const href = `/catalogo/${producto.categoria.slug}/${producto.slug}${
     variante?.color ? `?color=${encodeURIComponent(variante.color)}` : ""
@@ -43,8 +44,8 @@ export default function ProductCard({
         <h3 className="text-base font-semibold text-teal-dark">
           <Link href={href}>{titulo}</Link>
         </h3>
-        {typeof producto.precio === "number" && (
-          <p className="text-sm font-semibold text-ink">{formatoPrecio(producto.precio)}</p>
+        {typeof precio === "number" && (
+          <p className="text-sm font-semibold text-ink">{formatoPrecio(precio)}</p>
         )}
         <div className="mt-auto flex items-center gap-3 pt-2">
           <Link

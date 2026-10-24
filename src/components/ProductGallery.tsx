@@ -6,7 +6,7 @@ import Image from "next/image";
 import type { Producto } from "@/lib/types";
 import { esImagenSanity } from "@/lib/images";
 import QuoteButton from "./QuoteButton";
-import { formatoPrecio } from "@/lib/precio";
+import { formatoPrecio, precioDeVariante } from "@/lib/precio";
 
 export default function ProductGallery({
   producto,
@@ -22,6 +22,7 @@ export default function ProductGallery({
   const imagenes = variante?.imagenes ?? [];
   const imagenActiva = imagenes[imagenIdx] ?? imagenes[0];
   const hayColores = producto.variantes.length > 1;
+  const precio = precioDeVariante(producto, varianteIdx);
 
   function elegirVariante(idx: number) {
     setVarianteIdx(idx);
@@ -76,8 +77,8 @@ export default function ProductGallery({
         </Link>
         <h1 className="mt-2">{producto.titulo}</h1>
 
-        {typeof producto.precio === "number" && (
-          <p className="mt-2 text-lg font-semibold text-ink">{formatoPrecio(producto.precio)}</p>
+        {typeof precio === "number" && (
+          <p className="mt-2 text-lg font-semibold text-ink">{formatoPrecio(precio)}</p>
         )}
 
         {(producto.medidas || producto.capacidad) && (

@@ -14,6 +14,7 @@ import type { SanityImageSource } from "@sanity/image-url";
 type SanityVariante = {
   color?: string;
   imagenes?: SanityImageSource[];
+  precio?: number;
 };
 
 type SanityProducto = {
@@ -46,6 +47,7 @@ function mapProducto(p: SanityProducto): Producto {
     imagenes: (v.imagenes ?? [])
       .map((img) => urlFor(img)?.width(1000).height(1000).fit("crop").auto("format").url())
       .filter((url): url is string => Boolean(url)),
+    precio: v.precio ?? undefined,
   }));
   return {
     _id: p._id,

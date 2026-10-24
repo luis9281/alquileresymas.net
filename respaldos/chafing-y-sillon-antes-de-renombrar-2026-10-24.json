@@ -1,0 +1,102 @@
+[
+  {
+    "_createdAt": "2026-10-22T01:28:00Z",
+    "_id": "producto-cristaleria-chafing-dish-rectangular-tapa-rodante",
+    "_rev": "0toeB2hsiIX6riiI40vKCp",
+    "_type": "producto",
+    "_updatedAt": "2026-10-22T01:28:00Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Chafing dish rectangular de acero inoxidable pulido con tapa rodante (roll top) que se abre hacia atrás sin tener que retirarla. Ideal para bufés de hotel, bodas y cenas formales donde los invitados se sirven solos. El combustible (fueguito) se alquila aparte.",
+    "slug": {
+      "_type": "slug",
+      "current": "chafing-dish-rectangular-tapa-rodante"
+    },
+    "subcategoria": "Chafing dish",
+    "titulo": "Chafing dish rectangular con tapa rodante",
+    "variantes": [
+      {
+        "_key": "unica",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-be97d8fa2a1b3046616b6563ce9e3fce808a8323-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-22T01:28:07Z",
+    "_id": "producto-cristaleria-mini-chafing-dish-individual",
+    "_rev": "0toeB2hsiIX6riiI40vKCp",
+    "_type": "producto",
+    "_updatedAt": "2026-10-22T01:28:07Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Mini chafing dish de acero inoxidable con tapa de vidrio y asas, para porciones individuales, salsas, fondue o estaciones de degustación. El combustible (fueguito) se alquila aparte.",
+    "slug": {
+      "_type": "slug",
+      "current": "mini-chafing-dish-individual"
+    },
+    "subcategoria": "Chafing dish",
+    "titulo": "Mini chafing dish individual",
+    "variantes": [
+      {
+        "_key": "unica",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6a43e899c57474cf0735bbf314159f270cd2c658-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T18:24:01Z",
+    "_id": "producto-salas-lounge-sillon-individual",
+    "_rev": "RkzW5XafslQey0FrNuc6l2",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T18:24:01Z",
+    "categoria": {
+      "_ref": "categoria-salas-lounge",
+      "_type": "reference"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "sillon-individual"
+    },
+    "titulo": "Sillón individual",
+    "variantes": [
+      {
+        "_key": "008366c6",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "321db80a",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d779108241eb43bfee763fade3e9007261dfcef7-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

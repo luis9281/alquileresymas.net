@@ -61,6 +61,13 @@ export default defineType({
               validation: (r) => r.required().min(1),
               of: [defineField({ name: "imagen", type: "image", options: { hotspot: true } })],
             }),
+            defineField({
+              name: "precio",
+              title: "Precio de este color",
+              description: "Solo si este color cuesta distinto al precio general del producto. Dejalo vacio para usar el general.",
+              type: "number",
+              validation: (r) => r.min(0),
+            }),
           ],
           preview: {
             select: { title: "color", media: "imagenes.0" },
