@@ -1,0 +1,33 @@
+{
+  "_createdAt": "2026-10-10T19:15:56Z",
+  "_id": "producto-utileria-burro-de-salonero",
+  "_rev": "GbP60G3Uqz2qrcSPqQDkA9",
+  "_type": "producto",
+  "_updatedAt": "2026-10-10T19:15:56Z",
+  "categoria": {
+    "_ref": "categoria-utileria",
+    "_type": "reference"
+  },
+  "precio": 8,
+  "slug": {
+    "_type": "slug",
+    "current": "burro-de-salonero"
+  },
+  "titulo": "Burro de salonero (porta bandejas)",
+  "variantes": [
+    {
+      "_key": "5ad235ce",
+      "_type": "variante",
+      "imagenes": [
+        {
+          "_key": "228984c1",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-8bfdcb0bb9ec7c28356e88bcf53a366e3b988e71-1000x1000-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    }
+  ]
+}

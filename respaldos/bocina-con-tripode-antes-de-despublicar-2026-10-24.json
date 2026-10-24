@@ -1,0 +1,33 @@
+{
+  "_createdAt": "2026-10-10T19:08:09Z",
+  "_id": "producto-audio-video-bocina-con-tripode",
+  "_rev": "RkzW5XafslQey0FrNujKfY",
+  "_type": "producto",
+  "_updatedAt": "2026-10-10T19:08:09Z",
+  "categoria": {
+    "_ref": "categoria-audio-video",
+    "_type": "reference"
+  },
+  "precio": 75,
+  "slug": {
+    "_type": "slug",
+    "current": "bocina-con-tripode"
+  },
+  "titulo": "Bocina con trípode",
+  "variantes": [
+    {
+      "_key": "4e40b05f",
+      "_type": "variante",
+      "imagenes": [
+        {
+          "_key": "a16dd94c",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-bf29a3686850274f773d514ecc7b6a562670cdda-1200x1200-webp",
+            "_type": "reference"
+          }
+        }
+      ]
+    }
+  ]
+}
