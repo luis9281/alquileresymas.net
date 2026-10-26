@@ -60,8 +60,6 @@ export default async function Footer() {
               </a>
             </li>
             <li><a href={`mailto:${CONTACTO.emails.gerencia}`} className="hover:text-lime">{CONTACTO.emails.gerencia}</a></li>
-            <li><a href={`mailto:${CONTACTO.emails.ventas}`} className="hover:text-lime">{CONTACTO.emails.ventas}</a></li>
-            <li><a href={`mailto:${CONTACTO.emails.ventas1}`} className="hover:text-lime">{CONTACTO.emails.ventas1}</a></li>
             <li>
               <a href={CONTACTO.mapaUrl} target="_blank" rel="noopener noreferrer" className="hover:text-lime">
                 {CONTACTO.direccion}

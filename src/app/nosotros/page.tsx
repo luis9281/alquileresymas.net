@@ -195,7 +195,7 @@ export default function NosotrosPage() {
           </li>
           <li>
             <strong>Correo:</strong>{" "}
-            <a href={`mailto:${CONTACTO.emails.ventas}`} className="text-teal">{CONTACTO.emails.ventas}</a>
+            <a href={`mailto:${CONTACTO.emails.gerencia}`} className="text-teal">{CONTACTO.emails.gerencia}</a>
           </li>
           <li>
             <strong>Ubicación:</strong>{" "}

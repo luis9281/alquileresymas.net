@@ -66,7 +66,7 @@ const localBusinessJsonLd = {
   url: SITE_URL,
   image: `${SITE_URL}/logo.png`,
   telephone: CONTACTO.telefono,
-  email: CONTACTO.emails.ventas,
+  email: CONTACTO.emails.gerencia,
   address: {
     "@type": "PostalAddress",
     streetAddress: CONTACTO.direccion,

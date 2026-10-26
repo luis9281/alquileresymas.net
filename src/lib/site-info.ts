@@ -10,8 +10,6 @@ export const LNG = -79.4703409;
 export const CONTACTO = {
   emails: {
     gerencia: "gerencia@alquileresymas.net",
-    ventas: "ventas@alquileresymas.net",
-    ventas1: "ventas1@alquileresymas.net",
   },
   telefono: "+507 6672-8087",
   whatsappUrl: "https://wa.me/50766728087",

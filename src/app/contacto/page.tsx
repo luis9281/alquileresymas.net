@@ -30,12 +30,6 @@ export default function ContactoPage() {
             <a href={`mailto:${CONTACTO.emails.gerencia}`} className="text-teal">{CONTACTO.emails.gerencia}</a>
           </li>
           <li>
-            <strong>Ventas:</strong>{" "}
-            <a href={`mailto:${CONTACTO.emails.ventas}`} className="text-teal">{CONTACTO.emails.ventas}</a>
-            {", "}
-            <a href={`mailto:${CONTACTO.emails.ventas1}`} className="text-teal">{CONTACTO.emails.ventas1}</a>
-          </li>
-          <li>
             <strong>Ubicación:</strong>{" "}
             <a href={CONTACTO.mapaUrl} target="_blank" rel="noopener noreferrer" className="text-teal underline">
               {CONTACTO.direccion}
