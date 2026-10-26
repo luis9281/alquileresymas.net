@@ -31,7 +31,7 @@ export default defineType({
       name: "tipo",
       title: "Tipo",
       description:
-        "Opcional. Tercer nivel dentro de la subcategoria (ej. Redondos > Corrugado, Liso, Satin). Aparece anidado en la barra lateral del catalogo.",
+        "Opcional. Tercer nivel dentro de la subcategoria (ej. Redondos > Corrugado, Liso, Podesua). Aparece anidado en la barra lateral del catalogo.",
       type: "string",
       hidden: ({ document }) => !document?.subcategoria,
     }),

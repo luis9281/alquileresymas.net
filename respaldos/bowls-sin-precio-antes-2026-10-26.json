@@ -1,0 +1,247 @@
+[
+  {
+    "_createdAt": "2026-10-24T19:51:16Z",
+    "_id": "producto-cristaleria-bowl-cuadrado-con-borde-decorado",
+    "_rev": "WV3FKcQLPisfMXqbQStFuM",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:51:16Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl cuadrado de porcelana blanca con borde en relieve de estilo clásico. Elegante para bodas y cenas formales.",
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-cuadrado-con-borde-decorado"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl cuadrado con borde decorado",
+    "variantes": [
+      {
+        "_key": "fu704e84",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "x7pn7972",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fb12cde1bc688d2a0732ceb7bf12cf3f94f391aa-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:11Z",
+    "_id": "producto-cristaleria-bowl-cuadrado-de-porcelana",
+    "_rev": "vw0sMfodn1x9tMHGGjL9he",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:51:11Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl cuadrado de porcelana blanca, ideal para ensaladas, frutas o guarniciones en el bufé.",
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-cuadrado-de-porcelana"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl cuadrado de porcelana",
+    "variantes": [
+      {
+        "_key": "u9gu0z0q",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "6dhl3n0o",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8dc33d4b871aa42d534e057c23ac747ea44b3d39-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:19Z",
+    "_id": "producto-cristaleria-bowl-de-porcelana-borde-curvo",
+    "_rev": "WV3FKcQLPisfMXqbQStG9Y",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:51:19Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl redondo de porcelana blanca con borde abierto, para ensaladas, pastas o guarniciones.",
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-de-porcelana-borde-curvo"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl de porcelana con borde curvo",
+    "variantes": [
+      {
+        "_key": "iozdjbyq",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "ge1npj5l",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e0d7d03ddc2f0e866c2379e86ec94a5a461eb3be-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:27Z",
+    "_id": "producto-cristaleria-bowl-festoneado-de-porcelana",
+    "_rev": "vw0sMfodn1x9tMHGGjLCRe",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:51:27Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl redondo de porcelana blanca con borde festoneado, para ensaladas, frutas o postres.",
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-festoneado-de-porcelana"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl festoneado de porcelana",
+    "variantes": [
+      {
+        "_key": "goado3iy",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "57so2dg3",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-69e608633bdefa4f084da7cc53cf68f68e137eba-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:24Z",
+    "_id": "producto-cristaleria-bowl-inclinado-con-relieve",
+    "_rev": "vw0sMfodn1x9tMHGGjLCCe",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:51:24Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl de porcelana blanca de boca inclinada con relieve de anillos. Luce muy bien en mesas de bufé.",
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-inclinado-con-relieve"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl inclinado con relieve",
+    "variantes": [
+      {
+        "_key": "w1yeav48",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "lgcyg877",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a05463aca016e22da3e8bf6239b17cd423f2a04d-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:22Z",
+    "_id": "producto-cristaleria-bowl-ondulado-de-porcelana",
+    "_rev": "WV3FKcQLPisfMXqbQStGOk",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:51:22Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl de porcelana blanca con borde ondulado, para postres, entradas o botanas.",
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-ondulado-de-porcelana"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl ondulado de porcelana",
+    "variantes": [
+      {
+        "_key": "f5pfzvqu",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "4p7uzztc",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-af75bcc089847147525e7ee106d54c2ecac9bdd3-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:38Z",
+    "_id": "producto-cristaleria-bowl-redondo-de-porcelana",
+    "_rev": "WV3FKcQLPisfMXqbQStHkJ",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:51:38Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl redondo de porcelana blanca, versátil para ensaladas, frutas o guarniciones.",
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-redondo-de-porcelana"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl redondo de porcelana",
+    "variantes": [
+      {
+        "_key": "rvewlk2f",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "pso9h1tk",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e4d15ff064fbf67438f233e938d5b5cb58613c44-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

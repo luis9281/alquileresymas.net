@@ -104,7 +104,7 @@ export default async function HomePage() {
         <CategoryShowcase
           eyebrow="Nuestra colección"
           titulo="Mantelería para vestir cada mesa"
-          copy={`Manteles redondos, rectangulares y lycras para mesas cocteleras, en lisos, corrugados y satín: ${manteleria.reduce((n, p) => n + p.variantes.length, 0)}+ colores para combinar con la paleta de tu evento.`}
+          copy={`Manteles redondos, rectangulares y lycras para mesas cocteleras, en lisos, corrugados y Podesua: ${manteleria.reduce((n, p) => n + p.variantes.length, 0)}+ colores para combinar con la paleta de tu evento.`}
           verTodoHref="/catalogo/manteleria"
           productos={seleccionVitrina(manteleria, 12)}
           total={tarjetas(manteleria)}

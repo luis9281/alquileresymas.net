@@ -1,0 +1,35 @@
+{
+  "_createdAt": "2026-10-22T01:28:07Z",
+  "_id": "producto-cristaleria-mini-chafing-dish-individual",
+  "_rev": "Oh6YgvMTqh9o5H57txDLqE",
+  "_type": "producto",
+  "_updatedAt": "2026-10-24T19:08:49Z",
+  "categoria": {
+    "_ref": "categoria-cristaleria",
+    "_type": "reference"
+  },
+  "descripcion": "Mini chafing dish de acero inoxidable con tapa de vidrio y asas, para porciones individuales, salsas, fondue o estaciones de degustación. El combustible (fueguito) se alquila aparte.",
+  "precio": 12,
+  "slug": {
+    "_type": "slug",
+    "current": "mini-chafing-dish-individual"
+  },
+  "subcategoria": "Chafing dish",
+  "titulo": "Chafing dish redondo - Pequeño",
+  "variantes": [
+    {
+      "_key": "unica",
+      "_type": "variante",
+      "imagenes": [
+        {
+          "_key": "foto1",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6a43e899c57474cf0735bbf314159f270cd2c658-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    }
+  ]
+}
