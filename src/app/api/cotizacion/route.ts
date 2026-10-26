@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import type { QuoteItem } from "@/lib/types";
+import { registrarSolicitud } from "@/lib/solicitudes-log";
 
 type QuoteRequestBody = {
   nombre?: string;
@@ -126,6 +127,16 @@ ${body.mensaje ?? ""}
       subject: asunto,
       text: cuerpo,
     });
+
+    // The email already went out, so a failed log entry shouldn't fail the request.
+    await registrarSolicitud({
+      nombre,
+      email,
+      telefono: body.telefono ?? "",
+      fechaEvento: body.fechaEvento ?? "",
+      lugar: body.lugar ?? "",
+      items,
+    }).catch((error) => console.error("Error registrando la solicitud en el log:", error));
 
     return NextResponse.json({ ok: true });
   } catch (error) {

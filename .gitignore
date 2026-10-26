@@ -30,5 +30,8 @@ next-env.d.ts
 /productos/
 /productos-optimizadas/
 
+# log de solicitudes exportado (correos de clientes, nunca al repo)
+/privado/
+
 # estado local de Claude Code, no es parte del proyecto
 /.claude/
