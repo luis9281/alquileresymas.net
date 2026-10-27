@@ -37,6 +37,7 @@ function navLinks(categorias: Pick<Categoria, "slug" | "nombre">[]): NavLink[] {
     { href: "/", label: "Inicio" },
     { href: "/catalogo", label: "Catálogo", compacto: true, children: catalogo },
     { label: "Servicios", children: SERVICIOS_LINKS },
+    { href: "/cotizador-rapido", label: "Cotizador Rápido" },
     { href: "/blog", label: "Blog" },
     { href: "/nosotros", label: "Nosotros" },
     { href: "/contacto", label: "Contacto" },

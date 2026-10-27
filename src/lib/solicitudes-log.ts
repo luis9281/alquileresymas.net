@@ -25,6 +25,10 @@ export type Solicitud = {
   fechaEvento: string;
   lugar: string;
   items: QuoteItem[];
+  /** Which form sent it; the plain "Cotización" form leaves it empty. */
+  origen?: "cotizador-rapido";
+  /** Full quote text (prices, transport, totals) when the form builds one. */
+  detalle?: string;
 };
 
 /** Saves one request. No-op when SANITY_WRITE_TOKEN isn't set. */
@@ -40,5 +44,7 @@ export async function registrarSolicitud(s: Solicitud): Promise<void> {
     fechaEvento: s.fechaEvento,
     lugar: s.lugar,
     productos: s.items.map((i) => `${i.title} x${i.qty}`).join(", "),
+    ...(s.origen && { origen: s.origen }),
+    ...(s.detalle && { detalle: s.detalle }),
   });
 }

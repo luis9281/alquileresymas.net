@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 import type { QuoteItem } from "@/lib/types";
 import { registrarSolicitud } from "@/lib/solicitudes-log";
+import { captchaValido, CorreoNoConfigurado, EMAIL_VALIDO, enviarAGerencia, ipDe } from "@/lib/correo";
 
 type QuoteRequestBody = {
   nombre?: string;
@@ -17,45 +17,6 @@ type QuoteRequestBody = {
   captchaToken?: string;
 };
 
-const TURNSTILE_ACTION = "cotizacion";
-
-// Dominios desde donde se acepta el captcha. localhost solo cuenta en desarrollo.
-const HOSTNAMES_PERMITIDOS = [
-  "alquileresymas.net",
-  "www.alquileresymas.net",
-  ...(process.env.NODE_ENV === "development" ? ["localhost", "127.0.0.1"] : []),
-];
-
-type SiteverifyResult = { success?: boolean; action?: string; hostname?: string };
-
-/** Valida el token de Turnstile con Cloudflare. Sin TURNSTILE_SECRET_KEY no se exige captcha. */
-async function captchaValido(token: string, ip: string | null): Promise<boolean> {
-  const secret = process.env.TURNSTILE_SECRET_KEY;
-  if (!secret) return true;
-  if (!token || token.length > 2048) return false;
-
-  const datos = new URLSearchParams({ secret, response: token });
-  if (ip) datos.set("remoteip", ip);
-
-  try {
-    const res = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
-      method: "POST",
-      body: datos,
-    });
-    if (!res.ok) return false;
-    const resultado = (await res.json()) as SiteverifyResult;
-    return (
-      resultado.success === true &&
-      resultado.action === TURNSTILE_ACTION &&
-      !!resultado.hostname &&
-      HOSTNAMES_PERMITIDOS.includes(resultado.hostname)
-    );
-  } catch (error) {
-    console.error("Error validando el captcha:", error);
-    return false;
-  }
-}
-
 export async function POST(request: Request) {
   let body: QuoteRequestBody;
   try {
@@ -69,15 +30,14 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  const ip = request.headers.get("cf-connecting-ip") ?? request.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? null;
-  if (!(await captchaValido(body.captchaToken ?? "", ip))) {
+  if (!(await captchaValido(body.captchaToken ?? "", ipDe(request)))) {
     return NextResponse.json({ error: "Confirma que no eres un robot e intenta de nuevo." }, { status: 400 });
   }
 
   const nombre = (body.nombre ?? "").trim();
   const email = (body.email ?? "").trim();
 
-  if (!nombre || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (!nombre || !EMAIL_VALIDO.test(email)) {
     return NextResponse.json({ error: "Revisa tu nombre y correo electronico." }, { status: 400 });
   }
 
@@ -102,31 +62,8 @@ Mensaje:
 ${body.mensaje ?? ""}
 `;
 
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, QUOTE_TO_EMAIL } = process.env;
-
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS || !QUOTE_TO_EMAIL) {
-    console.error("Faltan variables de entorno SMTP_* / QUOTE_TO_EMAIL para enviar la cotizacion.");
-    return NextResponse.json(
-      { error: "El envio de correo no esta configurado todavia. Intenta por WhatsApp mientras tanto." },
-      { status: 503 }
-    );
-  }
-
   try {
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: Number(SMTP_PORT) || 587,
-      secure: Number(SMTP_PORT) === 465,
-      auth: { user: SMTP_USER, pass: SMTP_PASS },
-    });
-
-    await transporter.sendMail({
-      from: `"Alquileres Eventos & Más" <${SMTP_USER}>`,
-      to: QUOTE_TO_EMAIL,
-      replyTo: email,
-      subject: asunto,
-      text: cuerpo,
-    });
+    await enviarAGerencia({ asunto, texto: cuerpo, replyTo: email });
 
     // The email already went out, so a failed log entry shouldn't fail the request.
     await registrarSolicitud({
@@ -140,6 +77,13 @@ ${body.mensaje ?? ""}
 
     return NextResponse.json({ ok: true });
   } catch (error) {
+    if (error instanceof CorreoNoConfigurado) {
+      console.error(error.message);
+      return NextResponse.json(
+        { error: "El envio de correo no esta configurado todavia. Intenta por WhatsApp mientras tanto." },
+        { status: 503 }
+      );
+    }
     console.error("Error enviando correo de cotizacion:", error);
     return NextResponse.json({ error: "No se pudo enviar la solicitud. Intenta de nuevo." }, { status: 500 });
   }

@@ -12,7 +12,8 @@
     "optimizar:imagenes": "node bin/optimizar-imagenes.mjs",
     "merge:variantes": "node --env-file=.env.local bin/merge-variantes.mjs",
     "publish:all": "node --env-file=.env.local bin/publish-all-drafts.mjs",
-    "exportar:solicitudes": "node --env-file=.env.local bin/exportar-solicitudes.mjs"
+    "exportar:solicitudes": "node --env-file=.env.local bin/exportar-solicitudes.mjs",
+    "exportar:cotizador": "node --env-file=.env.local bin/exportar-cotizador.mjs"
   },
   "dependencies": {
     "@portabletext/react": "^8.0.1",
