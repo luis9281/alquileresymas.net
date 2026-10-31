@@ -26,7 +26,9 @@ export default function QuoteButton({
   function handleClick() {
     addItem({
       id: itemId,
-      title: colorSeleccionado ? `${producto.titulo} (${colorSeleccionado})` : producto.titulo,
+      title:
+        producto.variantes.find((v) => v.color === colorSeleccionado)?.nombre ??
+        (colorSeleccionado ? `${producto.titulo} (${colorSeleccionado})` : producto.titulo),
       image: imagenSeleccionada ?? imagenPrincipal(producto),
       url: `/catalogo/${producto.categoria.slug}/${producto.slug}`,
     });

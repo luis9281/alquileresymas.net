@@ -7,6 +7,7 @@ import type { Producto } from "@/lib/types";
 import { esImagenSanity } from "@/lib/images";
 import QuoteButton from "./QuoteButton";
 import { formatoPrecio, precioDeVariante } from "@/lib/precio";
+import { tituloListado } from "@/lib/producto";
 
 export default function ProductGallery({
   producto,
@@ -36,7 +37,7 @@ export default function ProductGallery({
           {imagenActiva ? (
             <Image
               src={imagenActiva}
-              alt={variante?.color ? `${producto.titulo} - ${variante.color}` : producto.titulo}
+              alt={tituloListado({ producto, varianteIdx })}
               width={900}
               height={900}
               unoptimized={esImagenSanity(imagenActiva)}

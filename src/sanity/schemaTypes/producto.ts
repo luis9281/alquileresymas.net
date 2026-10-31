@@ -55,6 +55,13 @@ export default defineType({
               description: "Deja vacio si el producto no tiene variantes de color.",
             }),
             defineField({
+              name: "nombre",
+              title: "Nombre en catalogo",
+              description:
+                'Opcional. Reemplaza "Producto — Color" en la tarjeta y en la cotizacion (ej. "Servilleta Azul Navy"). Dejalo vacio para usar el nombre del producto y el color.',
+              type: "string",
+            }),
+            defineField({
               name: "imagenes",
               title: "Fotos",
               type: "array",

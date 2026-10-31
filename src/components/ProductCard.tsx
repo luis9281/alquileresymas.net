@@ -4,6 +4,7 @@ import type { Producto } from "@/lib/types";
 import { esImagenSanity } from "@/lib/images";
 import QuoteButton from "./QuoteButton";
 import { formatoPrecio, precioDeVariante } from "@/lib/precio";
+import { tituloListado } from "@/lib/producto";
 
 export default function ProductCard({
   producto,
@@ -16,7 +17,7 @@ export default function ProductCard({
   const variante = producto.variantes[varianteIdx] ?? producto.variantes[0];
   const imagen = variante?.imagenes[0];
   const precio = precioDeVariante(producto, varianteIdx);
-  const titulo = variante?.color ? `${producto.titulo} — ${variante.color}` : producto.titulo;
+  const titulo = tituloListado({ producto, varianteIdx });
   const href = `/catalogo/${producto.categoria.slug}/${producto.slug}${
     variante?.color ? `?color=${encodeURIComponent(variante.color)}` : ""
   }`;

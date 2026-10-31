@@ -13,6 +13,7 @@ import type { SanityImageSource } from "@sanity/image-url";
 
 type SanityVariante = {
   color?: string;
+  nombre?: string;
   imagenes?: SanityImageSource[];
   precio?: number;
 };
@@ -44,6 +45,7 @@ type SanityPost = {
 function mapProducto(p: SanityProducto): Producto {
   const variantes = (p.variantes ?? []).map((v) => ({
     color: v.color,
+    nombre: v.nombre?.trim() || undefined,
     imagenes: (v.imagenes ?? [])
       .map((img) => urlFor(img)?.width(1000).height(1000).fit("crop").auto("format").url())
       .filter((url): url is string => Boolean(url)),

@@ -18,8 +18,9 @@ export function aListados(productos: Producto[]): ProductoListado[] {
 }
 
 export function tituloListado({ producto, varianteIdx }: ProductoListado): string {
-  const color = producto.variantes[varianteIdx]?.color;
-  return color ? `${producto.titulo} — ${color}` : producto.titulo;
+  const variante = producto.variantes[varianteIdx];
+  if (variante?.nombre) return variante.nombre;
+  return variante?.color ? `${producto.titulo} — ${variante.color}` : producto.titulo;
 }
 
 // Neutral colors go last in showcases: a strip of white and black tablecloths sells less.

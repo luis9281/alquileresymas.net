@@ -8,6 +8,8 @@ export type Categoria = {
 
 export type ProductoVariante = {
   color?: string;
+  /** Card/quote name for this variant, replacing "Producto — Color". */
+  nombre?: string;
   imagenes: string[];
   /** Overrides Producto.precio for this color only. */
   precio?: number;

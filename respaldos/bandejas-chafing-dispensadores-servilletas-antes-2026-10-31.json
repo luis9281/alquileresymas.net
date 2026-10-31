@@ -1,0 +1,1199 @@
+[
+  {
+    "_createdAt": "2026-10-22T01:31:46Z",
+    "_id": "producto-cristaleria-bandeja-para-chafing-dish",
+    "_rev": "0toeB2hsiIX6riiI40vKCp",
+    "_type": "producto",
+    "_updatedAt": "2026-10-22T01:35:45Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bandeja entera de acero inoxidable (tamaño 1/1 GN) que encaja en el chafing dish rectangular. Pide bandejas extra para reponer la comida del bufé sin interrumpir el servicio, o para preparar los platos con anticipación.",
+    "medidas": "53 x 32.5 x 6.6 cm (20.9 x 12.8 x 2.6 pulg)",
+    "precio": 7,
+    "slug": {
+      "_type": "slug",
+      "current": "bandeja-para-chafing-dish"
+    },
+    "subcategoria": "Chafing dish",
+    "titulo": "Bandeja para chafing dish",
+    "variantes": [
+      {
+        "_key": "unica",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-69d198acffeaaf5d9f1dad12885f7940d5ab52d5-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T19:59:00Z",
+    "_id": "producto-cristaleria-bandeja-redonda-con-diseno",
+    "_rev": "ertApYUV6RIXSmeZyV3Zxx",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T19:59:00Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "precio": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "bandeja-redonda-con-diseno"
+    },
+    "subcategoria": "Bandejas",
+    "titulo": "Bandeja redonda con diseño",
+    "variantes": [
+      {
+        "_key": "f052cd87",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "bb402c30",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-92af210c9148e63b37923582a6a294435a3f714d-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:35:55Z",
+    "_id": "producto-cristaleria-bandeja-redonda-para-salonero",
+    "_rev": "Oh6YgvMTqh9o5H57txDgpb",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:35:55Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bandeja redonda antideslizante para que los saloneros sirvan bebidas y bocadillos con seguridad.",
+    "precio": 2.5,
+    "slug": {
+      "_type": "slug",
+      "current": "bandeja-redonda-para-salonero"
+    },
+    "subcategoria": "Bandejas",
+    "titulo": "Bandeja redonda para salonero",
+    "variantes": [
+      {
+        "_key": "50p78i7t",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "tmsd40uo",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-019e649063af2221194cac090ad9caadc256722e-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T19:59:00Z",
+    "_id": "producto-cristaleria-bandeja-semirectangular",
+    "_rev": "ertApYUV6RIXSmeZyV3Zxx",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T19:59:00Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "precio": 6.5,
+    "slug": {
+      "_type": "slug",
+      "current": "bandeja-semirectangular"
+    },
+    "subcategoria": "Bandejas",
+    "titulo": "Bandeja semirectangular",
+    "variantes": [
+      {
+        "_key": "65e545ae",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "e2f8b56f",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3aff27b40f38076b55a9db1b7952f3c5384540ba-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-22T01:27:58Z",
+    "_id": "producto-cristaleria-chafing-dish-rectangular",
+    "_rev": "0toeB2hsiIX6riiI40vKCp",
+    "_type": "producto",
+    "_updatedAt": "2026-10-22T01:27:58Z",
+    "capacidad": "8 qt (7.6 L)",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Chafing dish rectangular de acero inoxidable con tapa y bandeja entera, el clásico para mantener la comida caliente en bufés de bodas, eventos corporativos y fiestas. Funciona a baño maría con dos fueguitos debajo. El combustible (fueguito) se alquila aparte.",
+    "medidas": "58 cm de largo x 29.5 cm de alto (22.95 x 11.61 pulg)",
+    "precio": 13,
+    "slug": {
+      "_type": "slug",
+      "current": "chafing-dish-rectangular"
+    },
+    "subcategoria": "Chafing dish",
+    "titulo": "Chafing dish rectangular",
+    "variantes": [
+      {
+        "_key": "unica",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fd59b184920960a8c3e420cdef9162dfaa7094fa-1200x1200-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "foto2",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f4b31a8688cd183ac703398ed4e0318551169824-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-22T01:28:00Z",
+    "_id": "producto-cristaleria-chafing-dish-rectangular-tapa-rodante",
+    "_rev": "Oh6YgvMTqh9o5H57txDLqE",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:08:49Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Chafing dish rectangular de acero inoxidable pulido con tapa rodante (roll top) que se abre hacia atrás sin tener que retirarla. Ideal para bufés de hotel, bodas y cenas formales donde los invitados se sirven solos. El combustible (fueguito) se alquila aparte.",
+    "precio": 25,
+    "slug": {
+      "_type": "slug",
+      "current": "chafing-dish-rectangular-tapa-rodante"
+    },
+    "subcategoria": "Chafing dish",
+    "titulo": "Chafing dish redondo - Grande",
+    "variantes": [
+      {
+        "_key": "unica",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-be97d8fa2a1b3046616b6563ce9e3fce808a8323-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-22T01:28:03Z",
+    "_id": "producto-cristaleria-chafing-dish-redondo-dorado",
+    "_rev": "0toeB2hsiIX6riiI40vKCp",
+    "_type": "producto",
+    "_updatedAt": "2026-10-22T01:28:03Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Chafing dish redondo de acero inoxidable con asas, patas y perilla en dorado. Perfecto para guarniciones, salsas y sopas en mesas de bufé elegantes, bodas y quince años. El combustible (fueguito) se alquila aparte.",
+    "precio": 18,
+    "slug": {
+      "_type": "slug",
+      "current": "chafing-dish-redondo-dorado"
+    },
+    "subcategoria": "Chafing dish",
+    "titulo": "Chafing dish redondo con detalles dorados",
+    "variantes": [
+      {
+        "_key": "unica",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d42a76dfc43c5b53d2a9919da89e59d7aedc7b90-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-22T01:28:05Z",
+    "_id": "producto-cristaleria-chafing-dish-redondo-tapa-rodante",
+    "_rev": "0toeB2hsiIX6riiI40vKCp",
+    "_type": "producto",
+    "_updatedAt": "2026-10-22T01:28:05Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Chafing dish redondo de acero inoxidable pulido con tapa rodante tipo cúpula. Su acabado espejo lo convierte en protagonista de bufés y estaciones de comida en eventos formales. El combustible (fueguito) se alquila aparte.",
+    "precio": 18,
+    "slug": {
+      "_type": "slug",
+      "current": "chafing-dish-redondo-tapa-rodante"
+    },
+    "subcategoria": "Chafing dish",
+    "titulo": "Chafing dish redondo con tapa rodante",
+    "variantes": [
+      {
+        "_key": "unica",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ae0a92175b66cf2816acf86d1a8d81a688834506-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T19:59:00Z",
+    "_id": "producto-cristaleria-dispensador-de-bebida-grande",
+    "_rev": "ertApYUV6RIXSmeZyV3Zxx",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T19:59:00Z",
+    "capacidad": "3 galones (384 oz, 48 tazas)",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "medidas": "16.5 x 10.5 pulg (alto x ancho)",
+    "precio": 18,
+    "slug": {
+      "_type": "slug",
+      "current": "dispensador-de-bebida-grande"
+    },
+    "subcategoria": "Dispensadores",
+    "titulo": "Dispensador de bebida grande",
+    "variantes": [
+      {
+        "_key": "848b2343",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "118541da",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8ba853c05716a40d1a75b853172a551f6af50b7f-1254x1254-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "46d76f60",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8af814d713318e89bb7ec892eda41e8ee282dc3b-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T19:59:00Z",
+    "_id": "producto-cristaleria-dispensador-de-vidrio-base-bambu",
+    "_rev": "RkzW5XafslQey0FrNuo17U",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T20:01:21Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "precio": 18,
+    "slug": {
+      "_type": "slug",
+      "current": "dispensador-de-vidrio-base-bambu"
+    },
+    "subcategoria": "Dispensadores",
+    "titulo": "Dispensador de vidrio con base de bambú",
+    "variantes": [
+      {
+        "_key": "b12d4d78",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "b761badb",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-56f8e3fbb1c4574f35e2ffcedf7949709ca0f73e-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T19:59:00Z",
+    "_id": "producto-cristaleria-dispensador-de-vidrio-clasico",
+    "_rev": "RkzW5XafslQey0FrNuo17U",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T20:01:21Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "precio": 18,
+    "slug": {
+      "_type": "slug",
+      "current": "dispensador-de-vidrio-clasico"
+    },
+    "subcategoria": "Dispensadores",
+    "titulo": "Dispensador de vidrio clásico",
+    "variantes": [
+      {
+        "_key": "2c7750b8",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "167144d9",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7ea6627053732ed3a106bcd8dd6ddc23bb38e3f2-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T19:59:00Z",
+    "_id": "producto-cristaleria-duo-de-dispensadores-de-bebida",
+    "_rev": "ertApYUV6RIXSmeZyV3Zxx",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T19:59:00Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "precio": 12,
+    "slug": {
+      "_type": "slug",
+      "current": "duo-de-dispensadores-de-bebida"
+    },
+    "subcategoria": "Dispensadores",
+    "titulo": "Dúo de dispensadores de bebida con base",
+    "variantes": [
+      {
+        "_key": "657a867e",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "64c5cc60",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a9dc64f0aa0a72f9c9d72681ad978f095192d1d5-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-22T01:31:49Z",
+    "_id": "producto-cristaleria-fueguito-para-chafing-dish",
+    "_rev": "0toeB2hsiIX6riiI40vKCp",
+    "_type": "producto",
+    "_updatedAt": "2026-10-22T01:31:49Z",
+    "capacidad": "250 ml",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Lata de alcohol en gel de 250 ml (fueguito o externo) que se coloca debajo del chafing dish para mantener la comida caliente durante el evento. El chafing dish rectangular usa dos fueguitos; calcula uno por cada 2 a 3 horas de servicio aproximadamente.",
+    "precio": 2.75,
+    "slug": {
+      "_type": "slug",
+      "current": "fueguito-para-chafing-dish"
+    },
+    "subcategoria": "Chafing dish",
+    "titulo": "Fueguito para chafing dish (alcohol en gel)",
+    "variantes": [
+      {
+        "_key": "unica",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d1c54ef7224dafc5e4856acdababff85dda3fc25-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-22T01:28:07Z",
+    "_id": "producto-cristaleria-mini-chafing-dish-individual",
+    "_rev": "vw0sMfodn1x9tMHGGjL3Ue",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:47:18Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Mini chafing dish de acero inoxidable con tapa de vidrio y asas, para porciones individuales, salsas, fondue o estaciones de degustación. El combustible (fueguito) se alquila aparte.",
+    "precio": 12,
+    "slug": {
+      "_type": "slug",
+      "current": "mini-chafing-dish-individual"
+    },
+    "subcategoria": "Chafing dish",
+    "titulo": "Chafing dish redondo - Pequeño",
+    "variantes": [
+      {
+        "_key": "unica",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-751ac7aeac0ff926005af554dc688e34536566c3-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-23T13:19:39Z",
+    "_id": "producto-manteleria-mantel-rectangular-sencillo",
+    "_rev": "olC5x40uqV8sfR6bPg9LVZ",
+    "_type": "producto",
+    "_updatedAt": "2026-10-28T22:56:42Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "descripcion": "Mantel rectangular sencillo para mesas rectangulares de 6′. Cubre la superficie y cae a media altura por los lados, dejando ver las patas: una opción práctica y económica para mesas de invitados, buffet, registro y fiestas infantiles. Disponible en 14 opciones: colores lisos, acabados Podesua y estampados de cuadros y navideños.",
+    "medidas": "Para mesa rectangular de 6′ (72 x 30\")",
+    "precio": 6,
+    "slug": {
+      "_type": "slug",
+      "current": "mantel-rectangular-sencillo"
+    },
+    "subcategoria": "Rectangulares",
+    "tipo": "Sencillo",
+    "titulo": "Mantel rectangular sencillo",
+    "variantes": [
+      {
+        "_key": "7099e4ab-a16",
+        "_type": "variante",
+        "color": "Blanco",
+        "imagenes": [
+          {
+            "_key": "78138bdb-8d5",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-011ae0f7676a510fb726aacccd86556506f2fea9-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "3df18695-a89",
+        "_type": "variante",
+        "color": "Azul rey",
+        "imagenes": [
+          {
+            "_key": "bc7afe6b-071",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-75dd8a8f8b2cee3c9e32f68fdc2a4598c0908e1c-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "c3597aa8-e79",
+        "_type": "variante",
+        "color": "Cuadros azul y blanco",
+        "imagenes": [
+          {
+            "_key": "06e28c37-cf6",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-79610e70cfa7a295e07cbcad698575ef9269b428-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "698f7c05-0fe",
+        "_type": "variante",
+        "color": "Fucsia",
+        "imagenes": [
+          {
+            "_key": "065e2051-62b",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ec278155d4ca9349b974349cce25657ff10fbc6e-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "2c0ba514-322",
+        "_type": "variante",
+        "color": "Naranja",
+        "imagenes": [
+          {
+            "_key": "60454747-b6b",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d3f9966be9cbed1d659034e3821cdf70900ad2c3-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "c092e08e-079",
+        "_type": "variante",
+        "color": "Navideño esferas",
+        "imagenes": [
+          {
+            "_key": "78c287aa-08e",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2f4cd8374d1b17a241e8b0ff5c2d7075ee9cb97a-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "2120181f-f9c",
+        "_type": "variante",
+        "color": "Navideño pinos",
+        "imagenes": [
+          {
+            "_key": "244a9ee3-7b4",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-579b3bfd09951549d2078eec77fc549b79cab24a-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "292198ec-ed3",
+        "_type": "variante",
+        "color": "Negro",
+        "imagenes": [
+          {
+            "_key": "e9d14b1e-86d",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8f9ddc16d94857a3a89bf020f3ce57fd7a6df3b4-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "6d4687d4-6f2",
+        "_type": "variante",
+        "color": "Plateado Podesua",
+        "imagenes": [
+          {
+            "_key": "8a4dc053-b66",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-56950dcbb6075842dece51c65d8a48e5eda2e7a3-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "c14a754f-ebd",
+        "_type": "variante",
+        "color": "Rojo vino",
+        "imagenes": [
+          {
+            "_key": "e1df1ef0-453",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fc45dcf80b189a0545bec9d425610a41794b4cf5-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "48a1fb77-443",
+        "_type": "variante",
+        "color": "Rosa Podesua",
+        "imagenes": [
+          {
+            "_key": "04007b05-5fb",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9a6d871be824d619e030fdfd170950a5889c6817-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "b879f85c-e0f",
+        "_type": "variante",
+        "color": "Turquesa",
+        "imagenes": [
+          {
+            "_key": "18877a48-bc0",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7eba0aa47701d803d506e7a9c0ea61f658719fb8-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "e197fcee-673",
+        "_type": "variante",
+        "color": "Verde esmeralda",
+        "imagenes": [
+          {
+            "_key": "4e064c42-ea7",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0582e78009fb27be2e891ff9dd6cf6d477d6b0bd-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "b1233af4-8da",
+        "_type": "variante",
+        "color": "Verde oscuro",
+        "imagenes": [
+          {
+            "_key": "cee74768-61b",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d9759c551eb196fa1a6ebcc80ccbedaa7b8d1d93-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-28T22:56:42Z",
+    "_id": "producto-manteleria-servilleta-blanca-de-lino",
+    "_rev": "olC5x40uqV8sfR6bPg9LVZ",
+    "_type": "producto",
+    "_updatedAt": "2026-10-28T22:56:42Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "descripcion": "Servilleta de lino blanca con detalle de vainica (calado) en el borde. Elegante para bodas, cenas formales y eventos de gala.",
+    "precio": 1,
+    "slug": {
+      "_type": "slug",
+      "current": "servilleta-blanca-de-lino"
+    },
+    "subcategoria": "Servilletas",
+    "titulo": "Servilleta blanca de Lino",
+    "variantes": [
+      {
+        "_key": "94fa5eb0",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "f17dff1c",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-cd18852df7289fad3130c224dd096bdf831613ba-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-22T00:56:09Z",
+    "_id": "producto-manteleria-servilleta-de-tela",
+    "_rev": "olC5x40uqV8sfR6bPg9LVZ",
+    "_type": "producto",
+    "_updatedAt": "2026-10-28T22:56:42Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "precio": 0.65,
+    "slug": {
+      "_type": "slug",
+      "current": "servilleta-de-tela"
+    },
+    "subcategoria": "Servilletas",
+    "titulo": "Servilleta de tela",
+    "variantes": [
+      {
+        "_key": "amarillo-mostaza",
+        "_type": "variante",
+        "color": "Amarillo mostaza",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-62e8056a21fcbde7b3ceb024ca00d74c8d37ffc2-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "amarillo",
+        "_type": "variante",
+        "color": "Amarillo",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1e87a6ef86da2a1409a2ceffc781bc14962a86d1-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "azul-navy",
+        "_type": "variante",
+        "color": "Azul navy",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1ba655cc12520993be7daf9d38225bdd59b53f52-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "turquesa",
+        "_type": "variante",
+        "color": "Turquesa",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2476fdc5d2f68b8aa767580b0b05ba33d273427b-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "blanco",
+        "_type": "variante",
+        "color": "Blanco",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d4ea4043476697b730a3640ee877141774090d41-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "negro",
+        "_type": "variante",
+        "color": "Negro",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c067edcd79495863918668d5ee121e701dba7978-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "rojo",
+        "_type": "variante",
+        "color": "Rojo",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b5460191b2440f5cebeb59f6988fd6c8de05b1cc-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "magenta",
+        "_type": "variante",
+        "color": "Magenta",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-51d216dc18f96478fe952977e1cec124dba2c527-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "lila",
+        "_type": "variante",
+        "color": "Lila",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-67555ef1485fc68522fdf92e40e36703c064c1a8-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "lavanda",
+        "_type": "variante",
+        "color": "Lavanda",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fd7ffa4472ec56dd88d008a7ffd03138269908c2-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "verde-limon",
+        "_type": "variante",
+        "color": "Verde limón",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d464bf284f5d7f4b6a993dfb15e004d09fdff6e9-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "verde-salvia",
+        "_type": "variante",
+        "color": "Verde salvia",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-54b68746f4124e136205e84739524bec7ab63958-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "verde-esmeralda",
+        "_type": "variante",
+        "color": "Verde esmeralda",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-79c758c601b271aca78a8ce3e734870fa403bdcc-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-22T00:56:31Z",
+    "_id": "producto-manteleria-servilleta-satinada",
+    "_rev": "64LZY5BK2V5gA8E6upoAlT",
+    "_type": "producto",
+    "_updatedAt": "2026-10-26T14:59:19Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "precio": 0.65,
+    "slug": {
+      "_type": "slug",
+      "current": "servilleta-satinada"
+    },
+    "subcategoria": "Servilletas",
+    "titulo": "Servilleta Podesua",
+    "variantes": [
+      {
+        "_key": "amarillo-oro",
+        "_type": "variante",
+        "color": "Amarillo oro",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4554d781dc4afe2c8a26adaf16ba5f64c22ee73e-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "azul-cielo",
+        "_type": "variante",
+        "color": "Azul cielo",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-131d4bb04f03edb1dcabfd1f6b9afab74043e9ba-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "azul-rey",
+        "_type": "variante",
+        "color": "Azul rey",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-de91d822faff3976d79992fcf86cc2b6ad3afcae-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "marfil",
+        "_type": "variante",
+        "color": "Marfil",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-926de55d4a8d861cefde086afe42f77a7b7d1a93-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "coral",
+        "_type": "variante",
+        "color": "Coral",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-09fac7efdfed55e6ccd24fd7d0105d516783c2d4-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "dorado",
+        "_type": "variante",
+        "color": "Dorado",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d8edc1cadfa3355082fcddb3253b33a08699f6da-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "fucsia",
+        "_type": "variante",
+        "color": "Fucsia",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2a4240ce4e5a44b6a6e54889a5103bb4b5107707-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "morado",
+        "_type": "variante",
+        "color": "Morado",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0bbeeddd43a22d98a9cebbe762d276b22492398d-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "naranja",
+        "_type": "variante",
+        "color": "Naranja",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ee87b2bec2327897e46d2d104dc5d545098044db-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "rojo",
+        "_type": "variante",
+        "color": "Rojo",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a95fa559391a85021e0a360fbb3b40cfc8feb1b4-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "rosa-pastel",
+        "_type": "variante",
+        "color": "Rosa pastel",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-19330091f99fe1f9338c6beea5e1696a5976944e-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      }
+    ]
+  }
+]

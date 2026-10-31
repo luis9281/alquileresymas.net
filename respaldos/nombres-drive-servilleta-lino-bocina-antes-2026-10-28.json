@@ -1,0 +1,1403 @@
+[
+  {
+    "_createdAt": "2026-10-24T19:38:35Z",
+    "_id": "producto-audio-video-bocina-con-tripode",
+    "_rev": "WV3FKcQLPisfMXqbQSt2dN",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:42:13Z",
+    "categoria": {
+      "_ref": "categoria-audio-video",
+      "_type": "reference"
+    },
+    "precio": 75,
+    "slug": {
+      "_type": "slug",
+      "current": "bocina-con-tripode"
+    },
+    "titulo": "Bocina con trípode",
+    "variantes": [
+      {
+        "_key": "4e40b05f",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "sa8nikk2",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b9ac3641afb9084482eab71b3e64d6455cfb5b2f-1254x1254-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "a16dd94c",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-bf29a3686850274f773d514ecc7b6a562670cdda-1200x1200-webp",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:08Z",
+    "_id": "producto-cristaleria-bandeja-blanca-dividida",
+    "_rev": "WV3FKcQLPisfMXqbQStFV2",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:51:08Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bandeja de porcelana blanca con tres compartimentos y mango de bambú. Perfecta para servir salsas, dips o botanas.",
+    "precio": 5,
+    "slug": {
+      "_type": "slug",
+      "current": "bandeja-blanca-dividida"
+    },
+    "subcategoria": "Bandejas",
+    "titulo": "Bandeja blanca dividida",
+    "variantes": [
+      {
+        "_key": "yvfqdji3",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "qfhzuyzv",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e2f8a575855474b63f7fdd3e41bda9a0b0eccba0-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:16Z",
+    "_id": "producto-cristaleria-bowl-cuadrado-con-borde-decorado",
+    "_rev": "64LZY5BK2V5gA8E6upTYhF",
+    "_type": "producto",
+    "_updatedAt": "2026-10-26T13:24:24Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl cuadrado de porcelana blanca con borde en relieve de estilo clásico. Elegante para bodas y cenas formales.",
+    "precio": 7,
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-cuadrado-con-borde-decorado"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl cuadrado con borde decorado",
+    "variantes": [
+      {
+        "_key": "fu704e84",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "x7pn7972",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fb12cde1bc688d2a0732ceb7bf12cf3f94f391aa-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:11Z",
+    "_id": "producto-cristaleria-bowl-cuadrado-de-porcelana",
+    "_rev": "64LZY5BK2V5gA8E6upTYhF",
+    "_type": "producto",
+    "_updatedAt": "2026-10-26T13:24:24Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl cuadrado de porcelana blanca, ideal para ensaladas, frutas o guarniciones en el bufé.",
+    "precio": 7,
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-cuadrado-de-porcelana"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl cuadrado de porcelana",
+    "variantes": [
+      {
+        "_key": "u9gu0z0q",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "6dhl3n0o",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8dc33d4b871aa42d534e057c23ac747ea44b3d39-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:14Z",
+    "_id": "producto-cristaleria-bowl-de-ensalada-de-vidrio",
+    "_rev": "vw0sMfodn1x9tMHGGjL9p9",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:51:14Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl grande de vidrio transparente para servir ensaladas, frutas o ponche.",
+    "precio": 7,
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-de-ensalada-de-vidrio"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Vidrio",
+    "titulo": "Bowl de ensalada de vidrio",
+    "variantes": [
+      {
+        "_key": "c3umtw9k",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "ec90n413",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3fa8e1be53b97cc71ef84d6e89ab65fbb5576b55-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:19Z",
+    "_id": "producto-cristaleria-bowl-de-porcelana-borde-curvo",
+    "_rev": "64LZY5BK2V5gA8E6upTYhF",
+    "_type": "producto",
+    "_updatedAt": "2026-10-26T13:24:24Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl redondo de porcelana blanca con borde abierto, para ensaladas, pastas o guarniciones.",
+    "precio": 7,
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-de-porcelana-borde-curvo"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl de porcelana con borde curvo",
+    "variantes": [
+      {
+        "_key": "iozdjbyq",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "ge1npj5l",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e0d7d03ddc2f0e866c2379e86ec94a5a461eb3be-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:27Z",
+    "_id": "producto-cristaleria-bowl-festoneado-de-porcelana",
+    "_rev": "64LZY5BK2V5gA8E6upTYhF",
+    "_type": "producto",
+    "_updatedAt": "2026-10-26T13:24:24Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl redondo de porcelana blanca con borde festoneado, para ensaladas, frutas o postres.",
+    "precio": 7,
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-festoneado-de-porcelana"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl festoneado de porcelana",
+    "variantes": [
+      {
+        "_key": "goado3iy",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "57so2dg3",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-69e608633bdefa4f084da7cc53cf68f68e137eba-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:24Z",
+    "_id": "producto-cristaleria-bowl-inclinado-con-relieve",
+    "_rev": "64LZY5BK2V5gA8E6upTYhF",
+    "_type": "producto",
+    "_updatedAt": "2026-10-26T13:24:24Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl de porcelana blanca de boca inclinada con relieve de anillos. Luce muy bien en mesas de bufé.",
+    "precio": 7,
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-inclinado-con-relieve"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl inclinado con relieve",
+    "variantes": [
+      {
+        "_key": "w1yeav48",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "lgcyg877",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a05463aca016e22da3e8bf6239b17cd423f2a04d-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:22Z",
+    "_id": "producto-cristaleria-bowl-ondulado-de-porcelana",
+    "_rev": "64LZY5BK2V5gA8E6upTYhF",
+    "_type": "producto",
+    "_updatedAt": "2026-10-26T13:24:24Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl de porcelana blanca con borde ondulado, para postres, entradas o botanas.",
+    "precio": 7,
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-ondulado-de-porcelana"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl ondulado de porcelana",
+    "variantes": [
+      {
+        "_key": "f5pfzvqu",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "4p7uzztc",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-af75bcc089847147525e7ee106d54c2ecac9bdd3-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:30Z",
+    "_id": "producto-cristaleria-bowl-para-ceviche",
+    "_rev": "WV3FKcQLPisfMXqbQStHFv",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:51:30Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl individual de vidrio con boca inclinada, ideal para ceviches, postres y entradas.",
+    "precio": 1,
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-para-ceviche"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Vidrio",
+    "titulo": "Bowl para ceviche",
+    "variantes": [
+      {
+        "_key": "24mtafx2",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "7s37u5i0",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3f2f6110902ef0bf19f54bcd125efe7f7015c01d-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:38Z",
+    "_id": "producto-cristaleria-bowl-redondo-de-porcelana",
+    "_rev": "64LZY5BK2V5gA8E6upTYhF",
+    "_type": "producto",
+    "_updatedAt": "2026-10-26T13:24:24Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Bowl redondo de porcelana blanca, versátil para ensaladas, frutas o guarniciones.",
+    "precio": 7,
+    "slug": {
+      "_type": "slug",
+      "current": "bowl-redondo-de-porcelana"
+    },
+    "subcategoria": "Bowls",
+    "tipo": "Porcelana",
+    "titulo": "Bowl redondo de porcelana",
+    "variantes": [
+      {
+        "_key": "rvewlk2f",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "pso9h1tk",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e4d15ff064fbf67438f233e938d5b5cb58613c44-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:32Z",
+    "_id": "producto-cristaleria-cafetera",
+    "_rev": "64LZY5BK2V5gA8E6upoAlT",
+    "_type": "producto",
+    "_updatedAt": "2026-10-26T14:59:19Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Cafetera eléctrica de acero inoxidable con dispensador y visor de nivel. Disponible en capacidades de 35, 75 o 100 tazas.",
+    "precio": 25,
+    "slug": {
+      "_type": "slug",
+      "current": "cafetera"
+    },
+    "subcategoria": "Servicio de buffet",
+    "titulo": "Cafetera de 100 tazas",
+    "variantes": [
+      {
+        "_key": "cm8x29x7",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "ak8zg8tx",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f48ab0fa05e58a5f0c6bdebd26a4808843052466-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:34Z",
+    "_id": "producto-cristaleria-mezclador-de-cocteles",
+    "_rev": "Oh6YgvMTqh9o5H57txDq2o",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:51:34Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Coctelera de acero inoxidable con colador integrado, para preparar cócteles en la barra.",
+    "precio": 5,
+    "slug": {
+      "_type": "slug",
+      "current": "mezclador-de-cocteles"
+    },
+    "subcategoria": "Bar",
+    "titulo": "Mezclador de cócteles",
+    "variantes": [
+      {
+        "_key": "txjt1gum",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "gdt6xdks",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-92efc7d88293bd53c1ec20cf18b6e89e996bae9a-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-24T19:51:40Z",
+    "_id": "producto-cristaleria-sopero",
+    "_rev": "WV3FKcQLPisfMXqbQStIEh",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:51:40Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Sopero de acero inoxidable con base para fueguito que mantiene caliente la sopa o las cremas durante el servicio.",
+    "precio": 18,
+    "slug": {
+      "_type": "slug",
+      "current": "sopero"
+    },
+    "subcategoria": "Chafing dish",
+    "titulo": "Sopero",
+    "variantes": [
+      {
+        "_key": "otax48n2",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "qfu7octz",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f7beaf2dab28a14c5b28fd692a84a31ba09d9a45-1000x1000-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-23T13:19:39Z",
+    "_id": "producto-manteleria-mantel-rectangular-sencillo",
+    "_rev": "TUCzNJ80PDCB7CVn3KiBNy",
+    "_type": "producto",
+    "_updatedAt": "2026-10-27T17:46:30Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "descripcion": "Mantel rectangular sencillo para mesas rectangulares de 6′. Cubre la superficie y cae a media altura por los lados, dejando ver las patas: una opción práctica y económica para mesas de invitados, buffet, registro y fiestas infantiles. Disponible en 14 opciones: colores lisos, acabados satinados y estampados de cuadros y navideños.",
+    "medidas": "Para mesa rectangular de 6′ (72 x 30\")",
+    "precio": 6,
+    "slug": {
+      "_type": "slug",
+      "current": "mantel-rectangular-sencillo"
+    },
+    "subcategoria": "Rectangulares",
+    "tipo": "Sencillo",
+    "titulo": "Mantel rectangular sencillo",
+    "variantes": [
+      {
+        "_key": "7099e4ab-a16",
+        "_type": "variante",
+        "color": "Blanco",
+        "imagenes": [
+          {
+            "_key": "78138bdb-8d5",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-011ae0f7676a510fb726aacccd86556506f2fea9-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "3df18695-a89",
+        "_type": "variante",
+        "color": "Azul rey",
+        "imagenes": [
+          {
+            "_key": "bc7afe6b-071",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-75dd8a8f8b2cee3c9e32f68fdc2a4598c0908e1c-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "c3597aa8-e79",
+        "_type": "variante",
+        "color": "Cuadros azul y blanco",
+        "imagenes": [
+          {
+            "_key": "06e28c37-cf6",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-79610e70cfa7a295e07cbcad698575ef9269b428-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "698f7c05-0fe",
+        "_type": "variante",
+        "color": "Fucsia",
+        "imagenes": [
+          {
+            "_key": "065e2051-62b",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ec278155d4ca9349b974349cce25657ff10fbc6e-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "2c0ba514-322",
+        "_type": "variante",
+        "color": "Naranja",
+        "imagenes": [
+          {
+            "_key": "60454747-b6b",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d3f9966be9cbed1d659034e3821cdf70900ad2c3-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "c092e08e-079",
+        "_type": "variante",
+        "color": "Navideño esferas",
+        "imagenes": [
+          {
+            "_key": "78c287aa-08e",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2f4cd8374d1b17a241e8b0ff5c2d7075ee9cb97a-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "2120181f-f9c",
+        "_type": "variante",
+        "color": "Navideño pinos",
+        "imagenes": [
+          {
+            "_key": "244a9ee3-7b4",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-579b3bfd09951549d2078eec77fc549b79cab24a-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "292198ec-ed3",
+        "_type": "variante",
+        "color": "Negro",
+        "imagenes": [
+          {
+            "_key": "e9d14b1e-86d",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8f9ddc16d94857a3a89bf020f3ce57fd7a6df3b4-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "6d4687d4-6f2",
+        "_type": "variante",
+        "color": "Plateado satinado",
+        "imagenes": [
+          {
+            "_key": "8a4dc053-b66",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-56950dcbb6075842dece51c65d8a48e5eda2e7a3-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "c14a754f-ebd",
+        "_type": "variante",
+        "color": "Rojo vino",
+        "imagenes": [
+          {
+            "_key": "e1df1ef0-453",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fc45dcf80b189a0545bec9d425610a41794b4cf5-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "48a1fb77-443",
+        "_type": "variante",
+        "color": "Rosa satinado",
+        "imagenes": [
+          {
+            "_key": "04007b05-5fb",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9a6d871be824d619e030fdfd170950a5889c6817-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "b879f85c-e0f",
+        "_type": "variante",
+        "color": "Turquesa",
+        "imagenes": [
+          {
+            "_key": "18877a48-bc0",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7eba0aa47701d803d506e7a9c0ea61f658719fb8-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "e197fcee-673",
+        "_type": "variante",
+        "color": "Verde esmeralda",
+        "imagenes": [
+          {
+            "_key": "4e064c42-ea7",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0582e78009fb27be2e891ff9dd6cf6d477d6b0bd-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "b1233af4-8da",
+        "_type": "variante",
+        "color": "Verde oscuro",
+        "imagenes": [
+          {
+            "_key": "cee74768-61b",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d9759c551eb196fa1a6ebcc80ccbedaa7b8d1d93-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T20:16:46Z",
+    "_id": "producto-manteleria-mantel-redondo-60-satin",
+    "_rev": "64LZY5BK2V5gA8E6upoAlT",
+    "_type": "producto",
+    "_updatedAt": "2026-10-26T14:59:19Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "descripcion": "Mantel redondo Podesua (peau de soie) para mesas redondas de 60\". Tejido de satín con brillo sutil y caída pesada y fluida que se ve elegante en fotos y luz de noche; ideal para bodas, quince años y cenas de gala. Disponible en 5 colores de tono profundo.",
+    "medidas": "Para mesa redonda de 60\"",
+    "precio": 10,
+    "slug": {
+      "_type": "slug",
+      "current": "mantel-redondo-60-satin"
+    },
+    "subcategoria": "Redondos",
+    "tipo": "Podesua",
+    "titulo": "Mantel redondo 60\" Podesua",
+    "variantes": [
+      {
+        "_key": "ea2a57c5",
+        "_type": "variante",
+        "color": "Esmeralda claro",
+        "imagenes": [
+          {
+            "_key": "6a5d2c49",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-efab4098720a95288b0d9027f2e809fa42acaac1-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "458e9a5a",
+        "_type": "variante",
+        "color": "Esmeralda oscuro",
+        "imagenes": [
+          {
+            "_key": "f44405b0",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-70d39da5ce848dd0e855a6b944f7dedcf36d0eef-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "c8888856",
+        "_type": "variante",
+        "color": "Rojo vino",
+        "imagenes": [
+          {
+            "_key": "ef13a96e",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-333f42352079e1fa4ba7f989cd2a901aa720b471-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "2d909872",
+        "_type": "variante",
+        "color": "Rosa viejo",
+        "imagenes": [
+          {
+            "_key": "af34c8a5",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7996d09a00f0d45756a0052149fe8f7f69f9fecb-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "68c60a92",
+        "_type": "variante",
+        "color": "Verde olivo",
+        "imagenes": [
+          {
+            "_key": "6a1eabea",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-071c170bd8cb7055f3a8a0aee5770624b70d5980-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-23T13:25:40Z",
+    "_id": "producto-manteleria-rucha-para-mesa-rectangular",
+    "_rev": "6tPKyzeq7yxCN60QkDOYg3",
+    "_type": "producto",
+    "_updatedAt": "2026-10-23T13:25:40Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "descripcion": "Rucha (faldón plisado) con cubierta para mesa rectangular de 6′. Cubre la superficie y cae en pliegues uniformes hasta el piso, ocultando por completo las patas: ideal para mesas de buffet, postres, regalos, registro y mesas principales en cumpleaños, bautizos y eventos corporativos. Disponible en 20 colores, incluidos acabados satinados en dorado y plateado.",
+    "medidas": "Para mesa rectangular de 6′ (72 x 30\")",
+    "precio": 13,
+    "slug": {
+      "_type": "slug",
+      "current": "rucha-para-mesa-rectangular"
+    },
+    "subcategoria": "Rectangulares",
+    "tipo": "Ruchas",
+    "titulo": "Rucha para mesa rectangular",
+    "variantes": [
+      {
+        "_key": "4a15b594-e04",
+        "_type": "variante",
+        "color": "Amarillo",
+        "imagenes": [
+          {
+            "_key": "8c1ff0a2-fe5",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7a31f20c6f482245aacac486975a006f55766064-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "bdd6feb8-193",
+        "_type": "variante",
+        "color": "Azul rey",
+        "imagenes": [
+          {
+            "_key": "6be78e60-d9e",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-24465c9e7024e27ed383a8167400d5fd6311d44e-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "746e772e-17d",
+        "_type": "variante",
+        "color": "Azul celeste",
+        "imagenes": [
+          {
+            "_key": "3366ab89-855",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-48c47659047ccc38bb7f9049bf4f5cb59259e86d-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "3d1a6ed1-d01",
+        "_type": "variante",
+        "color": "Azul cielo",
+        "imagenes": [
+          {
+            "_key": "2f2df81e-3a8",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-00308a898c95fefc646b05528c96361fd7c08235-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "a6c70c53-7e3",
+        "_type": "variante",
+        "color": "Blanco",
+        "imagenes": [
+          {
+            "_key": "5dc08a1b-cea",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-cdb187d96d5801da36a21d7c349ddeb25973e166-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "b5f1ab9c-8d2",
+        "_type": "variante",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "de0c2c41-1c9",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-bb07dd0f107bf106f9eda775e5d31a0f66a236ff-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "7fc1a7bf-1c8",
+        "_type": "variante",
+        "color": "Dorado satinado",
+        "imagenes": [
+          {
+            "_key": "c83476f7-dc3",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3f2d1bc37a76d56db806cf691728acf0dd6dcad9-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "f9a3e159-f6f",
+        "_type": "variante",
+        "color": "Fucsia",
+        "imagenes": [
+          {
+            "_key": "11added9-30d",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-78413c396bff23ebbfe773584e18edb55fc30c07-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "ae0618ca-d6a",
+        "_type": "variante",
+        "color": "Lila",
+        "imagenes": [
+          {
+            "_key": "ba237ab5-766",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a9c6d9625c1f4ec2d794dc41fe66ece94a87a07a-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "56a3b64b-200",
+        "_type": "variante",
+        "color": "Morado",
+        "imagenes": [
+          {
+            "_key": "182a2a65-b39",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b4962db2bf8ad86efafd2131c35a27a9cd43f9b9-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "c3a146d0-6bf",
+        "_type": "variante",
+        "color": "Morado oscuro",
+        "imagenes": [
+          {
+            "_key": "0c5d075c-344",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2702a574337b2efaaf308b5b5baa2dd015ffa7c0-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "6c3fd1f6-c64",
+        "_type": "variante",
+        "color": "Naranja",
+        "imagenes": [
+          {
+            "_key": "9c7fadc3-266",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-de27ee817777ccb778728d0ded57be1a598cf670-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "da7a38d3-2ef",
+        "_type": "variante",
+        "color": "Negro",
+        "imagenes": [
+          {
+            "_key": "202ae087-223",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-40402dd1fa9c57e9a23df83527e06cb19652ca85-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "773c1ecd-b33",
+        "_type": "variante",
+        "color": "Plateado satinado",
+        "imagenes": [
+          {
+            "_key": "0da66e3c-2c5",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e732dee8578853022564ba95e2f9269077bc2a8b-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "c21174b0-117",
+        "_type": "variante",
+        "color": "Rojo",
+        "imagenes": [
+          {
+            "_key": "da7bbd81-391",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8a28a01f14afbc5c9459cb7e9626b55d259b7615-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "88f218f4-cb0",
+        "_type": "variante",
+        "color": "Rosa pastel",
+        "imagenes": [
+          {
+            "_key": "a64c1c79-6b8",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1225ca83ba389fa5c91efbd4306f4781a675f28f-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "dcd8bd07-749",
+        "_type": "variante",
+        "color": "Turquesa",
+        "imagenes": [
+          {
+            "_key": "23cb611e-54b",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9a55f141708ccd594942dbbf252f6d9814cb5329-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "0b9defd0-e7d",
+        "_type": "variante",
+        "color": "Verde bandera",
+        "imagenes": [
+          {
+            "_key": "ee65c365-1fb",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-702fbeb07fd851214140e6d08ed138e615922262-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "46721a43-1c8",
+        "_type": "variante",
+        "color": "Verde limón",
+        "imagenes": [
+          {
+            "_key": "12ab03c4-b5e",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0829c6dd77d9292dfe099c1cbbffa825268e4d17-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "6d8f4a15-461",
+        "_type": "variante",
+        "color": "Verde manzana",
+        "imagenes": [
+          {
+            "_key": "3b0f1c1c-887",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-449ca407575d0d911c1bfa5de3717165b7bd31a8-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-22T00:56:09Z",
+    "_id": "producto-manteleria-servilleta-de-tela",
+    "_rev": "WV3FKcQLPisfMXqbQSo2Qs",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:13:52Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "precio": 0.65,
+    "slug": {
+      "_type": "slug",
+      "current": "servilleta-de-tela"
+    },
+    "subcategoria": "Servilletas",
+    "titulo": "Servilleta de tela",
+    "variantes": [
+      {
+        "_key": "amarillo-mostaza",
+        "_type": "variante",
+        "color": "Amarillo mostaza",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-62e8056a21fcbde7b3ceb024ca00d74c8d37ffc2-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "amarillo",
+        "_type": "variante",
+        "color": "Amarillo",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1e87a6ef86da2a1409a2ceffc781bc14962a86d1-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "azul-navy",
+        "_type": "variante",
+        "color": "Azul navy",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1ba655cc12520993be7daf9d38225bdd59b53f52-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "turquesa",
+        "_type": "variante",
+        "color": "Turquesa",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2476fdc5d2f68b8aa767580b0b05ba33d273427b-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "blanco-con-vainica",
+        "_type": "variante",
+        "color": "Blanco con vainica",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d2131c3b658416a15b600bf3c9d9db90ddd608b6-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "blanco",
+        "_type": "variante",
+        "color": "Blanco",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d4ea4043476697b730a3640ee877141774090d41-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "negro",
+        "_type": "variante",
+        "color": "Negro",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c067edcd79495863918668d5ee121e701dba7978-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "rojo",
+        "_type": "variante",
+        "color": "Rojo",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b5460191b2440f5cebeb59f6988fd6c8de05b1cc-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "magenta",
+        "_type": "variante",
+        "color": "Magenta",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-51d216dc18f96478fe952977e1cec124dba2c527-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "lila",
+        "_type": "variante",
+        "color": "Lila",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-67555ef1485fc68522fdf92e40e36703c064c1a8-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "lavanda",
+        "_type": "variante",
+        "color": "Lavanda",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fd7ffa4472ec56dd88d008a7ffd03138269908c2-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "verde-limon",
+        "_type": "variante",
+        "color": "Verde limón",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d464bf284f5d7f4b6a993dfb15e004d09fdff6e9-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "verde-salvia",
+        "_type": "variante",
+        "color": "Verde salvia",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-54b68746f4124e136205e84739524bec7ab63958-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      },
+      {
+        "_key": "verde-esmeralda",
+        "_type": "variante",
+        "color": "Verde esmeralda",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-79c758c601b271aca78a8ce3e734870fa403bdcc-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "precio": 0.75
+      }
+    ]
+  }
+]

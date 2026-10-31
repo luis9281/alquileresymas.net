@@ -1,0 +1,190 @@
+[
+  {
+    "_createdAt": "2026-10-10T20:16:46Z",
+    "_id": "producto-manteleria-mantel-rectangular-grande-liso",
+    "_rev": "6tPKyzeq7yxCN60QkDLurV",
+    "_type": "producto",
+    "_updatedAt": "2026-10-23T13:13:45Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "descripcion": "Mantel rectangular grande liso de tela con acabado mate para mesas rectangulares de 6′. Cubre la mesa hasta el piso con caída recta y pliegues suaves en las esquinas, ideal para mesas de invitados, buffet, bocadillos y registro en bodas, eventos corporativos y cumpleaños. Disponible en 11 colores, desde blanco y negro hasta tonos pastel y verdes.",
+    "medidas": "Para mesa rectangular de 6′ (72 x 30\")",
+    "precio": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "mantel-rectangular-grande-liso"
+    },
+    "subcategoria": "Rectangulares",
+    "tipo": "Liso",
+    "titulo": "Mantel rectangular grande liso",
+    "variantes": [
+      {
+        "_key": "bef81217",
+        "_type": "variante",
+        "color": "Azul navy",
+        "imagenes": [
+          {
+            "_key": "24eb9259",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3997f76f1b50bf39745338d503005283860eb6ac-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "1c7e1b02",
+        "_type": "variante",
+        "color": "Blanco",
+        "imagenes": [
+          {
+            "_key": "b0254a06-842",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-24184a9e771fcf91cecdff45ff93a548dea88d09-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "40ebbc1e",
+        "_type": "variante",
+        "color": "Crema",
+        "imagenes": [
+          {
+            "_key": "fbed3ac6-5f5",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4f56d41f32b8b223457f97eb0a0f00a876bcfa4d-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "4fcc2e30",
+        "_type": "variante",
+        "color": "Dorado",
+        "imagenes": [
+          {
+            "_key": "0c952356-37a",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f99753ec62649cc0c3d5754bdebc1ed1381238f5-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "2c384b5e",
+        "_type": "variante",
+        "color": "Morado",
+        "imagenes": [
+          {
+            "_key": "3ffc6281-1e1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-65a7bdd88135ca96c0f170af3b48402dace17736-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "3f0019cf",
+        "_type": "variante",
+        "color": "Negro",
+        "imagenes": [
+          {
+            "_key": "b1df1e7e-c34",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f9d97bb5a9cdb29218c6aafb6d970d8f232dc2ef-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "78a7e0b3",
+        "_type": "variante",
+        "color": "Rosa viejo",
+        "imagenes": [
+          {
+            "_key": "b743890d-803",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-425bab66c7859a28142863b87cdb0c0b023094ea-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "69908138",
+        "_type": "variante",
+        "color": "Rosado pastel",
+        "imagenes": [
+          {
+            "_key": "dd1ff0ff-fd9",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d08f873f8d80f49b5243dc2f06c1022cd219f5ce-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "de388e98",
+        "_type": "variante",
+        "color": "Verde olivo",
+        "imagenes": [
+          {
+            "_key": "ed3bdc3b-5d6",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c56b50d68f818ea447debc8c3dfd5c34c9882899-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "32b44a39",
+        "_type": "variante",
+        "color": "Verde oscuro",
+        "imagenes": [
+          {
+            "_key": "99c8edd5-fbc",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1bf333ff4cc5421dfdcbbf5f47b4b54076babc13-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "274a636b-eb3",
+        "_type": "variante",
+        "color": "Verde salvia",
+        "imagenes": [
+          {
+            "_key": "3e1e5f0a-299",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-dcf949df5c40204d2134dbde0dbe38aef2ce390f-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
