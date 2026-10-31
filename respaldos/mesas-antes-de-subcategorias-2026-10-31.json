@@ -1,0 +1,1296 @@
+[
+  {
+    "_createdAt": "2026-10-31T14:14:38Z",
+    "_id": "producto-bares-counters-podiums-mesita-lounge-cubo",
+    "_rev": "MhnO5j0Xf0Gda41Dlnlu2b",
+    "_type": "producto",
+    "_updatedAt": "2026-10-31T14:17:01Z",
+    "categoria": {
+      "_ref": "categoria-bares-counters-podiums",
+      "_type": "reference"
+    },
+    "descripcion": "Mesita cubo blanca para salas lounge. Sirve como mesa auxiliar, base de exhibición o apoyo junto a sofás y puffs.",
+    "precio": 10,
+    "slug": {
+      "_type": "slug",
+      "current": "mesita-cuadrada-blanca-cubo"
+    },
+    "titulo": "Mesita cuadrada Blanca - Cubo",
+    "variantes": [
+      {
+        "_key": "tf6j24p5",
+        "_type": "variante",
+        "color": "Blanco",
+        "imagenes": [
+          {
+            "_key": "byfga7kl",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d2dd94bdf47e09ad7e6323fab715da38340315bf-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Mesita cuadrada Blanca - Cubo"
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-31T14:14:41Z",
+    "_id": "producto-bares-counters-podiums-mesita-sala-luxury",
+    "_rev": "S5qNdSZhOju0QETYuNGNZQ",
+    "_type": "producto",
+    "_updatedAt": "2026-10-31T14:17:03Z",
+    "categoria": {
+      "_ref": "categoria-bares-counters-podiums",
+      "_type": "reference"
+    },
+    "descripcion": "Mesita blanca de líneas rectas con base de estructura abierta. Ideal como mesa auxiliar o de centro en salas lounge.",
+    "precio": 20,
+    "slug": {
+      "_type": "slug",
+      "current": "mesita-cuadrada-blanca-moderna"
+    },
+    "titulo": "Mesita cuadrada Blanca - Moderna",
+    "variantes": [
+      {
+        "_key": "o3sdi9wc",
+        "_type": "variante",
+        "color": "Blanco",
+        "imagenes": [
+          {
+            "_key": "bcb8z84v",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-dbace81abd56615d4396b62cdf383415026c58d5-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Mesita cuadrada Blanca - Moderna"
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-duo-de-mesas-decorativas",
+    "_rev": "GbP60G3Uqz2qrcSPqQSeV3",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T19:42:05Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 32,
+    "slug": {
+      "_type": "slug",
+      "current": "duo-de-mesas-decorativas"
+    },
+    "titulo": "Duo de Mesas Decorativas",
+    "variantes": [
+      {
+        "_key": "z7coljj0",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "acu3d8ri",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ccbe30d0662cdc334bb74e8ed4eec6f89bd01d3b-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "55y2pz3v",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "p80gn3rk",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9c12097eec2d041d9aef7a25de2d92da34dfc07f-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T19:45:37Z",
+    "_id": "producto-mesas-juego-de-mesas-decorativas-hierros-cruzados",
+    "_rev": "ertApYUV6RIXSmeZyV3Zxx",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T19:59:00Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 45,
+    "slug": {
+      "_type": "slug",
+      "current": "juego-de-mesas-decorativas-hierros-cruzados"
+    },
+    "titulo": "Mesita de hierros cruzados (individual)",
+    "variantes": [
+      {
+        "_key": "ee28a46e",
+        "_type": "variante",
+        "color": "Dorado",
+        "imagenes": [
+          {
+            "_key": "0132b8ec",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3a843a7e412ba7430e8417ab6242aa8c6fa609ae-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:32:41Z",
+    "_id": "producto-mesas-mesa-alta-decorativa",
+    "_rev": "GbP60G3Uqz2qrcSPqQSeV3",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T20:38:45Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 18,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-alta-decorativa"
+    },
+    "titulo": "Mesa alta decorativa",
+    "variantes": [
+      {
+        "_key": "8x6jwiol",
+        "imagenes": [
+          {
+            "_key": "rrtjm7hz",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9f1a56ce5a7005f99f46d5935226c009ca5d2bf9-1254x1254-png",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "cd60fb14",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7b5127648a17f52aa40109668d0b592eb4f3c254-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-mesa-carmencita",
+    "_rev": "Fp6j2OFYXErtrNMrGBFhH4",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:32:42Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 35,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-carmencita"
+    },
+    "titulo": "Mesa Carmencita",
+    "variantes": [
+      {
+        "_key": "cd5prrvy",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "cs5zqxb1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-529a2c3de9fd921c5c72e19839a702b530e043df-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "gkm0z8nh",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "5hltupt6",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0e4320ee35a9471809c1325a33c640992ae2519a-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-mesa-coctelera-de-madera",
+    "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:23:50Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 20,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-coctelera-de-madera"
+    },
+    "titulo": "Mesa Coctelera de Madera",
+    "variantes": [
+      {
+        "_key": "yqq5r2xj",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "f5daxfqu",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-92af3cfad1652e89ef803566fa112fb1d2e6ef16-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "blkvcl8k",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "h2nji9x6",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8d9581baf7902abd9320757685fc6a9f5405f876-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:33:14Z",
+    "_id": "producto-mesas-mesa-coctelera-led-rgb",
+    "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:23:50Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 25,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-coctelera-led-rgb"
+    },
+    "titulo": "Mesa coctelera LED RGB",
+    "variantes": [
+      {
+        "_key": "5u332amj",
+        "imagenes": [
+          {
+            "_key": "ikxg0bl3",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-15e974fd6cc36375bf5c701f6980717135e09862-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:33:17Z",
+    "_id": "producto-mesas-mesa-coctelera-plegable",
+    "_rev": "GbP60G3Uqz2qrcSPqQSeV3",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T20:38:45Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 6,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-coctelera-plegable"
+    },
+    "titulo": "Mesa coctelera plegable",
+    "variantes": [
+      {
+        "_key": "dhxpanz0",
+        "imagenes": [
+          {
+            "_key": "kr1v8ri0",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c03bf67535ec7a4cc6200e7e14545a032d802855-2000x2000-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:33:20Z",
+    "_id": "producto-mesas-mesa-cocteleras-para-2-4ptos",
+    "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:23:50Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 6,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-cocteleras-para-2-4ptos"
+    },
+    "titulo": "Mesa Cocteleras para 2-4ptos",
+    "variantes": [
+      {
+        "_key": "mzlwfqv2",
+        "imagenes": [
+          {
+            "_key": "cf0cweau",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-078682afef436d660f3a354c93267ba42d805a5b-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:33:24Z",
+    "_id": "producto-mesas-mesa-con-cambas-delanteras",
+    "_rev": "GbP60G3Uqz2qrcSPqQJADF",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T19:42:05Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 100,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-con-cambas-delanteras"
+    },
+    "titulo": "Mesa con Cambas delanteras",
+    "variantes": [
+      {
+        "_key": "0qqjn1cc",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "nvzf41a6",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d345ad3b37aeed8a6991487ab1046c543b03e66d-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "ac94231d",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "7ba646fc",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7f78cf1099efb915ce6cfa8f4b14fd3c39e5b165-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-mesa-de-dos-cubos",
+    "_rev": "Fp6j2OFYXErtrNMrGBFhH4",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:32:42Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 30,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-de-dos-cubos"
+    },
+    "titulo": "Mesa de dos cubos",
+    "variantes": [
+      {
+        "_key": "mw54puwb",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "6dfa4ne5",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e6518de4e5cb5283412e36b132e8fa4a0ba7b7b9-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "h97nmvyd",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "e4fhfde6",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d6ca55a5bf24915ecb8ba78d7049dbcaa731940-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-mesa-de-madera-8-puestos",
+    "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:23:50Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 20,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-de-madera-8-puestos"
+    },
+    "titulo": "Mesa de madera (8 Puestos)",
+    "variantes": [
+      {
+        "_key": "nkr2e0wc",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "1q384bvd",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2ba2abab541eae97c6419ba06a93152b20d08c34-1254x1254-png",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "0dkpkq18",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "qdy33t8w",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a398f7c526ecb7847180622097e3a339cc685e32-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-mesa-de-madera-redonda-de-48",
+    "_rev": "GbP60G3Uqz2qrcSPqQSeV3",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T20:38:45Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 38,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-de-madera-redonda-de-48"
+    },
+    "titulo": "Mesa de madera redonda de 48",
+    "variantes": [
+      {
+        "_key": "uu1k9bdb",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "rzutxyw6",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-00c23676aa6d5229650e2f24c44f6cc7cf057c5b-1254x1254-png",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "2xsrnmoa",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "y4l331r4",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7372dfabba7bec6adfcc1f5c3db3c0dfb98d89a9-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-mesa-de-un-cubo",
+    "_rev": "Fp6j2OFYXErtrNMrGBFhH4",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:32:42Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 30,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-de-un-cubo"
+    },
+    "titulo": "Mesa de un cubo",
+    "variantes": [
+      {
+        "_key": "k05rk5j7",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "pd7em5ks",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b34b33fddbd90cb6a48586365cde839d58052b39-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "lml87q8h",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "ve9ebohu",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-39b755ae7f49cce2bbcb99dac4893fd8d7ab4d88-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-mesa-decorativa-individual-baja",
+    "_rev": "GbP60G3Uqz2qrcSPqQSeV3",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T19:42:05Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 18,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-decorativa-individual-baja"
+    },
+    "titulo": "Mesa decorativa individual baja",
+    "variantes": [
+      {
+        "_key": "4r3ddfkd",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "v81n2ov5",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d682c44a32dd30543b3b2160c078d11c4e9109d1-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "bdde4c8e",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "a0769917",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7c3b2458a7df7d55f4f51f9beadd263cac9e55af-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-mesa-duo-isabelina",
+    "_rev": "GbP60G3Uqz2qrcSPqQSeV3",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T19:42:05Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 65,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-duo-isabelina"
+    },
+    "titulo": "Mesa Duo Isabelina",
+    "variantes": [
+      {
+        "_key": "f0nl372t",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "e7gsdecj",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-129e37f1f7eab63d45d5d41bdbb06926762c6582-1024x1024-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "xch0jiqf",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-73a7506eb441c7857aace1d280d19ea8ec8acf25-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "xfqotm0e",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "sxqowio9",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-b5a809d06b0b51aded8e86de33d8fa70076299da-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:34:05Z",
+    "_id": "producto-mesas-mesa-expo-coctelera",
+    "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:23:50Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 18,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-expo-coctelera"
+    },
+    "titulo": "Mesa expo coctelera",
+    "variantes": [
+      {
+        "_key": "w7dhcj5c",
+        "imagenes": [
+          {
+            "_key": "z8g49nzt",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-cba7c4af480d52bb0186bda7451dcd8cf4b248a5-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-mesa-isabelina-individual-alta",
+    "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:23:50Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 35,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-isabelina-individual-alta"
+    },
+    "titulo": "Mesa Isabelina individual alta",
+    "variantes": [
+      {
+        "_key": "xx599rtw",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "o67x9gpi",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-07392652a81984e280dc6700151acaeb0b9d0e1b-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "uckg5bmf",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "noqtg3qp",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-55c9e74891450df5c4b81af0892ea9cc5f507ce0-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:34:16Z",
+    "_id": "producto-mesas-mesa-magna",
+    "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:23:50Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 45,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-magna"
+    },
+    "titulo": "Mesa Magna",
+    "variantes": [
+      {
+        "_key": "mb2c5493",
+        "imagenes": [
+          {
+            "_key": "hl8w6jxt",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-378ca8fec9300c42f712db8ea8ed997dc64ce451-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-mesa-nova-luxe",
+    "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:23:50Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 35,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-nova-luxe"
+    },
+    "titulo": "Mesa Nova Luxe",
+    "variantes": [
+      {
+        "_key": "u50ds3ca",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "47zv9jws",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3d14abd1f7c3494ab572460bf62938b3bb7e4e4d-1024x1024-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "c53kt9pj",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-809b3a5a2c6ccf60aebaaae2a26215ed59a6654b-1000x1260-webp",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "m2ftpyk9",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "yus8g17z",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-19f7ab3488355b3eaee3296239b13a579beb0533-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:34:33Z",
+    "_id": "producto-mesas-mesa-para-novios",
+    "_rev": "Fp6j2OFYXErtrNMrGBFhH4",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:32:42Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 65,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-para-novios"
+    },
+    "titulo": "Mesa para Novios",
+    "variantes": [
+      {
+        "_key": "bkm38iro",
+        "imagenes": [
+          {
+            "_key": "jacg667m",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-86c0309fb9ef72d28eb22d1a70e943126bd3ae97-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:34:35Z",
+    "_id": "producto-mesas-mesa-rectangular-24-x-48",
+    "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:23:50Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 5.5,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-rectangular-24-x-48"
+    },
+    "titulo": "Mesa Rectangular 24 x 48",
+    "variantes": [
+      {
+        "_key": "v0mcg1f2",
+        "imagenes": [
+          {
+            "_key": "dik3kf9w",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6d11173be93cef1c4645b60e2731df93554f72f2-1000x1000-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:34:38Z",
+    "_id": "producto-mesas-mesa-rectangular-6",
+    "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:23:50Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 6,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-rectangular-6"
+    },
+    "titulo": "Mesa Rectangular 6′",
+    "variantes": [
+      {
+        "_key": "kk5hjdod",
+        "imagenes": [
+          {
+            "_key": "mvawb30h",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1e66c84b6a7c6b3a302c2e611c6f0598350745a6-1000x1000-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-mesa-rectangular-de-madera-72x32",
+    "_rev": "trzJwo7gNjLjmFEMdsinjQ",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:27:15Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 25,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-rectangular-de-madera-72x32"
+    },
+    "titulo": "Mesa rectangular de madera 72x32",
+    "variantes": [
+      {
+        "_key": "nkt4riwb",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "rm7nqioe",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-94b4192fe09b6afa0f2d68a0480a63296334cf7a-1254x1254-png",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "r174vnw9",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "n1ht8648",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-32e4cbd0d990ff23accbc7c5cfda259671c7ffbd-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-mesa-rectangular-de-madera-con-patas-torneadas",
+    "_rev": "trzJwo7gNjLjmFEMdsinjQ",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:27:15Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 25,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-rectangular-de-madera-con-patas-torneadas"
+    },
+    "titulo": "Mesa rectangular de madera con patas torneadas",
+    "variantes": [
+      {
+        "_key": "9w16upmh",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "01qtxi7z",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-865898993ed583b5d9d541c58cb44cf644e27ed8-1024x1024-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "h1epaae4",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4b85bec2c6f413a2039636e25cde28c3d0a26aa9-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "q4nfq61j",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "pixb3zm7",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-279131f986476077fcc24c691fa52b8044f13c03-1024x1024-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "t68bwln7",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ec9366bda7614b03e30277aea1b87c2b4c0e214b-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:35:15Z",
+    "_id": "producto-mesas-mesa-redonda-48",
+    "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:23:50Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 5.75,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-redonda-48"
+    },
+    "titulo": "Mesa Redonda 48´´",
+    "variantes": [
+      {
+        "_key": "08wl1ztk",
+        "imagenes": [
+          {
+            "_key": "3aflnov7",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1f7a49e18e46d39959eea54ee179cc3dff48bf58-1000x1000-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:55:57Z",
+    "_id": "producto-mesas-mesa-redonda-de-madera-para-invitados-60-4-patas",
+    "_rev": "9bEXvZgmUI2zGf3DfJTfRL",
+    "_type": "producto",
+    "_updatedAt": "2026-09-23T21:23:50Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 28,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-redonda-de-madera-para-invitados-60-4-patas"
+    },
+    "titulo": "Mesa redonda de madera para invitados - 60´´ - 4 patas",
+    "variantes": [
+      {
+        "_key": "8f2iqbq5",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "sb1jw5b6",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-adbb34121856926bc22f3d444501ba765ffea276-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "9uhkb0ot",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "ve5i8mfa",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c0278f95a5e8dca0f02b40c290f4e21ce5f89942-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T19:45:37Z",
+    "_id": "producto-mesas-mesa-redonda-de-madera-x",
+    "_rev": "RkzW5XafslQey0FrNunHkS",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T19:45:37Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 45,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-redonda-de-madera-x"
+    },
+    "titulo": "Mesa redonda de madera X",
+    "variantes": [
+      {
+        "_key": "e4f4394a",
+        "_type": "variante",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "02934da1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-54359f2155051a21e217b1093b9180c51cbc5e3e-499x500-webp",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-09-02T01:35:27Z",
+    "_id": "producto-mesas-mesa-redondas-60",
+    "_rev": "GbP60G3Uqz2qrcSPqQJADF",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T19:42:05Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 6.75,
+    "slug": {
+      "_type": "slug",
+      "current": "mesa-redondas-60"
+    },
+    "titulo": "Mesa Redondas 60´´",
+    "variantes": [
+      {
+        "_key": "3iqyhg2g",
+        "imagenes": [
+          {
+            "_key": "89mh34s1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4dac969f641267f442d7e17f18e2e05fbddfbe91-1000x1000-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "0b777a41",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e2d6d524c674aabfee6ede7758c2139f1fc34edb-2000x2000-webp",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T19:45:37Z",
+    "_id": "producto-mesas-trio-de-mesitas-decorativas",
+    "_rev": "RkzW5XafslQey0FrNunHkS",
+    "_type": "producto",
+    "_updatedAt": "2026-10-10T19:45:37Z",
+    "categoria": {
+      "_ref": "categoria-mesas",
+      "_type": "reference"
+    },
+    "precio": 45,
+    "slug": {
+      "_type": "slug",
+      "current": "trio-de-mesitas-decorativas"
+    },
+    "titulo": "Trío de mesitas decorativas",
+    "variantes": [
+      {
+        "_key": "fd90e3db",
+        "_type": "variante",
+        "color": "Blanca",
+        "imagenes": [
+          {
+            "_key": "7bf448d5",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6ea6a1d0a79d5044f9dce763fe12fa9ca017b282-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "e8a3da4c",
+        "_type": "variante",
+        "color": "Chocolate",
+        "imagenes": [
+          {
+            "_key": "bc6ce88d",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c6409ada729b002c6c1d1f42244926d90f940015-1024x1024-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

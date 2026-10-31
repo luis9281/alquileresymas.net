@@ -1,0 +1,37 @@
+[
+  {
+    "_createdAt": "2026-10-24T19:35:55Z",
+    "_id": "producto-bares-counters-podiums-podium-acrilico",
+    "_rev": "64LZY5BK2V5gA8E6upoAlT",
+    "_type": "producto",
+    "_updatedAt": "2026-10-26T14:59:19Z",
+    "categoria": {
+      "_ref": "categoria-bares-counters-podiums",
+      "_type": "reference"
+    },
+    "descripcion": "Pódium de acrílico transparente con atril inclinado y repisa interior. Ideal para conferencias, ceremonias, graduaciones y eventos corporativos.",
+    "medidas": "120 cm de alto x 58 cm de ancho x 45 cm de fondo",
+    "precio": 90,
+    "slug": {
+      "_type": "slug",
+      "current": "podium-acrilico"
+    },
+    "titulo": "Pódium acrílico - 2",
+    "variantes": [
+      {
+        "_key": "g8nnxw70",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "0viafzae",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-569a219b63726634336067b5dc7745f65283d91d-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
