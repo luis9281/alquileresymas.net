@@ -1,0 +1,264 @@
+[
+  {
+    "_createdAt": "2026-10-22T00:56:31Z",
+    "_id": "producto-manteleria-servilleta-satinada",
+    "_rev": "yNV1Oen6JtR5v9YqZrJZzN",
+    "_type": "producto",
+    "_updatedAt": "2026-11-02T17:40:02Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "precio": 0.75,
+    "slug": {
+      "_type": "slug",
+      "current": "servilleta-satinada"
+    },
+    "subcategoria": "Servilletas",
+    "tipo": "Podesua",
+    "titulo": "Servilleta Podesua",
+    "variantes": [
+      {
+        "_key": "70584844",
+        "_type": "variante",
+        "color": "Amarilla",
+        "imagenes": [
+          {
+            "_key": "6614c45c",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9c7d7dcaf6a56624b749982f9564eb8dec5bb482-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta Amarilla Podesua"
+      },
+      {
+        "_key": "9e76fe9b",
+        "_type": "variante",
+        "color": "Celeste",
+        "imagenes": [
+          {
+            "_key": "302bfc53",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2736e59d81a6768844be84bf0b13bf5df7b9915e-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta Celeste Podesua"
+      },
+      {
+        "_key": "azul-rey",
+        "_type": "variante",
+        "color": "Azul rey",
+        "imagenes": [
+          {
+            "_key": "foto1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c608182c340e06931556d2bf2fff965060aea8e0-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta Azul rey Podesua"
+      },
+      {
+        "_key": "9dee0800",
+        "_type": "variante",
+        "color": "Coral",
+        "imagenes": [
+          {
+            "_key": "52ffffba",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0331db9834cd8180c84ba9333f31088b4d225b85-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta Coral Podesua"
+      },
+      {
+        "_key": "19ea7514",
+        "_type": "variante",
+        "color": "Crema",
+        "imagenes": [
+          {
+            "_key": "db4dcf7d",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-10b318dad69e170978dd99699555d2570d339658-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta Crema Podesua"
+      },
+      {
+        "_key": "d698dacb",
+        "_type": "variante",
+        "color": "Fucsia",
+        "imagenes": [
+          {
+            "_key": "3c57fd13",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d02c815a761e27b30e2d94079c59781c4fffcc31-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta Fucsia Podesua"
+      },
+      {
+        "_key": "1875a135",
+        "_type": "variante",
+        "color": "Lila",
+        "imagenes": [
+          {
+            "_key": "7e509bf2",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-12d2a8f4cd526697ab4772777996e3533c9516aa-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta Lila Podesua",
+        "precio": 2
+      },
+      {
+        "_key": "6ab826a0",
+        "_type": "variante",
+        "color": "Morada",
+        "imagenes": [
+          {
+            "_key": "6744fa8e",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-1d22f546cc7740b8fd456d6bf1ace12f4cee0dcd-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta Morada Podesua"
+      },
+      {
+        "_key": "539d0480",
+        "_type": "variante",
+        "color": "Naranja",
+        "imagenes": [
+          {
+            "_key": "36268b58",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9a9c25189e909c2ebd62488526690bbcb5b744c4-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta Naranja Podesua"
+      },
+      {
+        "_key": "f7dad1ec",
+        "_type": "variante",
+        "color": "Roja",
+        "imagenes": [
+          {
+            "_key": "0f587d73",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9d9917764583c5c4e1e23254e2fc3d4e8af81c79-1289x1220-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta Roja Podesua"
+      },
+      {
+        "_key": "fcdb8ad4",
+        "_type": "variante",
+        "color": "Rojo Vino",
+        "imagenes": [
+          {
+            "_key": "02515282",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-74f8ad3e46cbe0d93318cab19f7f2cdce024d057-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta Rojo Vino Podesua"
+      },
+      {
+        "_key": "eb66e31d",
+        "_type": "variante",
+        "color": "Rosa pastel",
+        "imagenes": [
+          {
+            "_key": "2ca9f692",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8cbfba5efa64cccc8ebef9ab18119857cb1ddfdc-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta Rosa pastel Podesua"
+      },
+      {
+        "_key": "f75daa1d",
+        "_type": "variante",
+        "color": "Turquesa",
+        "imagenes": [
+          {
+            "_key": "fb036da3",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f48410dfddb696a163c39cdcd93ac663858e60f4-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta turquesa Podesua"
+      },
+      {
+        "_key": "dec06419",
+        "_type": "variante",
+        "color": "Verde caña",
+        "imagenes": [
+          {
+            "_key": "827bc629",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6cb453670dde5d3e413ed8bae244b2870a234964-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta verde caña Podesua"
+      },
+      {
+        "_key": "f7d9df57",
+        "_type": "variante",
+        "color": "Verde Olivo",
+        "imagenes": [
+          {
+            "_key": "7a74f4d1",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0aaf72a9b928396d93038a54fd7c907cc8d354ce-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ],
+        "nombre": "Servilleta Verde Olivo Podesua"
+      }
+    ]
+  }
+]
