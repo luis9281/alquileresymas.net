@@ -29,6 +29,8 @@ export type Solicitud = {
   origen?: "cotizador-rapido";
   /** Full quote text (prices, transport, totals) when the form builds one. */
   detalle?: string;
+  /** Sales mailbox the request was assigned to (src/lib/reparto.ts). */
+  asignadoA?: string;
 };
 
 /** Saves one request. No-op when SANITY_WRITE_TOKEN isn't set. */
@@ -46,5 +48,6 @@ export async function registrarSolicitud(s: Solicitud): Promise<void> {
     productos: s.items.map((i) => `${i.title} x${i.qty}`).join(", "),
     ...(s.origen && { origen: s.origen }),
     ...(s.detalle && { detalle: s.detalle }),
+    ...(s.asignadoA && { asignadoA: s.asignadoA }),
   });
 }

@@ -1,4 +1,6 @@
 import nodemailer from "nodemailer";
+import { asignarVendedor, devolverAsignacion, resumenConteos, type Asignacion } from "./reparto";
+import { avisarPorWhatsApp } from "./aviso-whatsapp";
 
 /** Debe coincidir con la action del widget (components/Turnstile.tsx). */
 const TURNSTILE_ACTION = "cotizacion";
@@ -49,8 +51,9 @@ export const EMAIL_VALIDO = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export class CorreoNoConfigurado extends Error {}
 
-/** Envía un correo a QUOTE_TO_EMAIL. Lanza CorreoNoConfigurado si faltan las variables SMTP_*. */
-export async function enviarAGerencia(opts: { asunto: string; texto: string; html?: string; replyTo: string }) {
+/** Envía un correo a QUOTE_TO_EMAIL (gerencia) y, si se indica, también a `vendedor`.
+ * Lanza CorreoNoConfigurado si faltan las variables SMTP_*. */
+export async function enviarAGerencia(opts: { asunto: string; texto: string; html?: string; replyTo: string; vendedor?: string }) {
   const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, QUOTE_TO_EMAIL } = process.env;
   if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS || !QUOTE_TO_EMAIL) {
     throw new CorreoNoConfigurado("Faltan variables de entorno SMTP_* / QUOTE_TO_EMAIL.");
@@ -65,10 +68,56 @@ export async function enviarAGerencia(opts: { asunto: string; texto: string; htm
 
   await transporter.sendMail({
     from: `"Alquileres Eventos & Más" <${SMTP_USER}>`,
-    to: QUOTE_TO_EMAIL,
+    to: [opts.vendedor, QUOTE_TO_EMAIL].filter((e): e is string => Boolean(e)),
     replyTo: opts.replyTo,
     subject: opts.asunto,
     text: opts.texto,
     html: opts.html,
   });
+}
+
+/**
+ * Envía una solicitud de cotización repartida: siempre a gerencia (QUOTE_TO_EMAIL) y a la persona
+ * de ventas con menos solicitudes (src/lib/reparto.ts). Si el correo falla, se le devuelve el conteo.
+ * Al salir bien avisa por WhatsApp a quién se asignó. Devuelve el correo de ventas asignado.
+ */
+export async function enviarSolicitudRepartida(opts: {
+  asunto: string;
+  texto: string;
+  replyTo: string;
+  /** Para el aviso de WhatsApp. */
+  origen: string;
+  cliente: string;
+  telefono: string;
+  asignacion?: Asignacion;
+}): Promise<string> {
+  const asignacion = opts.asignacion ?? (await asignarVendedor());
+  const nombreCorto = asignacion.email.split("@")[0];
+
+  try {
+    await enviarAGerencia({
+      asunto: `${opts.asunto} -> ${nombreCorto}`,
+      texto: `Asignada a: ${asignacion.email}\nReparto acumulado: ${resumenConteos(asignacion)}\n\n${opts.texto}`,
+      replyTo: opts.replyTo,
+      vendedor: asignacion.email,
+    });
+  } catch (error) {
+    await devolverAsignacion(asignacion.email);
+    throw error;
+  }
+
+  await avisarPorWhatsApp(
+    [
+      `Nueva solicitud de cotizacion (${opts.origen})`,
+      `Cliente: ${opts.cliente}`,
+      opts.telefono && `Tel: ${opts.telefono}`,
+      `Correo del cliente: ${opts.replyTo}`,
+      `Asignada a: ${asignacion.email}`,
+      `Reparto: ${resumenConteos(asignacion)}`,
+    ]
+      .filter(Boolean)
+      .join("\n")
+  ).catch((error) => console.error("Error enviando el aviso por WhatsApp:", error));
+
+  return asignacion.email;
 }

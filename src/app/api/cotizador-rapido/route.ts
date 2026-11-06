@@ -3,8 +3,9 @@ import { getProductos } from "@/lib/sanity/queries";
 import { precioDeVariante } from "@/lib/precio";
 import { tituloListado } from "@/lib/producto";
 import { registrarSolicitud } from "@/lib/solicitudes-log";
-import { captchaValido, CorreoNoConfigurado, EMAIL_VALIDO, enviarAGerencia, ipDe } from "@/lib/correo";
+import { captchaValido, CorreoNoConfigurado, EMAIL_VALIDO, enviarSolicitudRepartida, ipDe } from "@/lib/correo";
 import { anotarEnTxt } from "@/lib/cotizador-log";
+import { asignarVendedor } from "@/lib/reparto";
 import { textoCotizacion, ZONAS_TRANSPORTE, type CotizacionRapida, type LineaCotizacion } from "@/lib/cotizador";
 
 type Body = Partial<Omit<CotizacionRapida, "lineas">> & {
@@ -70,7 +71,9 @@ export async function POST(request: Request) {
     lineas,
   };
 
-  const detalle = `Enviada por: ${porWhatsApp ? "WhatsApp" : "correo"}\n\n${textoCotizacion(cotizacion)}`;
+  // Assigned before logging so the log says who got it; the WhatsApp button skips the split (no email goes out).
+  const asignacion = porWhatsApp ? null : await asignarVendedor();
+  const detalle = `Enviada por: ${asignacion ? `correo, asignada a ${asignacion.email}` : "WhatsApp"}\n\n${textoCotizacion(cotizacion)}`;
 
   // Logged before emailing, so a request still shows up if SMTP fails.
   await anotarEnTxt(detalle).catch((error) => console.error("Error anotando la cotizacion en el txt:", error));
@@ -83,15 +86,20 @@ export async function POST(request: Request) {
     items: lineas.map((l) => ({ id: l.id, title: l.titulo, url: "", qty: l.qty })),
     origen: "cotizador-rapido",
     detalle,
+    asignadoA: asignacion?.email,
   }).catch((error) => console.error("Error registrando la solicitud en el log:", error));
 
-  if (porWhatsApp) return NextResponse.json({ ok: true });
+  if (!asignacion) return NextResponse.json({ ok: true });
 
   try {
-    await enviarAGerencia({
+    await enviarSolicitudRepartida({
       asunto: `[Cotizador rapido] ${empresa}`,
       texto: `Cotizacion armada en alquileresymas.net/cotizador-rapido\n\n${textoCotizacion(cotizacion)}`,
       replyTo: email,
+      origen: "cotizador rapido",
+      cliente: empresa,
+      telefono: whatsapp,
+      asignacion,
     });
 
     return NextResponse.json({ ok: true });

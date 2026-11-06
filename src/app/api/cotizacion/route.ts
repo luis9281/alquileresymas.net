@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { QuoteItem } from "@/lib/types";
 import { registrarSolicitud } from "@/lib/solicitudes-log";
-import { captchaValido, CorreoNoConfigurado, EMAIL_VALIDO, enviarAGerencia, ipDe } from "@/lib/correo";
+import { captchaValido, CorreoNoConfigurado, EMAIL_VALIDO, enviarSolicitudRepartida, ipDe } from "@/lib/correo";
 
 type QuoteRequestBody = {
   nombre?: string;
@@ -63,7 +63,14 @@ ${body.mensaje ?? ""}
 `;
 
   try {
-    await enviarAGerencia({ asunto, texto: cuerpo, replyTo: email });
+    const asignadoA = await enviarSolicitudRepartida({
+      asunto,
+      texto: cuerpo,
+      replyTo: email,
+      origen: "formulario de cotizacion",
+      cliente: nombre,
+      telefono: body.telefono ?? "",
+    });
 
     // The email already went out, so a failed log entry shouldn't fail the request.
     await registrarSolicitud({
@@ -73,6 +80,7 @@ ${body.mensaje ?? ""}
       fechaEvento: body.fechaEvento ?? "",
       lugar: body.lugar ?? "",
       items,
+      asignadoA,
     }).catch((error) => console.error("Error registrando la solicitud en el log:", error));
 
     return NextResponse.json({ ok: true });
