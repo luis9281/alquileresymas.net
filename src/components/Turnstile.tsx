@@ -1,6 +1,6 @@
 "use client";
 
-import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
 import Script from "next/script";
 
 type TurnstileApi = {
@@ -29,6 +29,27 @@ export type TurnstileHandle = { reset: () => void };
 const Turnstile = forwardRef<TurnstileHandle, { siteKey: string }>(function Turnstile({ siteKey }, ref) {
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetId = useRef<string | null>(null);
+  // The Cloudflare script weighs ~1.9 MB: load it only once the visitor starts
+  // the form (first focus or tap inside it) or scrolls near the widget.
+  const [cargar, setCargar] = useState(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || cargar) return;
+    const activar = () => setCargar(true);
+    const form = el.closest("form");
+    form?.addEventListener("focusin", activar, { once: true });
+    form?.addEventListener("pointerdown", activar, { once: true });
+    const observer = new IntersectionObserver((entradas) => entradas.some((e) => e.isIntersecting) && activar(), {
+      rootMargin: "300px",
+    });
+    observer.observe(el);
+    return () => {
+      form?.removeEventListener("focusin", activar);
+      form?.removeEventListener("pointerdown", activar);
+      observer.disconnect();
+    };
+  }, [cargar]);
 
   function renderWidget() {
     if (!window.turnstile || !containerRef.current || widgetId.current) return;
@@ -36,13 +57,14 @@ const Turnstile = forwardRef<TurnstileHandle, { siteKey: string }>(function Turn
   }
 
   useEffect(() => {
+    if (!cargar) return;
     renderWidget();
     return () => {
       if (widgetId.current && window.turnstile) window.turnstile.remove(widgetId.current);
       widgetId.current = null;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [siteKey]);
+  }, [siteKey, cargar]);
 
   useImperativeHandle(ref, () => ({
     reset: () => {
@@ -52,12 +74,15 @@ const Turnstile = forwardRef<TurnstileHandle, { siteKey: string }>(function Turn
 
   return (
     <>
-      <Script
-        src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
-        strategy="afterInteractive"
-        onReady={renderWidget}
-      />
-      <div ref={containerRef} />
+      {cargar && (
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+          strategy="afterInteractive"
+          onReady={renderWidget}
+        />
+      )}
+      {/* Reserves the widget's 65px so the buttons below don't jump when it appears. */}
+      <div ref={containerRef} className="min-h-[65px]" />
     </>
   );
 });

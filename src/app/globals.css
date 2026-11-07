@@ -9,7 +9,11 @@
   --color-lime-dark: #a9b923;
   --color-cream: #faf7f1;
   --color-border: #e3decf;
-  --color-muted: #627075; /* 4.8:1 on cream (was #6e7c80, 4.0:1 - below WCAG AA) */
+  /* 5.4:1 on cream, 5.1:1 on the darker #f1f0eb panels (#627075 was 4.49:1 there, below WCAG AA) */
+  --color-muted: #5a676c;
+  /* WhatsApp's own green stays recognizable; white on it is only 1.98:1, so text/icons go deep green (7.4:1). */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-ink: #0b2e22;
 
   --font-display: var(--font-playfair), Georgia, serif;
   --font-body: var(--font-worksans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -25,6 +29,12 @@
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     color: var(--color-teal-dark);
+  }
+
+  /* Tailwind's default (text at 50%) is 2.8:1 on white; muted is 5.1:1. */
+  ::placeholder {
+    color: var(--color-muted);
+    opacity: 1;
   }
 }
 
@@ -46,6 +56,15 @@
   }
   .animate-marquee:hover {
     animation-play-state: paused;
+  }
+  /* Reduced motion: the strip stops and becomes a strip you swipe yourself. */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+      animation: none;
+    }
+    .marquee-viewport {
+      overflow-x: auto;
+    }
   }
 
   .py-20 {

@@ -12,9 +12,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-teal-dark/90 via-teal-dark/70 to-teal-dark/40" />
 
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        // Visible in the server HTML: the headline and both CTAs paint before JS loads.
+        initial={false}
         className="relative z-10 mx-auto max-w-2xl"
       >
         <p className="text-sm font-semibold uppercase tracking-widest text-lime">

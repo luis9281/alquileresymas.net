@@ -85,13 +85,14 @@ export default function Header({ categorias }: { categorias: Pick<Categoria, "sl
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-cream/95 backdrop-blur">
-      <div className="mx-auto flex max-w-[1350px] items-center justify-between gap-6 px-6 py-3">
+      {/* Phones: smaller logo and gutters so logo + Cotización + menu fit in 360px without sideways scroll. */}
+      <div className="mx-auto flex max-w-[1350px] items-center justify-between gap-3 px-4 py-3 sm:gap-6 sm:px-6">
         <Link href="/" className="shrink-0" onClick={() => setOpen(false)}>
-          <Image src="/logo.png" alt="Alquileres Eventos & Más" width={274} height={60} className="h-12 w-auto" priority />
+          <Image src="/logo.png" alt="Alquileres Eventos & Más" width={274} height={60} className="h-9 w-auto sm:h-12" priority />
         </Link>
 
-        <nav className="hidden md:block">
-          <ul className="flex items-center gap-7">
+        <nav className="hidden lg:block">
+          <ul className="flex items-center gap-5 xl:gap-7">
             {links.map((link) =>
               link.children ? (
                 <li
@@ -182,12 +183,26 @@ export default function Header({ categorias }: { categorias: Pick<Categoria, "sl
           </ul>
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <Link
             href="/cotizacion"
-            className="flex items-center gap-2 rounded-full bg-teal-dark px-4 py-2 text-sm font-semibold text-white"
+            className="flex min-h-11 items-center gap-1.5 rounded-full bg-teal-dark px-3 text-sm font-semibold text-white sm:gap-2 sm:px-4 lg:min-h-10"
           >
-            Cotización
+            {/* Under 400px the word gives way to an icon; it stays as the link's accessible name. */}
+            <svg
+              className="h-5 w-5 min-[400px]:hidden"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.8}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M9 4.5h6M9 4.5a1.5 1.5 0 0 0 0 3h6a1.5 1.5 0 0 0 0-3M9 4.5H7.5A1.5 1.5 0 0 0 6 6v13.5A1.5 1.5 0 0 0 7.5 21h9a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H15" />
+              <path d="M9 12h6M9 15.5h4" />
+            </svg>
+            <span className="max-[399px]:sr-only">Cotización</span>
             <motion.span
               key={totalCount}
               initial={{ scale: 1.4 }}
@@ -203,7 +218,7 @@ export default function Header({ categorias }: { categorias: Pick<Categoria, "sl
             aria-expanded={open}
             aria-label="Abrir menú"
             onClick={() => setOpen((v) => !v)}
-            className="flex flex-col gap-1.5 p-2 md:hidden"
+            className="-mr-2 flex h-11 w-11 flex-col items-center justify-center gap-1.5 lg:hidden"
           >
             <span className="block h-0.5 w-6 bg-teal-dark" />
             <span className="block h-0.5 w-6 bg-teal-dark" />
@@ -219,22 +234,22 @@ export default function Header({ categorias }: { categorias: Pick<Categoria, "sl
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="max-h-[calc(100dvh-73px)] overflow-y-auto border-t border-border md:hidden"
+            className="max-h-[calc(100dvh-69px)] overflow-y-auto border-t border-border sm:max-h-[calc(100dvh-73px)] lg:hidden"
           >
-            <ul className="flex flex-col gap-4 px-6 py-5">
+            <ul className="flex flex-col px-4 py-3 sm:px-6">
               {links.map((link) =>
                 link.children ? (
                   <li key={link.label}>
                     <div className="flex w-full items-center justify-between">
                       {link.href ? (
-                        <Link href={link.href} className="font-medium text-ink" onClick={closeMobile}>
+                        <Link href={link.href} className="flex min-h-11 flex-1 items-center font-medium text-ink" onClick={closeMobile}>
                           {link.label}
                         </Link>
                       ) : (
                         <button
                           type="button"
                           onClick={() => setMobileSubmenu((v) => toggle(v, link.label))}
-                          className="font-medium text-ink"
+                          className="flex min-h-11 flex-1 items-center font-medium text-ink"
                         >
                           {link.label}
                         </button>
@@ -244,7 +259,7 @@ export default function Header({ categorias }: { categorias: Pick<Categoria, "sl
                         aria-expanded={mobileSubmenu === link.label}
                         aria-label={`Mostrar ${link.label.toLowerCase()}`}
                         onClick={() => setMobileSubmenu((v) => toggle(v, link.label))}
-                        className="p-1 text-ink"
+                        className="-mr-3 flex h-11 w-11 items-center justify-center text-ink"
                       >
                         <Chevron abierto={mobileSubmenu === link.label} />
                       </button>
@@ -256,13 +271,13 @@ export default function Header({ categorias }: { categorias: Pick<Categoria, "sl
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.15 }}
-                          className={`overflow-hidden pl-4 ${link.compacto ? "grid grid-cols-2 gap-x-3" : ""}`}
+                          className={`overflow-hidden pb-2 pl-4 ${link.compacto ? "grid grid-cols-2 gap-x-3" : ""}`}
                         >
                           {link.children.map((sub) => (
-                            <li key={sub.href} className={link.compacto ? "pt-2" : "pt-3"}>
+                            <li key={sub.href}>
                               <Link
                                 href={sub.href}
-                                className={link.compacto ? "text-sm text-ink/80" : "font-medium text-ink/80"}
+                                className={`flex min-h-11 items-center ${link.compacto ? "text-sm text-ink/80" : "font-medium text-ink/80"}`}
                                 onClick={closeMobile}
                               >
                                 {sub.label}
@@ -275,7 +290,7 @@ export default function Header({ categorias }: { categorias: Pick<Categoria, "sl
                   </li>
                 ) : (
                   <li key={link.href}>
-                    <Link href={link.href} className="font-medium text-ink" onClick={() => setOpen(false)}>
+                    <Link href={link.href} className="flex min-h-11 items-center font-medium text-ink" onClick={() => setOpen(false)}>
                       {link.label}
                     </Link>
                   </li>

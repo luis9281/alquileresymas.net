@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useQuote } from "./QuoteContext";
 import type { Producto } from "@/lib/types";
 import { imagenPrincipal } from "@/lib/producto";
+import { trackEvent } from "@/lib/analytics";
 
 export default function QuoteButton({
   producto,
@@ -24,11 +25,15 @@ export default function QuoteButton({
   const added = isInQuote(itemId) || justAdded;
 
   function handleClick() {
+    const title =
+      producto.variantes.find((v) => v.color === colorSeleccionado)?.nombre ??
+      (colorSeleccionado ? `${producto.titulo} (${colorSeleccionado})` : producto.titulo);
+    if (!isInQuote(itemId)) {
+      trackEvent("add_to_quote", { item_id: itemId, item_name: title, item_category: producto.categoria.nombre });
+    }
     addItem({
       id: itemId,
-      title:
-        producto.variantes.find((v) => v.color === colorSeleccionado)?.nombre ??
-        (colorSeleccionado ? `${producto.titulo} (${colorSeleccionado})` : producto.titulo),
+      title,
       image: imagenSeleccionada ?? imagenPrincipal(producto),
       url: `/catalogo/${producto.categoria.slug}/${producto.slug}`,
     });
@@ -42,7 +47,7 @@ export default function QuoteButton({
       whileTap={{ scale: 0.95 }}
       className={
         className ??
-        "rounded-md bg-lime px-4 py-2 text-sm font-semibold text-teal-dark hover:bg-lime-dark"
+        "min-h-11 rounded-md bg-lime px-4 text-sm font-semibold text-teal-dark hover:bg-lime-dark sm:min-h-10"
       }
     >
       <AnimatePresence mode="wait" initial={false}>

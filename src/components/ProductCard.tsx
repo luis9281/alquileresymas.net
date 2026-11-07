@@ -51,7 +51,7 @@ export default function ProductCard({
         <div className="mt-auto flex items-center gap-3 pt-2">
           <Link
             href={href}
-            className="rounded-md border border-border px-4 py-2 text-sm font-semibold text-teal-dark hover:border-teal"
+            className="inline-flex min-h-11 items-center rounded-md border border-border px-4 text-sm font-semibold text-teal-dark hover:border-teal sm:min-h-10"
           >
             Ver detalle
           </Link>

@@ -10,6 +10,7 @@ import {
   type CategoriaItem,
 } from "@/lib/floorplan-catalog";
 import { CONTACTO } from "@/lib/site-info";
+import { trackLead } from "@/lib/analytics";
 import Canvas from "./Canvas";
 
 const CATEGORIAS: { id: CategoriaItem; titulo: string }[] = [
@@ -131,11 +132,13 @@ export default function FloorPlanner() {
       ),
     ];
     const url = `${CONTACTO.whatsappUrl}?text=${encodeURIComponent(lineas.join("\n"))}`;
+    trackLead("planos_whatsapp", { invitados, elementos: items.length });
     window.open(url, "_blank", "noopener,noreferrer");
   }
 
+  // minmax(0,…): the canvas column may shrink and scroll inside its own box instead of widening the page.
   return (
-    <div className="grid gap-8 lg:grid-cols-[260px_1fr_280px]">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-[260px_minmax(0,1fr)_280px]">
       {/* Paleta */}
       <div className="order-2 lg:order-1">
         <h3 className="mb-3 text-lg font-semibold text-teal-dark">Agregar al plano</h3>
@@ -310,7 +313,7 @@ export default function FloorPlanner() {
         <button
           type="button"
           onClick={enviarPorWhatsApp}
-          className="flex items-center justify-center gap-2 rounded-md bg-[#25D366] px-5 py-3 font-semibold text-white hover:brightness-95"
+          className="flex items-center justify-center gap-2 rounded-md bg-whatsapp px-5 py-3 font-semibold text-whatsapp-ink hover:brightness-95"
         >
           Enviar este plano por WhatsApp
         </button>

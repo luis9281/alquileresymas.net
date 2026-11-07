@@ -10,6 +10,7 @@ import Turnstile, { type TurnstileHandle } from "./Turnstile";
 import { CONTACTO } from "@/lib/site-info";
 import { esImagenSanity } from "@/lib/images";
 import type { QuoteItem } from "@/lib/types";
+import { trackLead } from "@/lib/analytics";
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
@@ -81,6 +82,7 @@ export default function QuoteForm() {
         return;
       }
       setStatus("ok");
+      trackLead("cotizacion_correo", { productos: items.length });
       clearAll();
       router.push("/gracias");
     } catch {
@@ -95,6 +97,7 @@ export default function QuoteForm() {
     if (!form) return;
     const mensaje = construirMensajeWhatsApp(form, items);
     const url = `${CONTACTO.whatsappUrl}?text=${encodeURIComponent(mensaje)}`;
+    trackLead("cotizacion_whatsapp", { productos: items.length });
     window.open(url, "_blank", "noopener,noreferrer");
   }
 
@@ -141,14 +144,15 @@ export default function QuoteForm() {
                   min={1}
                   value={item.qty}
                   onChange={(e) => updateQty(item.id, Number(e.target.value))}
-                  className="w-14 rounded border border-border p-1 text-center"
+                  inputMode="numeric"
+                  className="h-11 w-16 rounded border border-border text-center text-base"
                   aria-label={`Cantidad de ${item.title}`}
                 />
                 <button
                   type="button"
                   onClick={() => removeItem(item.id)}
                   aria-label={`Quitar ${item.title}`}
-                  className="text-lg text-muted hover:text-ink"
+                  className="-mr-2 flex h-11 w-11 shrink-0 items-center justify-center rounded-md text-xl text-muted hover:bg-cream hover:text-ink"
                 >
                   ×
                 </button>
@@ -158,7 +162,7 @@ export default function QuoteForm() {
         </ul>
 
         <p className="mt-5">
-          <Link href="/catalogo" className="font-semibold text-teal">
+          <Link href="/catalogo" className="inline-flex min-h-11 items-center font-semibold text-teal">
             Seguir explorando el catálogo →
           </Link>
         </p>
@@ -172,11 +176,11 @@ export default function QuoteForm() {
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" />
 
-          <Field label="Nombre completo *" name="nombre" required />
-          <Field label="Correo electrónico *" name="email" type="email" required />
-          <Field label="Teléfono" name="telefono" type="tel" />
+          <Field label="Nombre completo *" name="nombre" required autoComplete="name" />
+          <Field label="Correo electrónico *" name="email" type="email" required autoComplete="email" />
+          <Field label="Teléfono / WhatsApp" name="telefono" type="tel" autoComplete="tel" placeholder="+507 6000-0000" />
           <Field label="Fecha del evento" name="fecha_evento" type="date" />
-          <Field label="Lugar del evento" name="lugar" />
+          <Field label="Lugar del evento" name="lugar" placeholder="Ej. Hotel Sortis, Obarrio" />
 
           <label className="block">
             <span className="mb-1.5 block text-sm font-semibold">Cuéntanos más</span>
@@ -207,7 +211,7 @@ export default function QuoteForm() {
           <button
             type="button"
             onClick={handleWhatsApp}
-            className="flex items-center justify-center gap-2 rounded-md bg-[#25D366] px-6 py-3 font-semibold text-white hover:brightness-95"
+            className="flex items-center justify-center gap-2 rounded-md bg-whatsapp px-6 py-3 font-semibold text-whatsapp-ink hover:brightness-95"
           >
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden>
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.41-1.35a9.9 9.9 0 0 0 4.63 1.15h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.79 14.02c-.24.68-1.4 1.3-1.94 1.36-.5.06-1.1.09-1.77-.11-.41-.12-.93-.29-1.6-.57-2.82-1.22-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.92s.72-2.07.98-2.35c.24-.28.53-.34.71-.34h.5c.16 0 .38-.03.58.44.24.57.79 1.98.87 2.12.07.15.12.32.02.52-.09.19-.14.31-.28.48-.14.16-.29.36-.42.48-.14.14-.29.28-.12.56.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.61-.07.17-.19.71-.83.9-1.11.19-.28.38-.23.63-.14.26.09 1.64.77 1.92.91.28.14.47.21.53.33.07.12.07.68-.16 1.35Z" />
@@ -225,11 +229,15 @@ function Field({
   name,
   type = "text",
   required,
+  autoComplete,
+  placeholder,
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
+  autoComplete?: string;
+  placeholder?: string;
 }) {
   return (
     <label className="block">
@@ -238,6 +246,8 @@ function Field({
         type={type}
         name={name}
         required={required}
+        autoComplete={autoComplete}
+        placeholder={placeholder}
         className="w-full rounded-md border border-border bg-white p-3"
       />
     </label>

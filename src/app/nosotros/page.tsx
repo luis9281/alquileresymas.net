@@ -172,7 +172,7 @@ export default function NosotrosPage() {
               href={CONTACTO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md bg-[#25D366] px-6 py-3 font-semibold text-white hover:brightness-95"
+              className="rounded-md bg-whatsapp px-6 py-3 font-semibold text-whatsapp-ink hover:brightness-95"
             >
               Escribir por WhatsApp
             </a>

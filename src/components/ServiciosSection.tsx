@@ -62,7 +62,7 @@ export default function ServiciosSection() {
                 href={s.href}
                 className="group flex items-start gap-5 border-b border-border py-6"
               >
-                <span className="pt-1 text-sm font-semibold text-lime-dark">{s.numero}</span>
+                <span className="pt-1 text-sm font-semibold text-teal">{s.numero}</span>
                 <div className="flex-1">
                   <h3 className="text-xl group-hover:text-teal">{s.titulo}</h3>
                   <p className="mt-1 text-muted">{s.texto}</p>

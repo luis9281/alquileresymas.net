@@ -9,6 +9,7 @@ import { normalizar } from "./BuscadorProductos";
 import { CONTACTO } from "@/lib/site-info";
 import { esImagenSanity } from "@/lib/images";
 import { formatoPrecio } from "@/lib/precio";
+import { trackLead } from "@/lib/analytics";
 import {
   AVISO_DISPONIBILIDAD,
   AVISO_TRANSPORTE,
@@ -83,8 +84,45 @@ function Campo({ label, ...props }: { label: string } & React.InputHTMLAttribute
   return (
     <label className="block">
       <span className="mb-1 block text-sm font-semibold text-ink">{label}</span>
-      <input {...props} className="w-full rounded-md border border-border bg-white px-3 py-2.5 text-sm text-ink" />
+      {/* 16px on phones: iOS zooms into any field with smaller text on focus. */}
+      <input {...props} className="w-full rounded-md border border-border bg-white px-3 py-2.5 text-base text-ink sm:text-sm" />
     </label>
+  );
+}
+
+/** − / number / + stepper; 44px buttons so a thumb hits them on a phone. */
+function ControlCantidad({ titulo, qty, onChange }: { titulo: string; qty: number; onChange: (qty: number) => void }) {
+  return (
+    <div className="inline-flex items-center rounded-md border border-border">
+      <button type="button" onClick={() => onChange(qty - 1)} className="h-11 w-11 text-lg text-muted hover:text-ink" aria-label={`Quitar uno de ${titulo}`}>
+        −
+      </button>
+      <input
+        type="number"
+        inputMode="numeric"
+        min={1}
+        value={qty}
+        onChange={(e) => onChange(Number(e.target.value))}
+        className="h-11 w-14 border-x border-border text-center text-base sm:text-sm"
+        aria-label={`Cantidad de ${titulo}`}
+      />
+      <button type="button" onClick={() => onChange(qty + 1)} className="h-11 w-11 text-lg text-muted hover:text-ink" aria-label={`Añadir uno de ${titulo}`}>
+        +
+      </button>
+    </div>
+  );
+}
+
+function BotonQuitar({ titulo, onClick }: { titulo: string; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md text-xl text-muted hover:bg-cream hover:text-ink"
+      aria-label={`Quitar ${titulo}`}
+    >
+      ×
+    </button>
   );
 }
 
@@ -225,6 +263,7 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
         captchaRef.current?.reset();
         return;
       }
+      trackLead("cotizador_rapido_correo", { value: totales.total, currency: "USD", productos: lineas.length });
       router.push("/gracias");
     } catch {
       setStatus("error");
@@ -237,6 +276,7 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
     const form = event.currentTarget.form;
     if (!listo(form)) return;
     const texto = textoCotizacion(datos(), (t) => `*${t}*`);
+    trackLead("cotizador_rapido_whatsapp", { value: totales.total, currency: "USD", productos: lineas.length });
     window.open(`${CONTACTO.whatsappUrl}?text=${encodeURIComponent(texto)}`, "_blank", "noopener,noreferrer");
     // Fire-and-forget: keeps WhatsApp quotes in the request log too.
     fetch("/api/cotizador-rapido", {
@@ -283,7 +323,7 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
                     setDesde("");
                     setHasta("");
                   }}
-                  className="text-xs text-muted hover:text-ink"
+                  className="-my-2 -mr-2 min-h-11 rounded-md px-3 text-sm text-muted hover:bg-cream hover:text-ink"
                 >
                   × Borrar
                 </button>
@@ -313,7 +353,7 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
               value={observaciones}
               onChange={(e) => setObservaciones(e.target.value)}
               placeholder="Horario de montaje, piso, acceso, colores, tipo de evento…"
-              className="w-full rounded-md border border-border bg-white p-3 text-sm"
+              className="w-full rounded-md border border-border bg-white p-3 text-base sm:text-sm"
             />
           </Tarjeta>
         </div>
@@ -328,11 +368,11 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
                   href={`https://www.google.com/maps/search/${encodeURIComponent(direccion ? `${direccion}, Panamá` : "Panamá")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-md border border-border px-3 py-1.5 font-medium text-teal hover:bg-teal/10"
+                  className="inline-flex min-h-11 items-center rounded-md border border-border px-3 font-medium text-teal hover:bg-teal/10"
                 >
                   Buscar en Google Maps ↗
                 </a>
-                <button type="button" onClick={usarMiUbicacion} disabled={ubicando} className="rounded-md border border-border px-3 py-1.5 font-medium text-teal hover:bg-teal/10 disabled:opacity-60">
+                <button type="button" onClick={usarMiUbicacion} disabled={ubicando} className="inline-flex min-h-11 items-center rounded-md border border-border px-3 font-medium text-teal hover:bg-teal/10 disabled:opacity-60">
                   {ubicando ? "Ubicando…" : "📍 Usar mi ubicación actual"}
                 </button>
               </div>
@@ -357,7 +397,7 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
                 <select
                   value={zonaId}
                   onChange={(e) => setZonaElegida(e.target.value)}
-                  className="w-full rounded-md border border-border bg-white px-3 py-2.5 text-sm text-ink"
+                  className="w-full rounded-md border border-border bg-white px-3 py-2.5 text-base text-ink sm:text-sm"
                 >
                   <option value="">No, retiro en el local (sin costo)</option>
                   {ZONAS_TRANSPORTE.map((z) => (
@@ -407,7 +447,7 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
             onFocus={() => setAbierto(true)}
             onBlur={() => setAbierto(false)}
             onKeyDown={onKeyDown}
-            className="w-full rounded-md border border-border bg-white py-3 pl-10 pr-3 text-sm text-ink"
+            className="w-full rounded-md border border-border bg-white py-3 pl-10 pr-3 text-base text-ink sm:text-sm"
           />
           {mostrarLista && (
             <ul id={listaId} role="listbox" className="absolute left-5 right-5 top-full z-30 -mt-3 max-h-96 overflow-y-auto rounded-md border border-border bg-white py-1 shadow-lg">
@@ -441,62 +481,74 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
           )}
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[640px] text-sm">
-            <thead>
-              <tr className="border-y border-border text-left text-ink">
-                <th className="px-5 py-3 font-semibold">Producto</th>
-                <th className="px-3 py-3 font-semibold">Cantidad</th>
-                <th className="px-3 py-3 text-right font-semibold">Precio unit.</th>
-                <th className="px-3 py-3 text-right font-semibold">Total</th>
-                <th className="w-12" />
-              </tr>
-            </thead>
-            <tbody>
-              {lineas.length === 0 && (
-                <tr>
-                  <td colSpan={5} className="px-5 py-10 text-center text-muted">
-                    Aún no hay productos. Escribe en el buscador de arriba para añadirlos.
-                  </td>
-                </tr>
-              )}
+        {/* Phones: one card per line, no sideways scroll. md and up: the table. */}
+        {lineas.length === 0 ? (
+          <p className="border-t border-border px-5 py-10 text-center text-muted">
+            Aún no hay productos. Escribe en el buscador de arriba para añadirlos.
+          </p>
+        ) : (
+          <>
+            <ul className="border-t border-border md:hidden">
               {lineas.map((l) => (
-                <tr key={l.id} className="border-b border-border">
-                  <td className="px-5 py-3">
-                    <div className="flex items-center gap-3">
-                      <Miniatura src={l.imagen} />
-                      <div>
-                        <p className="font-semibold text-ink">{l.titulo}</p>
-                        <p className="text-xs text-muted">{l.categoria}</p>
-                      </div>
+                <li key={l.id} className="flex gap-3 border-b border-border py-4 pl-5 pr-2">
+                  <Miniatura src={l.imagen} />
+                  <div className="min-w-0 flex-1">
+                    <p className="font-semibold text-ink">{l.titulo}</p>
+                    <p className="text-sm text-muted">
+                      {l.precio === undefined ? "Por cotizar" : `${formatoPrecio(l.precio)} c/u`}
+                    </p>
+                    <div className="mt-2 flex items-center justify-between gap-3">
+                      <ControlCantidad titulo={l.titulo} qty={l.qty} onChange={(q) => cambiarQty(l.id, q)} />
+                      <span className="font-semibold tabular-nums text-ink">
+                        {l.precio === undefined ? "—" : formatoPrecio(l.precio * l.qty)}
+                      </span>
                     </div>
-                  </td>
-                  <td className="px-3 py-3">
-                    <div className="inline-flex items-center rounded-md border border-border">
-                      <button type="button" onClick={() => cambiarQty(l.id, l.qty - 1)} className="px-2.5 py-1.5 text-muted hover:text-ink" aria-label={`Quitar uno de ${l.titulo}`}>−</button>
-                      <input
-                        type="number"
-                        min={1}
-                        value={l.qty}
-                        onChange={(e) => cambiarQty(l.id, Number(e.target.value))}
-                        className="w-16 border-x border-border py-1.5 text-center"
-                        aria-label={`Cantidad de ${l.titulo}`}
-                      />
-                      <button type="button" onClick={() => cambiarQty(l.id, l.qty + 1)} className="px-2.5 py-1.5 text-muted hover:text-ink" aria-label={`Añadir uno de ${l.titulo}`}>+</button>
-                    </div>
-                  </td>
-                  <td className="px-3 py-3 text-right">{l.precio === undefined ? <span className="text-muted">Por cotizar</span> : formatoPrecio(l.precio)}</td>
-                  <td className="px-3 py-3 text-right font-semibold">{l.precio === undefined ? "—" : formatoPrecio(l.precio * l.qty)}</td>
-                  <td className="px-3 py-3 text-center">
-                    <button type="button" onClick={() => setLineas((prev) => prev.filter((x) => x.id !== l.id))} className="text-lg text-muted hover:text-ink" aria-label={`Quitar ${l.titulo}`}>
-                      ×
-                    </button>
-                  </td>
-                </tr>
+                  </div>
+                  <BotonQuitar titulo={l.titulo} onClick={() => setLineas((prev) => prev.filter((x) => x.id !== l.id))} />
+                </li>
               ))}
-            </tbody>
-          </table>
-        </div>
+            </ul>
+
+            <table className="hidden w-full text-sm md:table">
+              <thead>
+                <tr className="border-y border-border text-left text-ink">
+                  <th className="px-5 py-3 font-semibold">Producto</th>
+                  <th className="px-3 py-3 font-semibold">Cantidad</th>
+                  <th className="px-3 py-3 text-right font-semibold">Precio unit.</th>
+                  <th className="px-3 py-3 text-right font-semibold">Total</th>
+                  <th className="w-14" />
+                </tr>
+              </thead>
+              <tbody>
+                {lineas.map((l) => (
+                  <tr key={l.id} className="border-b border-border">
+                    <td className="px-5 py-3">
+                      <div className="flex items-center gap-3">
+                        <Miniatura src={l.imagen} />
+                        <div>
+                          <p className="font-semibold text-ink">{l.titulo}</p>
+                          <p className="text-xs text-muted">{l.categoria}</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="px-3 py-3">
+                      <ControlCantidad titulo={l.titulo} qty={l.qty} onChange={(q) => cambiarQty(l.id, q)} />
+                    </td>
+                    <td className="px-3 py-3 text-right tabular-nums">
+                      {l.precio === undefined ? <span className="text-muted">Por cotizar</span> : formatoPrecio(l.precio)}
+                    </td>
+                    <td className="px-3 py-3 text-right font-semibold tabular-nums">
+                      {l.precio === undefined ? "—" : formatoPrecio(l.precio * l.qty)}
+                    </td>
+                    <td className="px-1 py-3">
+                      <BotonQuitar titulo={l.titulo} onClick={() => setLineas((prev) => prev.filter((x) => x.id !== l.id))} />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </>
+        )}
 
         <div className="grid gap-8 p-5 md:grid-cols-[1fr_340px]">
           <div className="order-2 flex flex-col gap-3 md:order-1">
@@ -513,7 +565,7 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
               <button type="submit" disabled={status === "sending"} className="flex-1 rounded-md bg-lime px-6 py-3 font-semibold text-teal-dark hover:bg-lime-dark disabled:opacity-60">
                 {status === "sending" ? "Enviando…" : "✉️ Enviar por correo"}
               </button>
-              <button type="button" onClick={enviarWhatsApp} className="flex flex-1 items-center justify-center gap-2 rounded-md bg-[#25D366] px-6 py-3 font-semibold text-white hover:brightness-95">
+              <button type="button" onClick={enviarWhatsApp} className="flex flex-1 items-center justify-center gap-2 rounded-md bg-whatsapp px-6 py-3 font-semibold text-whatsapp-ink hover:brightness-95">
                 Enviar por WhatsApp
               </button>
             </div>
@@ -523,33 +575,40 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
             </p>
           </div>
 
-          <dl className="order-1 space-y-2 text-sm md:order-2">
-            <Fila label="Subtotal" valor={formatoPrecio(totales.subtotal)} />
-            <Fila
-              label={zona ? `Transporte (${zona.nombre})` : "Transporte"}
-              valor={!zona ? "Retiro en local" : zona.costo === null ? "Por confirmar" : `${formatoPrecio(zona.costo)}*`}
-            />
-            <div className="border-t border-border pt-2">
-              <Fila label="Total sin impuestos" valor={formatoPrecio(totales.subtotal + totales.transporte)} />
-            </div>
-            <Fila label={`ITBMS (${ITBMS * 100}%)`} valor={formatoPrecio(totales.itbms)} />
-            <div className="border-t border-border pt-2 text-base font-bold text-ink">
-              <Fila label="Total estimado con ITBMS" valor={formatoPrecio(totales.total)} />
-            </div>
-            {zona && <p className="text-xs text-muted">* Transporte estimado, sujeto a cantidad y distancia.</p>}
-            {totales.pendientes && <p className="text-xs text-muted">+ montos por confirmar (productos o transporte sin precio publicado).</p>}
-          </dl>
+          <div className="order-1 text-sm md:order-2">
+            {/* Only dt/dd groups inside the dl (notes go after it) so screen readers read it as a list of totals. */}
+            <dl className="space-y-2">
+              <Fila label="Subtotal" valor={formatoPrecio(totales.subtotal)} />
+              <Fila
+                label={zona ? `Transporte (${zona.nombre})` : "Transporte"}
+                valor={!zona ? "Retiro en local" : zona.costo === null ? "Por confirmar" : `${formatoPrecio(zona.costo)}*`}
+              />
+              <Fila
+                className="border-t border-border pt-2"
+                label="Total sin impuestos"
+                valor={formatoPrecio(totales.subtotal + totales.transporte)}
+              />
+              <Fila label={`ITBMS (${Math.round(ITBMS * 100)}%)`} valor={formatoPrecio(totales.itbms)} />
+              <Fila
+                className="border-t border-border pt-2 text-base font-bold text-ink"
+                label="Total estimado con ITBMS"
+                valor={formatoPrecio(totales.total)}
+              />
+            </dl>
+            {zona && <p className="mt-2 text-xs text-muted">* Transporte estimado, sujeto a cantidad y distancia.</p>}
+            {totales.pendientes && <p className="mt-2 text-xs text-muted">+ montos por confirmar (productos o transporte sin precio publicado).</p>}
+          </div>
         </div>
       </div>
     </form>
   );
 }
 
-function Fila({ label, valor }: { label: string; valor: string }) {
+function Fila({ label, valor, className = "" }: { label: string; valor: string; className?: string }) {
   return (
-    <div className="flex justify-between gap-4">
+    <div className={`flex justify-between gap-4 ${className}`}>
       <dt>{label}</dt>
-      <dd className="text-right">{valor}</dd>
+      <dd className="text-right tabular-nums">{valor}</dd>
     </div>
   );
 }

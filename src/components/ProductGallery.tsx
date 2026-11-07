@@ -100,7 +100,7 @@ export default function ProductGallery({
                   key={v.color ?? idx}
                   type="button"
                   onClick={() => elegirVariante(idx)}
-                  className={`rounded-md border px-3 py-1.5 text-sm font-medium ${
+                  className={`inline-flex min-h-11 items-center rounded-md border px-3 text-sm font-medium sm:min-h-9 ${
                     idx === varianteIdx
                       ? "border-teal bg-teal text-white"
                       : "border-border text-ink hover:border-teal"

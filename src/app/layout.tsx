@@ -5,6 +5,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import RastreoWhatsApp from "@/components/RastreoWhatsApp";
+import Movimiento from "@/components/Movimiento";
 import JsonLd from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/GoogleTagManager";
@@ -95,12 +97,15 @@ export default async function RootLayout({
         <GoogleTagManager />
         <GoogleAnalytics />
         <JsonLd data={localBusinessJsonLd} />
-        <QuoteProvider>
-          <Header categorias={categorias.map(({ slug, nombre }) => ({ slug, nombre }))} />
-          <main>{children}</main>
-          <Footer />
-          <WhatsAppButton />
-        </QuoteProvider>
+        <Movimiento>
+          <QuoteProvider>
+            <Header categorias={categorias.map(({ slug, nombre }) => ({ slug, nombre }))} />
+            <main>{children}</main>
+            <Footer />
+            <WhatsAppButton />
+            <RastreoWhatsApp />
+          </QuoteProvider>
+        </Movimiento>
       </body>
     </html>
   );

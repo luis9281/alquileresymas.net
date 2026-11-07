@@ -59,7 +59,7 @@ export default async function Footer() {
                 {CONTACTO.telefono} (WhatsApp)
               </a>
             </li>
-            <li><a href={`mailto:${CONTACTO.emails.gerencia}`} className="hover:text-lime">{CONTACTO.emails.gerencia}</a></li>
+            <li><a href={`mailto:${CONTACTO.emails.gerencia}`} className="[overflow-wrap:anywhere] hover:text-lime">{CONTACTO.emails.gerencia}</a></li>
             <li>
               <a href={CONTACTO.mapaUrl} target="_blank" rel="noopener noreferrer" className="hover:text-lime">
                 {CONTACTO.direccion}
@@ -69,7 +69,8 @@ export default async function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/15 px-6 py-5 text-center text-xs">
+      {/* Extra bottom room on phones so the floating WhatsApp button doesn't cover this line. */}
+      <div className="border-t border-white/15 px-6 pb-24 pt-5 text-center text-xs md:pb-5">
         © {new Date().getFullYear()} Alquileres Eventos & Más. Todos los derechos reservados.
         {" · "}
         <Link href="/politica-de-privacidad" className="hover:text-lime">Política de privacidad</Link>

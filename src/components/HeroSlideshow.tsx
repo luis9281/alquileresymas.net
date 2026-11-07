@@ -1,9 +1,31 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import type { HeroSlide } from "@/lib/hero-slides";
+
+/** matchMedia as a store: false on the server, live value in the browser. */
+function useMedia(query: string) {
+  return useSyncExternalStore(
+    (avisar) => {
+      const m = window.matchMedia(query);
+      m.addEventListener("change", avisar);
+      return () => m.removeEventListener("change", avisar);
+    },
+    () => window.matchMedia(query).matches,
+    () => false
+  );
+}
+
+const sinSuscripcion = () => () => {};
+function useAhorroDatos() {
+  return useSyncExternalStore(
+    sinSuscripcion,
+    () => (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData === true,
+    () => false
+  );
+}
 
 export default function HeroSlideshow({
   slides,
@@ -13,19 +35,27 @@ export default function HeroSlideshow({
   intervalMs?: number;
 }) {
   const [index, setIndex] = useState(0);
+  // The server HTML (and phones) paint the light poster image. Only wide
+  // screens without reduced motion or data saver swap in the 1.5 MB video.
+  const sinMovimiento = useMedia("(prefers-reduced-motion: reduce)");
+  const pantallaAncha = useMedia("(min-width: 768px)");
+  const ahorroDatos = useAhorroDatos();
+  const conVideo = pantallaAncha && !sinMovimiento && !ahorroDatos;
 
   useEffect(() => {
-    if (slides.length <= 1) return;
+    // Reduced motion: no auto-advance; the dots still change slides.
+    if (slides.length <= 1 || sinMovimiento) return;
     const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), intervalMs);
     return () => clearInterval(id);
-  }, [slides.length, intervalMs]);
+  }, [slides.length, intervalMs, sinMovimiento]);
 
   if (slides.length === 0) return null;
   const slide = slides[index];
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      <AnimatePresence>
+      {/* initial={false}: the first slide is visible in the server HTML instead of fading in after hydration (it is the LCP). */}
+      <AnimatePresence initial={false}>
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -34,7 +64,7 @@ export default function HeroSlideshow({
           transition={{ duration: 1.2, ease: "easeInOut" }}
           className="absolute inset-0"
         >
-          {slide.type === "video" ? (
+          {slide.type === "video" && (conVideo || !slide.poster) ? (
             <video
               src={slide.src}
               poster={slide.poster}
@@ -44,6 +74,8 @@ export default function HeroSlideshow({
               playsInline
               className="h-full w-full object-cover"
             />
+          ) : slide.type === "video" ? (
+            <Image src={slide.poster!} alt="" fill sizes="100vw" priority={index === 0} className="object-cover" />
           ) : (
             <Image
               src={slide.src}

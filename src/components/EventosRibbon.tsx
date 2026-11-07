@@ -39,7 +39,7 @@ export default function EventosRibbon({
         </Link>
       </div>
 
-      <div className="mt-8 overflow-hidden">
+      <div className="marquee-viewport mt-8 overflow-hidden">
         <div className="flex w-max animate-marquee">
           {tira.map((foto, i) => (
             <div key={i} className="relative h-64 w-[22rem] shrink-0">
