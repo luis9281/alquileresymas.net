@@ -1,0 +1,104 @@
+{
+  "_createdAt": "2026-11-12T15:09:38Z",
+  "_id": "producto-manteleria-mantel-redondo-60-con-diseno",
+  "_rev": "pn6AH4UF6s86kVLVJpFv0M",
+  "_type": "producto",
+  "_updatedAt": "2026-11-12T15:09:38Z",
+  "categoria": {
+    "_ref": "categoria-manteles-licras",
+    "_type": "reference"
+  },
+  "descripcion": "Manteles redondos con diseño para mesas de 60 pulgadas: damasco con arabescos y orilla festoneada (blanco y marfil), texturizado (crema y azul rey) y floral (gris). Dan un acabado elegante a bodas, cenas y eventos corporativos.",
+  "grupo": "60\"",
+  "medidas": "Para mesa redonda de 60\"",
+  "precio": 6.5,
+  "slug": {
+    "_type": "slug",
+    "current": "mantel-redondo-60-con-diseno"
+  },
+  "subcategoria": "Redondos",
+  "tipo": "Con diseño",
+  "titulo": "Mantel redondo 60\" con diseño",
+  "variantes": [
+    {
+      "_key": "t8edlnfjoz",
+      "_type": "variante",
+      "color": "Blanco",
+      "imagenes": [
+        {
+          "_key": "rt9l4u9iq4i",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-afb8ef94107f8cf73378299f51ea4bba616b3554-1254x1254-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "nombre": "Mantel redondo 60\" damasco blanco"
+    },
+    {
+      "_key": "yknajai1tug",
+      "_type": "variante",
+      "color": "Crema",
+      "imagenes": [
+        {
+          "_key": "xynpjnp2gh",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-11043c0854aefa27f1a0d0ad463e82ed57ef6f26-1254x1254-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "nombre": "Mantel redondo 60\" texturizado crema"
+    },
+    {
+      "_key": "ydy9xria52",
+      "_type": "variante",
+      "color": "Marfil",
+      "imagenes": [
+        {
+          "_key": "7zbzg8fcj86",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-60724d36bfa47ec61c155562d7aadf66d56f8aab-1254x1254-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "nombre": "Mantel redondo 60\" damasco marfil"
+    },
+    {
+      "_key": "pbf7y2piipg",
+      "_type": "variante",
+      "color": "Gris",
+      "imagenes": [
+        {
+          "_key": "ibhhlm8ow8p",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-e42ac725b967b005e17fbf13b1644842dec959c0-1254x1254-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "nombre": "Mantel redondo 60\" floral gris"
+    },
+    {
+      "_key": "f4ak2yk6zna",
+      "_type": "variante",
+      "color": "Azul rey",
+      "imagenes": [
+        {
+          "_key": "otnl5flj85c",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-3e23da5aac2e88478f30b30ad227a87b5b98b803-1254x1254-jpg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "nombre": "Mantel redondo 60\" texturizado azul rey"
+    }
+  ]
+}
