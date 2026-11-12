@@ -1,0 +1,32 @@
+{
+  "_createdAt": "2026-09-15T22:46:13Z",
+  "_id": "producto-cristaleria-cuacharita-de-postre",
+  "_rev": "ertApYUV6RIXSmeZyV3Zxx",
+  "_type": "producto",
+  "_updatedAt": "2026-10-10T19:59:00Z",
+  "categoria": {
+    "_ref": "categoria-cristaleria",
+    "_type": "reference"
+  },
+  "precio": 0.25,
+  "slug": {
+    "_type": "slug",
+    "current": "cuacharita-de-postre"
+  },
+  "subcategoria": "Cubiertos",
+  "titulo": "Cucharita de postre",
+  "variantes": [
+    {
+      "_type": "variante",
+      "imagenes": [
+        {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-a12e0d9956939aeef41563bbbbb054a50032f4ee-1024x1024-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    }
+  ]
+}
