@@ -1,0 +1,35 @@
+{
+  "_createdAt": "2026-10-24T19:51:32Z",
+  "_id": "producto-cristaleria-cafetera",
+  "_rev": "64LZY5BK2V5gA8E6upoAlT",
+  "_type": "producto",
+  "_updatedAt": "2026-10-26T14:59:19Z",
+  "categoria": {
+    "_ref": "categoria-cristaleria",
+    "_type": "reference"
+  },
+  "descripcion": "Cafetera eléctrica de acero inoxidable con dispensador y visor de nivel. Disponible en capacidades de 35, 75 o 100 tazas.",
+  "precio": 25,
+  "slug": {
+    "_type": "slug",
+    "current": "cafetera"
+  },
+  "subcategoria": "Servicio de buffet",
+  "titulo": "Cafetera de 100 tazas",
+  "variantes": [
+    {
+      "_key": "cm8x29x7",
+      "_type": "variante",
+      "imagenes": [
+        {
+          "_key": "ak8zg8tx",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-f48ab0fa05e58a5f0c6bdebd26a4808843052466-1024x1024-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    }
+  ]
+}
