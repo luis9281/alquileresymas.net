@@ -9,8 +9,23 @@ export function ordenarAlfabeticamente(categorias: Categoria[]): Categoria[] {
 }
 
 export type Tipo = { slug: string; nombre: string; cantidad: number };
-/** `tipos`: optional third level (Redondos > Corrugado), A-Z; empty when no product sets one. */
-export type Subcategoria = Tipo & { tipos: Tipo[] };
+/** Optional level between subcategory and type (Redondos > 60" > Corrugado), with its own types. */
+export type Grupo = Tipo & { tipos: Tipo[] };
+/**
+ * `tipos`: every type in the subcategory, whatever its group (keeps old ?sub=&tipo= links working).
+ * `grupos`: present when some product sets a group; the sidebar then lists groups instead of `tipos`.
+ * All lists A-Z; empty when no product sets that level.
+ */
+export type Subcategoria = Tipo & { tipos: Tipo[]; grupos: Grupo[] };
+
+/** Adds one product's cards to the matching entry of `lista` (by slug), creating it if needed. */
+function sumar<T extends Tipo>(lista: T[], nombre: string, tarjetas: number, nuevo: (t: Tipo) => T): T {
+  const slug = slugSubcategoria(nombre);
+  let item = lista.find((t) => t.slug === slug);
+  if (item) item.cantidad += tarjetas;
+  else lista.push((item = nuevo({ slug, nombre, cantidad: tarjetas })));
+  return item;
+}
 
 /** "Porta platos" -> "porta-platos" (used in ?sub= links). */
 export function slugSubcategoria(nombre: string): string {
@@ -27,36 +42,35 @@ export function slugSubcategoria(nombre: string): string {
  * catalog cards (one per color variant), matching what the grid shows.
  */
 export function subcategoriasDe(productos: Producto[]): Subcategoria[] {
-  const porSlug = new Map<string, Subcategoria>();
+  const subs: Subcategoria[] = [];
   for (const p of productos) {
     if (!p.subcategoria) continue;
-    const slug = slugSubcategoria(p.subcategoria);
     const tarjetas = Math.max(1, p.variantes.length);
-    let sub = porSlug.get(slug);
-    if (sub) sub.cantidad += tarjetas;
-    else porSlug.set(slug, (sub = { slug, nombre: p.subcategoria, cantidad: tarjetas, tipos: [] }));
-    if (!p.tipo) continue;
-    const tipoSlug = slugSubcategoria(p.tipo);
-    const tipo = sub.tipos.find((t) => t.slug === tipoSlug);
-    if (tipo) tipo.cantidad += tarjetas;
-    else sub.tipos.push({ slug: tipoSlug, nombre: p.tipo, cantidad: tarjetas });
+    const sub = sumar(subs, p.subcategoria, tarjetas, (t) => ({ ...t, tipos: [], grupos: [] }));
+    if (p.tipo) sumar(sub.tipos, p.tipo, tarjetas, (t) => t);
+    if (!p.grupo) continue;
+    const grupo = sumar(sub.grupos, p.grupo, tarjetas, (t) => ({ ...t, tipos: [] }));
+    if (p.tipo) sumar(grupo.tipos, p.tipo, tarjetas, (t) => t);
   }
-  const az = (a: Tipo, b: Tipo) => a.nombre.localeCompare(b.nombre, "es");
-  return [...porSlug.values()].map((s) => ({ ...s, tipos: s.tipos.sort(az) })).sort(az);
+  const az = (a: Tipo, b: Tipo) => a.nombre.localeCompare(b.nombre, "es", { numeric: true });
+  return subs
+    .map((s) => ({
+      ...s,
+      tipos: s.tipos.sort(az),
+      grupos: s.grupos.map((g) => ({ ...g, tipos: g.tipos.sort(az) })).sort(az),
+    }))
+    .sort(az);
 }
 
-/** Products of `?sub=` (and `?tipo=` inside it), given slugs already validated by subcategoriasDe. */
-export function productosDe(productos: Producto[], sub: string, tipo?: string): Producto[] {
-  return productos.filter(
-    (p) =>
-      p.subcategoria &&
-      slugSubcategoria(p.subcategoria) === sub &&
-      (!tipo || (p.tipo && slugSubcategoria(p.tipo) === tipo))
-  );
+const coincide = (valor: string | undefined, slug?: string) => !slug || (valor && slugSubcategoria(valor) === slug);
+
+/** Products of `?sub=` (and `?grupo=` / `?tipo=` inside it), given slugs already validated by subcategoriasDe. */
+export function productosDe(productos: Producto[], sub: string, tipo?: string, grupo?: string): Producto[] {
+  return productos.filter((p) => coincide(p.subcategoria, sub) && coincide(p.grupo, grupo) && coincide(p.tipo, tipo));
 }
 
-/** /catalogo/manteleria?sub=redondos&tipo=corrugado (each level optional). */
-export function urlSeleccion(categoria: string, sub?: string, tipo?: string): string {
+/** /catalogo/manteleria?sub=redondos&grupo=60&tipo=corrugado (each level optional). */
+export function urlSeleccion(categoria: string, sub?: string, tipo?: string, grupo?: string): string {
   if (!sub) return `/catalogo/${categoria}`;
-  return `/catalogo/${categoria}?sub=${sub}${tipo ? `&tipo=${tipo}` : ""}`;
+  return `/catalogo/${categoria}?sub=${sub}${grupo ? `&grupo=${grupo}` : ""}${tipo ? `&tipo=${tipo}` : ""}`;
 }

@@ -32,13 +32,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // /catalogo/manteleria?sub=servilletas has its own canonical (see the category page metadata).
   // Next writes <loc> without XML-escaping, so "&tipo=" must go out as "&amp;tipo=".
   const subcategoriaUrls: MetadataRoute.Sitemap = categorias.flatMap((c) =>
-    subcategoriasDe(productos.filter((p) => p.categoria.slug === c.slug)).flatMap((s) =>
-      [undefined, ...s.tipos.map((t) => t.slug)].map((tipo) => ({
-        url: `${SITE_URL}${urlSeleccion(c.slug, s.slug, tipo)}`.replaceAll("&", "&amp;"),
+    subcategoriasDe(productos.filter((p) => p.categoria.slug === c.slug)).flatMap((s) => {
+      // With groups (Redondos > 60" > Corrugado) the type links live under each group.
+      const niveles: { grupo?: string; tipo?: string }[] = s.grupos.length
+        ? s.grupos.flatMap((g) => [{ grupo: g.slug }, ...g.tipos.map((t) => ({ grupo: g.slug, tipo: t.slug }))])
+        : s.tipos.map((t) => ({ tipo: t.slug }));
+      return [{}, ...niveles].map(({ grupo, tipo }: { grupo?: string; tipo?: string }) => ({
+        url: `${SITE_URL}${urlSeleccion(c.slug, s.slug, tipo, grupo)}`.replaceAll("&", "&amp;"),
         changeFrequency: "weekly" as const,
-        priority: tipo ? 0.6 : 0.7,
-      }))
-    )
+        priority: [0.7, 0.6, 0.5][[grupo, tipo].filter(Boolean).length],
+      }));
+    })
   );
 
   const productoUrls: MetadataRoute.Sitemap = productos.map((p) => ({

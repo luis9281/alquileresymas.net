@@ -1,0 +1,249 @@
+{
+  "_createdAt": "2026-10-10T20:16:46Z",
+  "_id": "producto-manteleria-mantel-redondo-60-liso",
+  "_rev": "pn6AH4UF6s86kVLVJpD6nK",
+  "_type": "producto",
+  "_updatedAt": "2026-11-12T14:53:30Z",
+  "categoria": {
+    "_ref": "categoria-manteles-licras",
+    "_type": "reference"
+  },
+  "descripcion": "Mantel redondo liso de tela con acabado mate para mesas redondas de 60\". Cae hasta el piso con pliegues suaves y uniformes, y es la base más versátil para cualquier montaje: bodas, cumpleaños, eventos corporativos y fiestas infantiles. Disponible en 15 colores, desde blanco y negro hasta tonos pastel y vibrantes.",
+  "grupo": "60\"",
+  "medidas": "Para mesa redonda de 60\"",
+  "precio": 7,
+  "slug": {
+    "_type": "slug",
+    "current": "mantel-redondo-60-liso"
+  },
+  "subcategoria": "Redondos",
+  "tipo": "Liso",
+  "titulo": "Mantel redondo 60\" liso",
+  "variantes": [
+    {
+      "_key": "ae27cd18",
+      "_type": "variante",
+      "color": "Amarillo",
+      "imagenes": [
+        {
+          "_key": "7f8ef733",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-3a03f59b77da0dfecfe42179d40f2f6601adcb26-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "cd6045bc",
+      "_type": "variante",
+      "color": "Azul navy",
+      "imagenes": [
+        {
+          "_key": "70d6cb4c",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-ec2fda94d20e38f60cd9a1544091907b274cc568-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "2766cd14",
+      "_type": "variante",
+      "color": "Azul rey",
+      "imagenes": [
+        {
+          "_key": "624a1b01",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-148b43af72f4ea61122c74c1d3383fd355867021-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "e6e4cd6d",
+      "_type": "variante",
+      "color": "Blanco",
+      "imagenes": [
+        {
+          "_key": "a38b528b",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-78d6fdefe1aa9646010df13c2da7288ee323aa1a-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "824a19cc",
+      "_type": "variante",
+      "color": "Fucsia",
+      "imagenes": [
+        {
+          "_key": "df62595e",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-af434c9fb52c0be2b626b49a074098553be5dfe7-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "9d8c87a0",
+      "_type": "variante",
+      "color": "Lila",
+      "imagenes": [
+        {
+          "_key": "e452f7b9",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4f313011fd332163f3e4a4b81f8f4972ecbdf636-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "e295c8be",
+      "_type": "variante",
+      "color": "Naranja",
+      "imagenes": [
+        {
+          "_key": "cfa4d20c",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-a56d3b43c5c11165fd8f84bc3cbcfbd4267a2d55-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "d3d0d1e4",
+      "_type": "variante",
+      "color": "Negro",
+      "imagenes": [
+        {
+          "_key": "22d0ec1f",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-73a613c84dde417be70b6031d4d29de7f7dcdfbc-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "a5ecd330",
+      "_type": "variante",
+      "color": "Rojo",
+      "imagenes": [
+        {
+          "_key": "1c266ae2",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-2f91851c10f1b9e476c1a755226e92d6b675d312-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "5c47044c",
+      "_type": "variante",
+      "color": "Rosa pastel",
+      "imagenes": [
+        {
+          "_key": "02bf8590",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-41bfb53b99c99cf0bf2ce15a8c83b6b0a3ae9410-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "e870c3d5",
+      "_type": "variante",
+      "color": "Rosa viejo",
+      "imagenes": [
+        {
+          "_key": "a7720ac4",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-0248b595718688c9a9ac0ef4526d62c73690d512-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "78a26294",
+      "_type": "variante",
+      "color": "Turquesa",
+      "imagenes": [
+        {
+          "_key": "6c9580b6",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-ee121cc86f6ffbb8f2cd8fb2bf9699b32271da7e-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "ee02ccc8",
+      "_type": "variante",
+      "color": "Verde aqua",
+      "imagenes": [
+        {
+          "_key": "306232c0",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-e3f934154d2e36b72c3f3670d7880df4d7516541-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "0d02ab9b",
+      "_type": "variante",
+      "color": "Verde caña",
+      "imagenes": [
+        {
+          "_key": "1b4c0991",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-c1e153fc709ca65b9cbef8e0357b254c1b8df097-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "c5ad17fb",
+      "_type": "variante",
+      "color": "Verde pasto",
+      "imagenes": [
+        {
+          "_key": "ed592743",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-8f90cb1afa99ce711156d02d7ea2c7af72dfef43-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    }
+  ]
+}

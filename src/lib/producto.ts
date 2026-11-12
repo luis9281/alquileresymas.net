@@ -40,7 +40,7 @@ export function seleccionVitrina(productos: Producto[], limite: number): Product
       .map((v, i) => ({ i, neutro: NEUTRO.test(v.color ?? "") }))
       .sort((a, b) => Number(a.neutro) - Number(b.neutro))
       .map((v) => v.i);
-    const clave = p.subcategoria ? `${p.subcategoria}/${p.tipo ?? ""}` : p._id;
+    const clave = p.subcategoria ? `${p.subcategoria}/${p.grupo ?? ""}/${p.tipo ?? ""}` : p._id;
     grupos.set(clave, [...(grupos.get(clave) ?? []), { producto: p, variantes }]);
   }
 

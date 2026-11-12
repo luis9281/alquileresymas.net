@@ -1,0 +1,99 @@
+{
+  "_createdAt": "2026-10-10T20:16:46Z",
+  "_id": "producto-manteleria-mantel-redondo-60-satin",
+  "_rev": "ZLZvlCzEZzNxd4hgOOwAf0",
+  "_type": "producto",
+  "_updatedAt": "2026-11-12T14:53:31Z",
+  "categoria": {
+    "_ref": "categoria-manteles-licras",
+    "_type": "reference"
+  },
+  "descripcion": "Mantel redondo Podesua (peau de soie) para mesas redondas de 60\". Tela con brillo sutil y caída pesada y fluida que se ve elegante en fotos y luz de noche; ideal para bodas, quince años y cenas de gala. Disponible en 5 colores de tono profundo.",
+  "grupo": "60\"",
+  "medidas": "Para mesa redonda de 60\"",
+  "precio": 10,
+  "slug": {
+    "_type": "slug",
+    "current": "mantel-redondo-60-satin"
+  },
+  "subcategoria": "Redondos",
+  "tipo": "Podesua",
+  "titulo": "Mantel redondo 60\" Podesua",
+  "variantes": [
+    {
+      "_key": "ea2a57c5",
+      "_type": "variante",
+      "color": "Esmeralda claro",
+      "imagenes": [
+        {
+          "_key": "6a5d2c49",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-efab4098720a95288b0d9027f2e809fa42acaac1-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "458e9a5a",
+      "_type": "variante",
+      "color": "Esmeralda oscuro",
+      "imagenes": [
+        {
+          "_key": "f44405b0",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-70d39da5ce848dd0e855a6b944f7dedcf36d0eef-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "c8888856",
+      "_type": "variante",
+      "color": "Rojo vino",
+      "imagenes": [
+        {
+          "_key": "ef13a96e",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-333f42352079e1fa4ba7f989cd2a901aa720b471-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "2d909872",
+      "_type": "variante",
+      "color": "Rosa viejo",
+      "imagenes": [
+        {
+          "_key": "af34c8a5",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-7996d09a00f0d45756a0052149fe8f7f69f9fecb-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "68c60a92",
+      "_type": "variante",
+      "color": "Verde olivo",
+      "imagenes": [
+        {
+          "_key": "6a1eabea",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-071c170bd8cb7055f3a8a0aee5770624b70d5980-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    }
+  ]
+}

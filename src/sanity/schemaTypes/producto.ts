@@ -28,10 +28,18 @@ export default defineType({
       type: "string",
     }),
     defineField({
+      name: "grupo",
+      title: "Grupo",
+      description:
+        'Opcional. Nivel entre la subcategoria y el tipo (ej. Redondos > 60" > Corrugado). Escribelo igual en todos los productos del grupo.',
+      type: "string",
+      hidden: ({ document }) => !document?.subcategoria,
+    }),
+    defineField({
       name: "tipo",
       title: "Tipo",
       description:
-        "Opcional. Tercer nivel dentro de la subcategoria (ej. Redondos > Corrugado, Liso, Podesua). Aparece anidado en la barra lateral del catalogo.",
+        "Opcional. Ultimo nivel dentro de la subcategoria (o del grupo si tiene), ej. Redondos > Corrugado, Liso, Podesua. Aparece anidado en la barra lateral del catalogo.",
       type: "string",
       hidden: ({ document }) => !document?.subcategoria,
     }),

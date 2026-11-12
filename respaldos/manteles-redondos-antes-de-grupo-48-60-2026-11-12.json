@@ -1,0 +1,916 @@
+[
+  {
+    "_createdAt": "2026-11-12T14:42:47Z",
+    "_id": "drafts.producto-manteleria-mantel-redondo-60-con-diseno",
+    "_rev": "iTh6hyx6tW7BHNTwYphJru",
+    "_type": "producto",
+    "_updatedAt": "2026-11-12T14:42:47Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "descripcion": "Mantel redondo con diseño (damasco, texturizado o floral) para mesas de 60 pulgadas. Da un acabado elegante a bodas, cenas y eventos corporativos.",
+    "medidas": "Para mesa redonda de 60\"",
+    "precio": 6.5,
+    "slug": {
+      "_type": "slug",
+      "current": "mantel-redondo-60-con-diseno"
+    },
+    "subcategoria": "Redondos",
+    "tipo": "Con diseño",
+    "titulo": "Mantel redondo 60\" con diseño",
+    "variantes": [
+      {
+        "_key": "t8edlnfjoz",
+        "_type": "variante",
+        "color": "Blanco damasco",
+        "imagenes": [
+          {
+            "_key": "rt9l4u9iq4i",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-afb8ef94107f8cf73378299f51ea4bba616b3554-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "yknajai1tug",
+        "_type": "variante",
+        "color": "Crema texturizado",
+        "imagenes": [
+          {
+            "_key": "xynpjnp2gh",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-11043c0854aefa27f1a0d0ad463e82ed57ef6f26-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "ydy9xria52",
+        "_type": "variante",
+        "color": "Marfil damasco",
+        "imagenes": [
+          {
+            "_key": "7zbzg8fcj86",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-60724d36bfa47ec61c155562d7aadf66d56f8aab-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "pbf7y2piipg",
+        "_type": "variante",
+        "color": "Gris floral",
+        "imagenes": [
+          {
+            "_key": "ibhhlm8ow8p",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e42ac725b967b005e17fbf13b1644842dec959c0-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "f4ak2yk6zna",
+        "_type": "variante",
+        "color": "Azul rey texturizado",
+        "imagenes": [
+          {
+            "_key": "otnl5flj85c",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3e23da5aac2e88478f30b30ad227a87b5b98b803-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-11-12T14:46:36Z",
+    "_id": "drafts.producto-manteleria-mantel-redondo-60-corrugado",
+    "_rev": "ZLZvlCzEZzNxd4hgOOvuTI",
+    "_type": "producto",
+    "_updatedAt": "2026-11-12T14:46:36Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "descripcion": "Mantel redondo de tela corrugada (efecto arrugado tipo crush) para mesas redondas de 60\". Su textura con brillo suave aporta movimiento y elegancia sin necesidad de planchado perfecto, ideal para bodas, quince años y cenas de gala. Disponible en 9 colores.",
+    "medidas": "Para mesa redonda de 60\"",
+    "precio": 6.5,
+    "slug": {
+      "_type": "slug",
+      "current": "mantel-redondo-60-corrugado"
+    },
+    "subcategoria": "Redondos",
+    "tipo": "Corrugado",
+    "titulo": "Mantel redondo 60\" corrugado",
+    "variantes": [
+      {
+        "_key": "48b2abd2",
+        "_type": "variante",
+        "color": "Amarillo",
+        "imagenes": [
+          {
+            "_key": "b5maiip4l06",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9878a93bc551543e7dac5642a3b12b85dff1a8bb-1254x1254-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "edeb3aa2",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ff31311160db492bc13f6e6c9a97a36f4c8af48e-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "hirf3bx9ghm",
+        "_type": "variante",
+        "color": "Azul petróleo",
+        "imagenes": [
+          {
+            "_key": "nqamv9hyiiq",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d8c31d842ed5abe4de689773e8e6ccc5b29fd6d6-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "cf4e08e1",
+        "_type": "variante",
+        "color": "Azul rey",
+        "imagenes": [
+          {
+            "_key": "3846f86c",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0eef83e1af9f7f80ddc50f0aae101d178e2a3b7e-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "tz0fh9iitnr",
+        "_type": "variante",
+        "color": "Blanco",
+        "imagenes": [
+          {
+            "_key": "vkzkt4qswz8",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e9c2c315bcf3b40ad5f4f3aa549e50de08ed5c6b-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "6b87wmb2p2",
+        "_type": "variante",
+        "color": "Coral",
+        "imagenes": [
+          {
+            "_key": "lceeioum9om",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-22884a722449984aeeed312828f72bb1a612604e-1254x1254-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "gvdxvk4zbo6",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0c966e3143fd5840b9f5191a463bdb94d8dea827-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "045a43da",
+        "_type": "variante",
+        "color": "Crema claro",
+        "imagenes": [
+          {
+            "_key": "xyk3iitoo5",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-842568866af19f8e13a41eb8f08728e385a9776a-1254x1254-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "bd1f1abf",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fef203cebddeaddd6b5da3df6a9da45b49f0b40a-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "i5k0yfp7uy",
+        "_type": "variante",
+        "color": "Gris oscuro",
+        "imagenes": [
+          {
+            "_key": "i7hmpvaumv",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9db58f93e63e875a988289d59abb179c627953c4-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "jx7tu7eg52b",
+        "_type": "variante",
+        "color": "Gris topo",
+        "imagenes": [
+          {
+            "_key": "9hwr8dadjzb",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fdab1cad60daf913bfb4b2ea5713695b3a4f52dc-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "e118393a",
+        "_type": "variante",
+        "color": "Morado",
+        "imagenes": [
+          {
+            "_key": "mf0s9tef81e",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a201fe20a49c343c4591c8b829d7171067b50da7-1254x1254-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "a70a9003",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c081985a72df396950e26c0cc59cae3eda8377ba-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "e5164bec",
+        "_type": "variante",
+        "color": "Negro",
+        "imagenes": [
+          {
+            "_key": "8tzjvhhhd8w",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7875ea7cf4c89001cb5f22d4e80a0590db99e2b0-1254x1254-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "870ad032",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-46116e465735b4a985c63c26c057c451ce19ef5a-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "0x4dmkr7zpf",
+        "_type": "variante",
+        "color": "Plateado",
+        "imagenes": [
+          {
+            "_key": "iot6iw2vqjg",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6076e5407ed8922073e7a3e0bec87d81067bbab3-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "0637aee5",
+        "_type": "variante",
+        "color": "Rojo",
+        "imagenes": [
+          {
+            "_key": "8n9t49dlpyk",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c36e9684b0f51237f94f4cc9781af0f033ba2ac4-1254x1254-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "f963cfc4",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-493f84f48f37ca1826f0c89d51f5d263deee748c-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "9e9c34f8",
+        "_type": "variante",
+        "color": "Turquesa",
+        "imagenes": [
+          {
+            "_key": "l01pgc7fayf",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4684a080d2a9ea2ad0375b238ee153717304e39b-1254x1254-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "a04ab512",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9f86b7e9fbb07724968e5fbcc04f11dc83769ca3-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "f1e0613a",
+        "_type": "variante",
+        "color": "Verde manzana",
+        "imagenes": [
+          {
+            "_key": "nl3ys3o75r",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c7c86684541662050bd28c28892f01612b2d3313-1254x1254-jpg",
+              "_type": "reference"
+            }
+          },
+          {
+            "_key": "579d8bf3",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-5f10f831d42ab5206430946126cc019b22104562-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "6a8c9ab2",
+        "_type": "variante",
+        "color": "Verde olivo",
+        "imagenes": [
+          {
+            "_key": "1ad35d1c",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-13fca42b8748ea9dfe82aaa971dcfd9f578a4f23-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T20:16:46Z",
+    "_id": "producto-manteleria-mantel-redondo-60-corrugado",
+    "_rev": "0toeB2hsiIX6riiI40vKCp",
+    "_type": "producto",
+    "_updatedAt": "2026-10-22T01:39:22Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "descripcion": "Mantel redondo de tela corrugada (efecto arrugado tipo crush) para mesas redondas de 60\". Su textura con brillo suave aporta movimiento y elegancia sin necesidad de planchado perfecto, ideal para bodas, quince años y cenas de gala. Disponible en 9 colores.",
+    "medidas": "Para mesa redonda de 60\"",
+    "precio": 6.5,
+    "slug": {
+      "_type": "slug",
+      "current": "mantel-redondo-60-corrugado"
+    },
+    "subcategoria": "Redondos",
+    "tipo": "Corrugado",
+    "titulo": "Mantel redondo 60\" corrugado",
+    "variantes": [
+      {
+        "_key": "48b2abd2",
+        "_type": "variante",
+        "color": "Amarillo",
+        "imagenes": [
+          {
+            "_key": "edeb3aa2",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ff31311160db492bc13f6e6c9a97a36f4c8af48e-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "cf4e08e1",
+        "_type": "variante",
+        "color": "Azul rey",
+        "imagenes": [
+          {
+            "_key": "3846f86c",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0eef83e1af9f7f80ddc50f0aae101d178e2a3b7e-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "045a43da",
+        "_type": "variante",
+        "color": "Crema claro",
+        "imagenes": [
+          {
+            "_key": "bd1f1abf",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fef203cebddeaddd6b5da3df6a9da45b49f0b40a-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "e118393a",
+        "_type": "variante",
+        "color": "Morado",
+        "imagenes": [
+          {
+            "_key": "a70a9003",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c081985a72df396950e26c0cc59cae3eda8377ba-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "e5164bec",
+        "_type": "variante",
+        "color": "Negro",
+        "imagenes": [
+          {
+            "_key": "870ad032",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-46116e465735b4a985c63c26c057c451ce19ef5a-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "0637aee5",
+        "_type": "variante",
+        "color": "Rojo",
+        "imagenes": [
+          {
+            "_key": "f963cfc4",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-493f84f48f37ca1826f0c89d51f5d263deee748c-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "9e9c34f8",
+        "_type": "variante",
+        "color": "Turquesa",
+        "imagenes": [
+          {
+            "_key": "a04ab512",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9f86b7e9fbb07724968e5fbcc04f11dc83769ca3-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "f1e0613a",
+        "_type": "variante",
+        "color": "Verde manzana",
+        "imagenes": [
+          {
+            "_key": "579d8bf3",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-5f10f831d42ab5206430946126cc019b22104562-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "6a8c9ab2",
+        "_type": "variante",
+        "color": "Verde olivo",
+        "imagenes": [
+          {
+            "_key": "1ad35d1c",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-13fca42b8748ea9dfe82aaa971dcfd9f578a4f23-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T20:16:46Z",
+    "_id": "producto-manteleria-mantel-redondo-60-liso",
+    "_rev": "64LZY5BK2V5gA8E6upoAlT",
+    "_type": "producto",
+    "_updatedAt": "2026-10-26T14:59:19Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "descripcion": "Mantel redondo liso de tela con acabado mate para mesas redondas de 60\". Cae hasta el piso con pliegues suaves y uniformes, y es la base más versátil para cualquier montaje: bodas, cumpleaños, eventos corporativos y fiestas infantiles. Disponible en 15 colores, desde blanco y negro hasta tonos pastel y vibrantes.",
+    "medidas": "Para mesa redonda de 60\"",
+    "precio": 7,
+    "slug": {
+      "_type": "slug",
+      "current": "mantel-redondo-60-liso"
+    },
+    "subcategoria": "Redondos",
+    "tipo": "Liso",
+    "titulo": "Mantel redondo 60\" liso",
+    "variantes": [
+      {
+        "_key": "ae27cd18",
+        "_type": "variante",
+        "color": "Amarillo",
+        "imagenes": [
+          {
+            "_key": "7f8ef733",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3a03f59b77da0dfecfe42179d40f2f6601adcb26-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "cd6045bc",
+        "_type": "variante",
+        "color": "Azul navy",
+        "imagenes": [
+          {
+            "_key": "70d6cb4c",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ec2fda94d20e38f60cd9a1544091907b274cc568-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "2766cd14",
+        "_type": "variante",
+        "color": "Azul rey",
+        "imagenes": [
+          {
+            "_key": "624a1b01",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-148b43af72f4ea61122c74c1d3383fd355867021-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "e6e4cd6d",
+        "_type": "variante",
+        "color": "Blanco",
+        "imagenes": [
+          {
+            "_key": "a38b528b",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-78d6fdefe1aa9646010df13c2da7288ee323aa1a-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "824a19cc",
+        "_type": "variante",
+        "color": "Fucsia",
+        "imagenes": [
+          {
+            "_key": "df62595e",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-af434c9fb52c0be2b626b49a074098553be5dfe7-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "9d8c87a0",
+        "_type": "variante",
+        "color": "Lila",
+        "imagenes": [
+          {
+            "_key": "e452f7b9",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4f313011fd332163f3e4a4b81f8f4972ecbdf636-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "e295c8be",
+        "_type": "variante",
+        "color": "Naranja",
+        "imagenes": [
+          {
+            "_key": "cfa4d20c",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a56d3b43c5c11165fd8f84bc3cbcfbd4267a2d55-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "d3d0d1e4",
+        "_type": "variante",
+        "color": "Negro",
+        "imagenes": [
+          {
+            "_key": "22d0ec1f",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-73a613c84dde417be70b6031d4d29de7f7dcdfbc-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "a5ecd330",
+        "_type": "variante",
+        "color": "Rojo",
+        "imagenes": [
+          {
+            "_key": "1c266ae2",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2f91851c10f1b9e476c1a755226e92d6b675d312-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "5c47044c",
+        "_type": "variante",
+        "color": "Rosa pastel",
+        "imagenes": [
+          {
+            "_key": "02bf8590",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-41bfb53b99c99cf0bf2ce15a8c83b6b0a3ae9410-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "e870c3d5",
+        "_type": "variante",
+        "color": "Rosa viejo",
+        "imagenes": [
+          {
+            "_key": "a7720ac4",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0248b595718688c9a9ac0ef4526d62c73690d512-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "78a26294",
+        "_type": "variante",
+        "color": "Turquesa",
+        "imagenes": [
+          {
+            "_key": "6c9580b6",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-ee121cc86f6ffbb8f2cd8fb2bf9699b32271da7e-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "ee02ccc8",
+        "_type": "variante",
+        "color": "Verde aqua",
+        "imagenes": [
+          {
+            "_key": "306232c0",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e3f934154d2e36b72c3f3670d7880df4d7516541-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "0d02ab9b",
+        "_type": "variante",
+        "color": "Verde caña",
+        "imagenes": [
+          {
+            "_key": "1b4c0991",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c1e153fc709ca65b9cbef8e0357b254c1b8df097-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "c5ad17fb",
+        "_type": "variante",
+        "color": "Verde pasto",
+        "imagenes": [
+          {
+            "_key": "ed592743",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8f90cb1afa99ce711156d02d7ea2c7af72dfef43-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-10-10T20:16:46Z",
+    "_id": "producto-manteleria-mantel-redondo-60-satin",
+    "_rev": "olC5x40uqV8sfR6bPg9LVZ",
+    "_type": "producto",
+    "_updatedAt": "2026-10-28T22:56:42Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "descripcion": "Mantel redondo Podesua (peau de soie) para mesas redondas de 60\". Tela con brillo sutil y caída pesada y fluida que se ve elegante en fotos y luz de noche; ideal para bodas, quince años y cenas de gala. Disponible en 5 colores de tono profundo.",
+    "medidas": "Para mesa redonda de 60\"",
+    "precio": 10,
+    "slug": {
+      "_type": "slug",
+      "current": "mantel-redondo-60-satin"
+    },
+    "subcategoria": "Redondos",
+    "tipo": "Podesua",
+    "titulo": "Mantel redondo 60\" Podesua",
+    "variantes": [
+      {
+        "_key": "ea2a57c5",
+        "_type": "variante",
+        "color": "Esmeralda claro",
+        "imagenes": [
+          {
+            "_key": "6a5d2c49",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-efab4098720a95288b0d9027f2e809fa42acaac1-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "458e9a5a",
+        "_type": "variante",
+        "color": "Esmeralda oscuro",
+        "imagenes": [
+          {
+            "_key": "f44405b0",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-70d39da5ce848dd0e855a6b944f7dedcf36d0eef-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "c8888856",
+        "_type": "variante",
+        "color": "Rojo vino",
+        "imagenes": [
+          {
+            "_key": "ef13a96e",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-333f42352079e1fa4ba7f989cd2a901aa720b471-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "2d909872",
+        "_type": "variante",
+        "color": "Rosa viejo",
+        "imagenes": [
+          {
+            "_key": "af34c8a5",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7996d09a00f0d45756a0052149fe8f7f69f9fecb-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "68c60a92",
+        "_type": "variante",
+        "color": "Verde olivo",
+        "imagenes": [
+          {
+            "_key": "6a1eabea",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-071c170bd8cb7055f3a8a0aee5770624b70d5980-1200x1200-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

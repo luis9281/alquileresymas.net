@@ -1,12 +1,36 @@
 import Link from "next/link";
 import type { Categoria } from "@/lib/types";
-import { ordenarAlfabeticamente, urlSeleccion, type Subcategoria } from "@/lib/categorias";
+import { ordenarAlfabeticamente, urlSeleccion, type Subcategoria, type Tipo } from "@/lib/categorias";
+
+/** Last level of the tree (Corrugado, Liso...), nested under its subcategory or group. */
+function ListaTipos({ tipos, activo, href }: { tipos: Tipo[]; activo?: string; href: (tipo: string) => string }) {
+  if (tipos.length === 0) return null;
+  return (
+    <ul className="mt-1.5 space-y-1 border-l border-border pl-3">
+      {tipos.map((t) => (
+        <li key={t.slug}>
+          <Link
+            href={href(t.slug)}
+            aria-current={t.slug === activo ? "page" : undefined}
+            className={`flex justify-between gap-2 text-[13px] ${
+              t.slug === activo ? "font-semibold text-teal-dark" : "text-muted hover:text-teal"
+            }`}
+          >
+            {t.nombre}
+            <span className="text-xs text-muted">{t.cantidad}</span>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default function CategoriasSidebar({
   categorias,
   activa,
   subcategorias = [],
   subActiva,
+  grupoActivo,
   tipoActivo,
   totalActiva,
 }: {
@@ -15,7 +39,9 @@ export default function CategoriasSidebar({
   /** Subcategories of the active category, listed under it. */
   subcategorias?: Subcategoria[];
   subActiva?: string;
-  /** Third level, listed under the active subcategory. */
+  /** Optional level under the active subcategory (Redondos > 60"). */
+  grupoActivo?: string;
+  /** Last level, listed under the active group (or subcategory when it has no groups). */
   tipoActivo?: string;
   /** Card count of the whole active category (sum of its subcategories plus ungrouped products). */
   totalActiva?: number;
@@ -50,7 +76,7 @@ export default function CategoriasSidebar({
                       <li key={s.slug}>
                         <Link
                           href={urlSeleccion(c.slug, s.slug)}
-                          aria-current={subEsActiva && !tipoActivo ? "page" : undefined}
+                          aria-current={subEsActiva && !grupoActivo && !tipoActivo ? "page" : undefined}
                           className={`flex justify-between gap-2 text-sm ${
                             subEsActiva ? "font-semibold text-teal-dark" : "text-muted hover:text-teal"
                           }`}
@@ -58,23 +84,32 @@ export default function CategoriasSidebar({
                           {s.nombre}
                           <span className="text-xs text-muted">{s.cantidad}</span>
                         </Link>
-                        {subEsActiva && s.tipos.length > 0 && (
+                        {subEsActiva && s.grupos.length > 0 && (
                           <ul className="mt-1.5 space-y-1 border-l border-border pl-3">
-                            {s.tipos.map((t) => (
-                              <li key={t.slug}>
-                                <Link
-                                  href={urlSeleccion(c.slug, s.slug, t.slug)}
-                                  aria-current={t.slug === tipoActivo ? "page" : undefined}
-                                  className={`flex justify-between gap-2 text-[13px] ${
-                                    t.slug === tipoActivo ? "font-semibold text-teal-dark" : "text-muted hover:text-teal"
-                                  }`}
-                                >
-                                  {t.nombre}
-                                  <span className="text-xs text-muted">{t.cantidad}</span>
-                                </Link>
-                              </li>
-                            ))}
+                            {s.grupos.map((g) => {
+                              const grupoEsActivo = g.slug === grupoActivo;
+                              return (
+                                <li key={g.slug}>
+                                  <Link
+                                    href={urlSeleccion(c.slug, s.slug, undefined, g.slug)}
+                                    aria-current={grupoEsActivo && !tipoActivo ? "page" : undefined}
+                                    className={`flex justify-between gap-2 text-[13px] ${
+                                      grupoEsActivo ? "font-semibold text-teal-dark" : "text-muted hover:text-teal"
+                                    }`}
+                                  >
+                                    {g.nombre}
+                                    <span className="text-xs text-muted">{g.cantidad}</span>
+                                  </Link>
+                                  {grupoEsActivo && (
+                                    <ListaTipos tipos={g.tipos} activo={tipoActivo} href={(t) => urlSeleccion(c.slug, s.slug, t, g.slug)} />
+                                  )}
+                                </li>
+                              );
+                            })}
                           </ul>
+                        )}
+                        {subEsActiva && s.grupos.length === 0 && (
+                          <ListaTipos tipos={s.tipos} activo={tipoActivo} href={(t) => urlSeleccion(c.slug, s.slug, t)} />
                         )}
                       </li>
                     );

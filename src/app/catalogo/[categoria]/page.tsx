@@ -14,17 +14,22 @@ type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-/** ?sub=redondos&tipo=corrugado -> the matching entries; unknown values fall back to the level above. */
-function seleccion(productos: Producto[], sub: unknown, tipo: unknown) {
+/**
+ * ?sub=redondos&grupo=60&tipo=corrugado -> the matching entries; unknown values fall back to the
+ * level above. Without ?grupo= the type is looked up across the whole subcategory (old links).
+ */
+function seleccion(productos: Producto[], sub: unknown, grupo: unknown, tipo: unknown) {
   const subcategorias = subcategoriasDe(productos);
   const subActiva = subcategorias.find((s) => s.slug === sub);
-  const tipoActivo = subActiva?.tipos.find((t) => t.slug === tipo);
-  return { subcategorias, subActiva, tipoActivo };
+  const grupoActivo = subActiva?.grupos.find((g) => g.slug === grupo);
+  const tipoActivo = (grupoActivo ?? subActiva)?.tipos.find((t) => t.slug === tipo);
+  const ruta = [subActiva, grupoActivo, tipoActivo].flatMap((n) => (n ? [n.nombre] : []));
+  return { subcategorias, subActiva, grupoActivo, tipoActivo, ruta };
 }
 
 export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const { categoria: slug } = await params;
-  const { sub, tipo } = await searchParams;
+  const { sub, grupo, tipo } = await searchParams;
   const categorias = await getCategorias();
   const categoria = categorias.find((c) => c.slug === slug);
   if (!categoria) return { title: "Catálogo | Alquileres Eventos & Más" };
@@ -32,21 +37,20 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   // ?sub=servilletas (and ?tipo=corrugado inside it) get their own title/description/canonical
   // so they can rank on their own.
   const todos = await getProductos(slug);
-  const { subActiva, tipoActivo } = seleccion(todos, sub, tipo);
+  const { subActiva, grupoActivo, tipoActivo, ruta } = seleccion(todos, sub, grupo, tipo);
   if (subActiva) {
-    const productos = productosDe(todos, subActiva.slug, tipoActivo?.slug);
+    const productos = productosDe(todos, subActiva.slug, tipoActivo?.slug, grupoActivo?.slug);
     const precios = productos.map((p) => p.precio).filter((p): p is number => typeof p === "number");
     const desde = precios.length ? ` Desde ${formatoPrecio(Math.min(...precios))}.` : "";
     const imagen = productos[0] && imagenPrincipal(productos[0]);
-    const cantidad = tipoActivo?.cantidad ?? subActiva.cantidad;
+    const cantidad = (tipoActivo ?? grupoActivo ?? subActiva).cantidad;
     return {
-      title: tipoActivo
-        ? `${subActiva.nombre} · ${tipoActivo.nombre} | ${categoria.nombre} | Alquileres Eventos & Más`
-        : `${subActiva.nombre} | ${categoria.nombre} | Alquileres Eventos & Más`,
-      description: tipoActivo
-        ? `${categoria.nombre} › ${subActiva.nombre} › ${tipoActivo.nombre}: ${cantidad} opciones para eventos en Panamá, con fotos reales.${desde} Entrega, montaje y desmontaje incluidos.`
-        : `Renta de ${subActiva.nombre.toLowerCase()} para eventos en Panamá: ${cantidad} opciones con fotos reales.${desde} Entrega, montaje y desmontaje incluidos.`,
-      alternates: { canonical: urlSeleccion(slug, subActiva.slug, tipoActivo?.slug) },
+      title: `${ruta.join(" · ")} | ${categoria.nombre} | Alquileres Eventos & Más`,
+      description:
+        ruta.length > 1
+          ? `${[categoria.nombre, ...ruta].join(" › ")}: ${cantidad} opciones para eventos en Panamá, con fotos reales.${desde} Entrega, montaje y desmontaje incluidos.`
+          : `Renta de ${subActiva.nombre.toLowerCase()} para eventos en Panamá: ${cantidad} opciones con fotos reales.${desde} Entrega, montaje y desmontaje incluidos.`,
+      alternates: { canonical: urlSeleccion(slug, subActiva.slug, tipoActivo?.slug, grupoActivo?.slug) },
       openGraph: imagen ? { images: [imagen] } : undefined,
     };
   }
@@ -62,15 +66,15 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
 
 export default async function CategoriaPage({ params, searchParams }: Props) {
   const { categoria: slug } = await params;
-  const { sub, tipo } = await searchParams;
+  const { sub, grupo, tipo } = await searchParams;
   const categorias = await getCategorias();
   const categoria = categorias.find((c) => c.slug === slug);
 
   if (!categoria) notFound();
 
   const productos = await getProductos(slug);
-  const { subcategorias, subActiva, tipoActivo } = seleccion(productos, sub, tipo);
-  const visibles = subActiva ? productosDe(productos, subActiva.slug, tipoActivo?.slug) : productos;
+  const { subcategorias, subActiva, grupoActivo, tipoActivo, ruta } = seleccion(productos, sub, grupo, tipo);
+  const visibles = subActiva ? productosDe(productos, subActiva.slug, tipoActivo?.slug, grupoActivo?.slug) : productos;
 
   return (
     <>
@@ -80,12 +84,7 @@ export default async function CategoriaPage({ params, searchParams }: Props) {
             Catálogo
           </Link>
           <h1 className="mt-2 text-white">{categoria.nombre}</h1>
-          {subActiva && (
-            <p className="mt-1 text-lg text-white/80">
-              {subActiva.nombre}
-              {tipoActivo && ` · ${tipoActivo.nombre}`}
-            </p>
-          )}
+          {subActiva && <p className="mt-1 text-lg text-white/80">{ruta.join(" · ")}</p>}
         </div>
       </section>
 
@@ -95,11 +94,12 @@ export default async function CategoriaPage({ params, searchParams }: Props) {
           activa={slug}
           subcategorias={subcategorias}
           subActiva={subActiva?.slug}
+          grupoActivo={grupoActivo?.slug}
           tipoActivo={tipoActivo?.slug}
           totalActiva={productos.reduce((n, p) => n + Math.max(1, p.variantes.length), 0)}
         />
 
-        <CatalogGrid key={`${slug}-${subActiva?.slug ?? ""}-${tipoActivo?.slug ?? ""}`} productos={visibles} filtroPrecio filtroColor />
+        <CatalogGrid key={`${slug}-${subActiva?.slug ?? ""}-${grupoActivo?.slug ?? ""}-${tipoActivo?.slug ?? ""}`} productos={visibles} filtroPrecio filtroColor />
       </section>
     </>
   );

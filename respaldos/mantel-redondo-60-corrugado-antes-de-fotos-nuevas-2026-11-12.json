@@ -1,0 +1,158 @@
+{
+  "_createdAt": "2026-10-10T20:16:46Z",
+  "_id": "producto-manteleria-mantel-redondo-60-corrugado",
+  "_rev": "0toeB2hsiIX6riiI40vKCp",
+  "_type": "producto",
+  "_updatedAt": "2026-10-22T01:39:22Z",
+  "categoria": {
+    "_ref": "categoria-manteles-licras",
+    "_type": "reference"
+  },
+  "descripcion": "Mantel redondo de tela corrugada (efecto arrugado tipo crush) para mesas redondas de 60\". Su textura con brillo suave aporta movimiento y elegancia sin necesidad de planchado perfecto, ideal para bodas, quince años y cenas de gala. Disponible en 9 colores.",
+  "medidas": "Para mesa redonda de 60\"",
+  "precio": 6.5,
+  "slug": {
+    "_type": "slug",
+    "current": "mantel-redondo-60-corrugado"
+  },
+  "subcategoria": "Redondos",
+  "tipo": "Corrugado",
+  "titulo": "Mantel redondo 60\" corrugado",
+  "variantes": [
+    {
+      "_key": "48b2abd2",
+      "_type": "variante",
+      "color": "Amarillo",
+      "imagenes": [
+        {
+          "_key": "edeb3aa2",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-ff31311160db492bc13f6e6c9a97a36f4c8af48e-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "cf4e08e1",
+      "_type": "variante",
+      "color": "Azul rey",
+      "imagenes": [
+        {
+          "_key": "3846f86c",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-0eef83e1af9f7f80ddc50f0aae101d178e2a3b7e-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "045a43da",
+      "_type": "variante",
+      "color": "Crema claro",
+      "imagenes": [
+        {
+          "_key": "bd1f1abf",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-fef203cebddeaddd6b5da3df6a9da45b49f0b40a-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "e118393a",
+      "_type": "variante",
+      "color": "Morado",
+      "imagenes": [
+        {
+          "_key": "a70a9003",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-c081985a72df396950e26c0cc59cae3eda8377ba-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "e5164bec",
+      "_type": "variante",
+      "color": "Negro",
+      "imagenes": [
+        {
+          "_key": "870ad032",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-46116e465735b4a985c63c26c057c451ce19ef5a-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "0637aee5",
+      "_type": "variante",
+      "color": "Rojo",
+      "imagenes": [
+        {
+          "_key": "f963cfc4",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-493f84f48f37ca1826f0c89d51f5d263deee748c-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "9e9c34f8",
+      "_type": "variante",
+      "color": "Turquesa",
+      "imagenes": [
+        {
+          "_key": "a04ab512",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-9f86b7e9fbb07724968e5fbcc04f11dc83769ca3-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "f1e0613a",
+      "_type": "variante",
+      "color": "Verde manzana",
+      "imagenes": [
+        {
+          "_key": "579d8bf3",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-5f10f831d42ab5206430946126cc019b22104562-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    },
+    {
+      "_key": "6a8c9ab2",
+      "_type": "variante",
+      "color": "Verde olivo",
+      "imagenes": [
+        {
+          "_key": "1ad35d1c",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-13fca42b8748ea9dfe82aaa971dcfd9f578a4f23-1200x1200-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    }
+  ]
+}
