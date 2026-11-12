@@ -1,0 +1,35 @@
+{
+  "_createdAt": "2026-10-24T19:38:35Z",
+  "_id": "producto-audio-video-soporte-para-tv",
+  "_rev": "WV3FKcQLPisfMXqbQSozMv",
+  "_type": "producto",
+  "_updatedAt": "2026-10-24T19:38:35Z",
+  "categoria": {
+    "_ref": "categoria-audio-video",
+    "_type": "reference"
+  },
+  "descripcion": "Soporte de trípode con altura ajustable para televisores de 23 a 55 pulgadas. Incluye la instalación de la pantalla en el soporte. Ideal para presentaciones, recepciones y stands.",
+  "medidas": "Para pantallas de 23 a 55 pulgadas",
+  "precio": 60,
+  "slug": {
+    "_type": "slug",
+    "current": "soporte-para-tv"
+  },
+  "titulo": "Soporte e instalación para TV 23\"-55\"",
+  "variantes": [
+    {
+      "_key": "8rtao0ji",
+      "_type": "variante",
+      "imagenes": [
+        {
+          "_key": "v3gabypp",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-8883b297143005101c64dd1b2736166bb117d6cb-1254x1254-jpg",
+            "_type": "reference"
+          }
+        }
+      ]
+    }
+  ]
+}
