@@ -1,0 +1,72 @@
+[
+  {
+    "_createdAt": "2026-10-24T19:51:40Z",
+    "_id": "producto-cristaleria-sopero",
+    "_rev": "WV3FKcQLPisfMXqbQStIEh",
+    "_type": "producto",
+    "_updatedAt": "2026-10-24T19:51:40Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Sopero de acero inoxidable con base para fueguito que mantiene caliente la sopa o las cremas durante el servicio.",
+    "precio": 18,
+    "slug": {
+      "_type": "slug",
+      "current": "sopero"
+    },
+    "subcategoria": "Chafing dish",
+    "titulo": "Sopero",
+    "variantes": [
+      {
+        "_key": "otax48n2",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "qfu7octz",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f7beaf2dab28a14c5b28fd692a84a31ba09d9a45-1000x1000-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_createdAt": "2026-11-12T14:00:26Z",
+    "_id": "producto-cristaleria-sopero-electrico",
+    "_rev": "ZLZvlCzEZzNxd4hgOOsrEA",
+    "_type": "producto",
+    "_updatedAt": "2026-11-12T14:29:23Z",
+    "categoria": {
+      "_ref": "categoria-cristaleria",
+      "_type": "reference"
+    },
+    "descripcion": "Sopero eléctrico con control de temperatura y tapa de acero inoxidable para mantener sopas y cremas calientes.",
+    "precio": 18,
+    "slug": {
+      "_type": "slug",
+      "current": "sopero-electrico"
+    },
+    "subcategoria": "Servicio de buffet",
+    "titulo": "Sopero eléctrico",
+    "variantes": [
+      {
+        "_key": "qyhsknsty5o",
+        "_type": "variante",
+        "imagenes": [
+          {
+            "_key": "7bcjvnv6qz2",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-dac8d8576f57be38ef9a35d37b3955971664243e-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
