@@ -63,14 +63,17 @@ function Tarjeta({
   children,
   accion,
   className = "",
+  tour,
 }: {
   titulo: string;
   children: React.ReactNode;
   accion?: React.ReactNode;
   className?: string;
+  /** Anchor for the guided tour (TourCotizador). */
+  tour?: string;
 }) {
   return (
-    <div className={`rounded-lg border border-border bg-white ${className}`}>
+    <div data-tour={tour} className={`rounded-lg border border-border bg-white ${className}`}>
       <div className="flex items-center justify-between border-b border-border px-5 py-4">
         <h2 className="font-sans text-base font-semibold text-ink">{titulo}</h2>
         {accion}
@@ -293,7 +296,7 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
 
       <div className="grid gap-5 lg:grid-cols-2">
         <div className="flex flex-col gap-5">
-          <Tarjeta titulo="Cliente">
+          <Tarjeta titulo="Cliente" tour="cliente">
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="sm:col-span-2">
                 <Campo label="Nombre de la empresa o cliente *" required value={empresa} onChange={(e) => setEmpresa(e.target.value)} autoComplete="organization" />
@@ -315,6 +318,7 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
 
           <Tarjeta
             titulo="Fecha del evento"
+            tour="fecha"
             accion={
               (desde || hasta) && (
                 <button
@@ -360,7 +364,9 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
 
         <Tarjeta titulo="Dirección de entrega">
           <div className="flex flex-col gap-4">
-            <Campo label="Dirección" placeholder="Ej. Hotel Sortis, Calle 56 Obarrio" value={direccion} onChange={(e) => setDireccion(e.target.value)} autoComplete="street-address" />
+            <div data-tour="direccion">
+              <Campo label="Dirección" placeholder="Ej. Hotel Sortis, Calle 56 Obarrio" value={direccion} onChange={(e) => setDireccion(e.target.value)} autoComplete="street-address" />
+            </div>
             <div>
               <Campo label="Ubicación en Google Maps (opcional)" type="url" placeholder="Pega aquí el enlace de Google Maps" value={mapsUrl} onChange={(e) => setMapsUrl(e.target.value)} />
               <div className="mt-2 flex flex-wrap gap-2 text-sm">
@@ -391,7 +397,7 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
               </div>
             )}
 
-            <div className="border-t border-border pt-4">
+            <div className="border-t border-border pt-4" data-tour="transporte">
               <label className="block">
                 <span className="mb-1 block text-sm font-semibold text-ink">¿Necesitas transporte (entrega y recogida)?</span>
                 <select
@@ -422,7 +428,7 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
       </div>
 
       <div className="rounded-lg border border-border bg-white">
-        <div className="relative p-5">
+        <div className="relative p-5" data-tour="productos">
           <label htmlFor={`${listaId}-input`} className="sr-only">Buscar para añadir productos</label>
           <svg className="pointer-events-none absolute left-8 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clipRule="evenodd" />
@@ -561,7 +567,7 @@ export default function CotizadorRapido({ opciones }: { opciones: OpcionProducto
             </div>
             {status === "error" && <p className="rounded-md bg-red-100 px-4 py-3 text-sm font-semibold text-red-800">{mensaje}</p>}
             {TURNSTILE_SITE_KEY && <Turnstile ref={captchaRef} siteKey={TURNSTILE_SITE_KEY} />}
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <div className="flex flex-col gap-3 sm:flex-row" data-tour="enviar">
               <button type="submit" disabled={status === "sending"} className="flex-1 rounded-md bg-lime px-6 py-3 font-semibold text-teal-dark hover:bg-lime-dark disabled:opacity-60">
                 {status === "sending" ? "Enviando…" : "✉️ Enviar por correo"}
               </button>

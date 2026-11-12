@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CotizadorRapido, { type OpcionProducto } from "@/components/CotizadorRapido";
+import TourCotizador from "@/components/TourCotizador";
 import { getProductos } from "@/lib/sanity/queries";
 import { aListados, tituloListado } from "@/lib/producto";
 import { precioDeVariante } from "@/lib/precio";
@@ -39,6 +40,7 @@ export default async function CotizadorRapidoPage() {
 
       <section className="bg-[#eef1f4] px-4 py-8 sm:px-6">
         <div className="mx-auto max-w-[1350px]">
+          <TourCotizador />
           <CotizadorRapido opciones={opciones} />
         </div>
       </section>

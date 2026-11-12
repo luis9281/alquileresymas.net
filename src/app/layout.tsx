@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import RastreoWhatsApp from "@/components/RastreoWhatsApp";
+import AvisoCotizador from "@/components/AvisoCotizador";
 import Movimiento from "@/components/Movimiento";
 import JsonLd from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
@@ -104,6 +105,7 @@ export default async function RootLayout({
             <Footer />
             <WhatsAppButton />
             <RastreoWhatsApp />
+            <AvisoCotizador />
           </QuoteProvider>
         </Movimiento>
       </body>
