@@ -1,0 +1,146 @@
+[
+  {
+    "_createdAt": "2026-11-12T15:09:42Z",
+    "_id": "producto-manteleria-mantel-redondo-48-liso",
+    "_rev": "ZLZvlCzEZzNxd4hgOOxtYe",
+    "_type": "producto",
+    "_updatedAt": "2026-11-12T15:09:42Z",
+    "categoria": {
+      "_ref": "categoria-manteles-licras",
+      "_type": "reference"
+    },
+    "descripcion": "Mantel redondo liso para mesas de 48 pulgadas (4 a 6 personas).",
+    "grupo": "48\"",
+    "medidas": "Para mesa redonda de 48\"",
+    "precio": 5.5,
+    "slug": {
+      "_type": "slug",
+      "current": "mantel-redondo-48-liso"
+    },
+    "subcategoria": "Redondos",
+    "tipo": "Liso",
+    "titulo": "Mantel redondo 48\" liso",
+    "variantes": [
+      {
+        "_key": "hhkciif4ntf",
+        "_type": "variante",
+        "color": "Azul navy",
+        "imagenes": [
+          {
+            "_key": "stwjexolvt",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4d9ba8e681e20adcba2340595fe5f13d48aecc6d-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "2b58gmp27xb",
+        "_type": "variante",
+        "color": "Azul rey",
+        "imagenes": [
+          {
+            "_key": "2b2jl4mzkz4",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-162b41c78913a0a35641db30bc094f676c6ee872-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "dxn7quqzrgg",
+        "_type": "variante",
+        "color": "Blanco",
+        "imagenes": [
+          {
+            "_key": "7bl1572ew66",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4d50af477df1f00d380a9163dcf2ec8eac36ded0-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "641dxm6q2z9",
+        "_type": "variante",
+        "color": "Fucsia",
+        "imagenes": [
+          {
+            "_key": "jywhcq3jwu",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-89c26668f7a7ace60b7f3ced1d70451bcd92d41f-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "pr1hhw1feon",
+        "_type": "variante",
+        "color": "Naranja",
+        "imagenes": [
+          {
+            "_key": "5q9yxnbbhs8",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-48e4053dae9fb475e19243ee21f63f55ac0c463d-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "cc9ijt79u6v",
+        "_type": "variante",
+        "color": "Negro",
+        "imagenes": [
+          {
+            "_key": "l1dsgzj7xi",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6732192327272f2ebf1d02cf42bb3ce6c4fb9bd5-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "dcefxsb7mjc",
+        "_type": "variante",
+        "color": "Rosa pastel",
+        "imagenes": [
+          {
+            "_key": "8b0po8yt973",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f7ec8b9897a60574888d3a3bdbbd41c21f274c9d-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "enu8ywv8jnr",
+        "_type": "variante",
+        "color": "Turquesa",
+        "imagenes": [
+          {
+            "_key": "cn60xtkpdm6",
+            "_type": "image",
+            "asset": {
+              "_ref": "image-584b082e4914e59b27d5737cd25509b67b324af6-1254x1254-jpg",
+              "_type": "reference"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
