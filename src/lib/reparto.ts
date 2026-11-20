@@ -35,18 +35,30 @@ const clave = (email: string) => email.replace(/[^a-zA-Z0-9]/g, "_");
 
 const alAzar = <T,>(lista: T[]) => lista[randomInt(lista.length)];
 
-type DocReparto = { _rev: string; conteos?: Record<string, number> };
+type DocReparto = {
+  _rev: string;
+  conteos?: Record<string, number>;
+  /** Studio switch per salesperson; false = on vacation, gets no requests. Missing = active. */
+  activos?: Record<string, boolean>;
+  /**
+   * Hidden offset added to conteos only for choosing who's next. While someone is inactive it keeps
+   * them level with the lowest active count, so on their return they don't get every request until
+   * they "catch up". conteos itself stays the real number of requests received.
+   */
+  ajustes?: Record<string, number>;
+};
 
 export type Asignacion = {
   email: string;
   /** How many requests this person has received, counting this one. */
   total: number;
   /** Totals for everyone after this assignment, in VENTAS_EMAILS order. */
-  conteos: { email: string; total: number }[];
+  conteos: { email: string; total: number; activo: boolean }[];
 };
 
 /**
- * Picks the salesperson with the fewest requests and adds one to their counter.
+ * Picks the active salesperson with the fewest requests and adds one to their counter.
+ * Inactive ones (switched off in Studio) are skipped; if everyone is off, everyone is used.
  * Without SANITY_WRITE_TOKEN (or if Sanity fails) it still picks someone at random,
  * so an email always goes out; it just isn't counted.
  */
@@ -54,7 +66,7 @@ export async function asignarVendedor(): Promise<Asignacion> {
   const lista = vendedores();
   const sinContar = (): Asignacion => {
     const email = alAzar(lista);
-    return { email, total: 0, conteos: lista.map((e) => ({ email: e, total: 0 })) };
+    return { email, total: 0, conteos: lista.map((e) => ({ email: e, total: 0, activo: true })) };
   };
   if (!escritura) return sinContar();
 
@@ -65,9 +77,22 @@ export async function asignarVendedor(): Promise<Asignacion> {
       const doc = await escritura.getDocument<DocReparto>(ID);
       if (!doc) break;
       const conteos = doc.conteos ?? {};
-      const minimo = Math.min(...lista.map((e) => conteos[clave(e)] ?? 0));
-      const email = alAzar(lista.filter((e) => (conteos[clave(e)] ?? 0) === minimo));
+      const ajustes = doc.ajustes ?? {};
+      const esActivo = (e: string) => doc.activos?.[clave(e)] !== false;
+      const activos = lista.filter(esActivo).length ? lista.filter(esActivo) : lista;
+      const efectivo = (e: string) => (conteos[clave(e)] ?? 0) + (ajustes[clave(e)] ?? 0);
+
+      const minimo = Math.min(...activos.map(efectivo));
+      const email = alAzar(activos.filter((e) => efectivo(e) === minimo));
       const ruta = `conteos.${clave(email)}`;
+      const total = (conteos[clave(email)] ?? 0) + 1;
+
+      // Keep whoever is off level with the new lowest active count (never pushes anyone down).
+      const nuevoMinimo = Math.min(...activos.map((e) => efectivo(e) + (e === email ? 1 : 0)));
+      const nivelar: Record<string, number> = {};
+      for (const e of lista) {
+        if (!activos.includes(e) && efectivo(e) < nuevoMinimo) nivelar[`ajustes.${clave(e)}`] = nuevoMinimo - (conteos[clave(e)] ?? 0);
+      }
 
       try {
         // ifRevisionId fails if someone else updated the counters since we read them; then we retry.
@@ -76,10 +101,14 @@ export async function asignarVendedor(): Promise<Asignacion> {
           .ifRevisionId(doc._rev)
           .setIfMissing({ [ruta]: 0 })
           .inc({ [ruta]: 1 })
-          .set({ ultimo: { email, fecha: new Date().toISOString() } })
+          .set({ ...nivelar, ultimo: { email, fecha: new Date().toISOString() } })
           .commit();
-        const nuevos = { ...conteos, [clave(email)]: minimo + 1 };
-        return { email, total: minimo + 1, conteos: lista.map((e) => ({ email: e, total: nuevos[clave(e)] ?? 0 })) };
+        const nuevos = { ...conteos, [clave(email)]: total };
+        return {
+          email,
+          total,
+          conteos: lista.map((e) => ({ email: e, total: nuevos[clave(e)] ?? 0, activo: activos.includes(e) })),
+        };
       } catch (error) {
         if ((error as { statusCode?: number }).statusCode !== 409) throw error;
       }
@@ -101,4 +130,5 @@ export async function devolverAsignacion(email: string): Promise<void> {
 }
 
 /** "ventas2@alquileresymas.net: 5 | ventas3@...: 4 ..." for the WhatsApp notice and the email footer. */
-export const resumenConteos = (a: Asignacion) => a.conteos.map((c) => `${c.email.split("@")[0]}: ${c.total}`).join(" | ");
+export const resumenConteos = (a: Asignacion) =>
+  a.conteos.map((c) => `${c.email.split("@")[0]}: ${c.total}${c.activo ? "" : " (inactivo)"}`).join(" | ");

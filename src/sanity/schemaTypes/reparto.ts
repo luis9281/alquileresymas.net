@@ -1,9 +1,9 @@
 import { defineField, defineType } from "sanity";
 
 /**
- * Read-only Studio views of the data the website writes on its own:
+ * Studio views of the data the website writes on its own:
  * the sales split counters (src/lib/reparto.ts) and the quote request log (src/lib/solicitudes-log.ts).
- * Nobody edits these by hand; the counters decide who gets the next request.
+ * Nobody edits these by hand, except the "activos" switches (vacations); the counters decide who gets the next request.
  */
 
 // Counter keys as reparto.ts stores them ("ventas1@alquileresymas.net" -> "ventas1_alquileresymas_net").
@@ -13,20 +13,43 @@ export const repartoCorreos = defineType({
   name: "repartoCorreos",
   title: "Contadores del reparto",
   type: "document",
-  readOnly: true,
+  // Edits save straight to the published document as field patches (no draft), so turning someone
+  // on/off never overwrites counters the website changed in the meantime.
+  liveEdit: true,
   fields: [
+    defineField({
+      name: "activos",
+      title: "Vendedores activos",
+      description:
+        "Apagado = no recibe solicitudes (vacaciones). Al volver, encenderlo: entra parejo con los demas, sin acumular. Se guarda al instante.",
+      type: "object",
+      fields: VENDEDORES.map((v) =>
+        defineField({ name: `${v}_alquileresymas_net`, title: `${v}@alquileresymas.net`, type: "boolean", initialValue: true })
+      ),
+    }),
     defineField({
       name: "conteos",
       title: "Solicitudes recibidas por cada vendedor",
-      description: "A la siguiente solicitud le toca al que tenga menos (empate al azar). Gerencia recibe copia de todas.",
+      description: "A la siguiente solicitud le toca al activo que tenga menos (empate al azar). Gerencia recibe copia de todas.",
+      readOnly: true,
       type: "object",
       fields: VENDEDORES.map((v) =>
         defineField({ name: `${v}_alquileresymas_net`, title: `${v}@alquileresymas.net`, type: "number" })
       ),
     }),
     defineField({
+      // Internal leveling offsets for inactive salespeople (see reparto.ts); declared only so Studio
+      // doesn't flag them as unknown fields.
+      name: "ajustes",
+      type: "object",
+      hidden: true,
+      readOnly: true,
+      fields: VENDEDORES.map((v) => defineField({ name: `${v}_alquileresymas_net`, type: "number" })),
+    }),
+    defineField({
       name: "ultimo",
       title: "Ultima asignacion",
+      readOnly: true,
       type: "object",
       fields: [
         defineField({ name: "email", title: "Vendedor", type: "string" }),

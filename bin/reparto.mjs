@@ -41,7 +41,10 @@ const limpiar = (v) => String(v ?? "").replace(/[;\r\n]+/g, " ").trim();
 console.log("Contadores del reparto (los que deciden a quien le toca):");
 const conteos = Object.entries(contadores?.conteos ?? {}).sort((a, b) => a[0].localeCompare(b[0]));
 if (!conteos.length) console.log("  (todavia no hay envios)");
-for (const [clave, n] of conteos) console.log(`  ${clave.replace(/_alquileresymas_net$/, "@alquileresymas.net").padEnd(32)} ${n}`);
+for (const [clave, n] of conteos) {
+  const inactivo = contadores?.activos?.[clave] === false ? "  (inactivo: no recibe)" : "";
+  console.log(`  ${clave.replace(/_alquileresymas_net$/, "@alquileresymas.net").padEnd(32)} ${n}${inactivo}`);
+}
 if (contadores?.ultimo) console.log(`  Ultimo: ${contadores.ultimo.email} el ${fechaPanama(contadores.ultimo.fecha)}`);
 
 const porMes = new Map();
